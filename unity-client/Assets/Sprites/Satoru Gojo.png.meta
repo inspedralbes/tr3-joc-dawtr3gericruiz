@@ -2033,6 +2033,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: gojo_portrait
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1591
+        width: 205
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3d0208a207d3bd9bd812d696e71b0d
+      internalID: 875994248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2047,7 +2069,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Satoru Gojo_0: 3065939836703873171
       Satoru Gojo_1: 6802462640481933912
       Satoru Gojo_10: 5550695260393846900
       Satoru Gojo_102: 5821369308079985694
@@ -2292,6 +2313,7 @@ TextureImporter:
       c_5: -164160736580210835
       fall_1: -774072005630281066
       fall_2: -8577901437313109967
+      gojo_portrait: 3065939836703873171
       hit_1: 8625986952344634916
       hit_2: -5707536419269873303
       hit_3: -4268248223775630964

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/EstilosSeleccion.uss?fileID=7433441132597879392&amp;guid=1657aea975afd734e82d8f57f7a92438&amp;type=3#EstilosSeleccion" />
+    <ui:VisualElement name="PantallaPrincipal" style="flex-grow: 1; background-color: rgb(219, 217, 217); flex-basis: auto; width: 100%; height: 100%;">
+        <ui:Label text="Selecció de personatge&#10;" name="TituloMenu" style="align-self: center; font-size: 22px;" />
+        <ui:VisualElement name="ContenedorRoster" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap;" />
+        <ui:VisualElement name="PanelJugadores" style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+            <ui:VisualElement name="P1Panel" style="flex-grow: 1;">
+                <ui:VisualElement name="P1Retrato" style="flex-grow: 1;" />
+                <ui:Label name="P1NombreText" style="font-size: 20px; align-self: center;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
