@@ -1,0 +1,2354 @@
+fileFormatVersion: 2
+guid: 55bf5778cbfe18a62a98f3bca413b740
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3065939836703873171
+    second: Satoru Gojo_0
+  - first:
+      213: 6802462640481933912
+    second: Satoru Gojo_1
+  - first:
+      213: -2538801363713679776
+    second: Satoru Gojo_2
+  - first:
+      213: -1361864760393733724
+    second: Satoru Gojo_3
+  - first:
+      213: 3943555532667633648
+    second: Satoru Gojo_4
+  - first:
+      213: -2316982584445313852
+    second: Satoru Gojo_5
+  - first:
+      213: 3600396765635444535
+    second: Satoru Gojo_6
+  - first:
+      213: 4633532945379056225
+    second: Satoru Gojo_7
+  - first:
+      213: 3085362314121370259
+    second: Satoru Gojo_8
+  - first:
+      213: -6313927188222163151
+    second: Satoru Gojo_9
+  - first:
+      213: 5550695260393846900
+    second: Satoru Gojo_10
+  - first:
+      213: -3828819470519887687
+    second: Satoru Gojo_11
+  - first:
+      213: 2765635627882256883
+    second: Satoru Gojo_12
+  - first:
+      213: 4382765943163305382
+    second: Satoru Gojo_13
+  - first:
+      213: -5713526359145238104
+    second: Satoru Gojo_14
+  - first:
+      213: -1372082767589834011
+    second: Satoru Gojo_15
+  - first:
+      213: -1573956077296496039
+    second: Satoru Gojo_16
+  - first:
+      213: -6898045684933769825
+    second: Satoru Gojo_17
+  - first:
+      213: 2694687820810216369
+    second: Satoru Gojo_18
+  - first:
+      213: -7916954359440183247
+    second: Satoru Gojo_19
+  - first:
+      213: 6439239484761839407
+    second: Satoru Gojo_20
+  - first:
+      213: -1450431984120156259
+    second: Satoru Gojo_21
+  - first:
+      213: -8942454810451656828
+    second: Satoru Gojo_22
+  - first:
+      213: -3749811122050197752
+    second: Satoru Gojo_23
+  - first:
+      213: -3544307852046989796
+    second: Satoru Gojo_24
+  - first:
+      213: 2552625522070272073
+    second: Satoru Gojo_25
+  - first:
+      213: -1512236712349253735
+    second: Satoru Gojo_26
+  - first:
+      213: -7817057524838936103
+    second: Satoru Gojo_27
+  - first:
+      213: -2194859421565161701
+    second: Satoru Gojo_28
+  - first:
+      213: 3668921425055615234
+    second: Satoru Gojo_29
+  - first:
+      213: -6261995333439152656
+    second: Satoru Gojo_30
+  - first:
+      213: -1256618825108449110
+    second: Satoru Gojo_31
+  - first:
+      213: -4095766498130138443
+    second: Satoru Gojo_32
+  - first:
+      213: -4468372577813879482
+    second: Satoru Gojo_33
+  - first:
+      213: 5524222252109156638
+    second: Satoru Gojo_34
+  - first:
+      213: -1049949534721242598
+    second: Satoru Gojo_35
+  - first:
+      213: -6238513392480591641
+    second: Satoru Gojo_36
+  - first:
+      213: 8024340271639441061
+    second: Satoru Gojo_37
+  - first:
+      213: -1077266009655030968
+    second: Satoru Gojo_38
+  - first:
+      213: 7079814782628744990
+    second: Satoru Gojo_39
+  - first:
+      213: 902823990916112079
+    second: Satoru Gojo_40
+  - first:
+      213: -4686818490583200220
+    second: Satoru Gojo_41
+  - first:
+      213: 8034360402858188271
+    second: Satoru Gojo_42
+  - first:
+      213: -3857983852531437803
+    second: Satoru Gojo_43
+  - first:
+      213: -2311328749405306458
+    second: Satoru Gojo_44
+  - first:
+      213: 8874434585687704811
+    second: Satoru Gojo_45
+  - first:
+      213: -8130615069383335429
+    second: Satoru Gojo_46
+  - first:
+      213: 9190745156935729513
+    second: Satoru Gojo_47
+  - first:
+      213: -291421158930275315
+    second: Satoru Gojo_48
+  - first:
+      213: 6244357566560024501
+    second: Satoru Gojo_49
+  - first:
+      213: 4867592185770916866
+    second: Satoru Gojo_50
+  - first:
+      213: 8825392716300104615
+    second: Satoru Gojo_51
+  - first:
+      213: 4736840858581287338
+    second: Satoru Gojo_52
+  - first:
+      213: -364814902058191313
+    second: Satoru Gojo_53
+  - first:
+      213: 4726716877715856445
+    second: Satoru Gojo_54
+  - first:
+      213: -8683498033820635214
+    second: Satoru Gojo_55
+  - first:
+      213: -8577901437313109967
+    second: Satoru Gojo_56
+  - first:
+      213: 7917345750403497283
+    second: Satoru Gojo_57
+  - first:
+      213: -4597479900388618508
+    second: Satoru Gojo_58
+  - first:
+      213: -774072005630281066
+    second: Satoru Gojo_59
+  - first:
+      213: 6518573842966532869
+    second: Satoru Gojo_60
+  - first:
+      213: -4535244668462321541
+    second: Satoru Gojo_61
+  - first:
+      213: -6588698636669673546
+    second: Satoru Gojo_62
+  - first:
+      213: -5927239297234792713
+    second: Satoru Gojo_63
+  - first:
+      213: 3873709214659134156
+    second: Satoru Gojo_64
+  - first:
+      213: -4772632993570858141
+    second: Satoru Gojo_65
+  - first:
+      213: -6282137105971160984
+    second: Satoru Gojo_66
+  - first:
+      213: -4487661740809893845
+    second: Satoru Gojo_67
+  - first:
+      213: -7000461258585489340
+    second: Satoru Gojo_68
+  - first:
+      213: 8625986952344634916
+    second: Satoru Gojo_69
+  - first:
+      213: -5707536419269873303
+    second: Satoru Gojo_70
+  - first:
+      213: -4268248223775630964
+    second: Satoru Gojo_71
+  - first:
+      213: 4547357676646344079
+    second: Satoru Gojo_72
+  - first:
+      213: 7825115972416836923
+    second: Satoru Gojo_73
+  - first:
+      213: 5425343114762296700
+    second: Satoru Gojo_74
+  - first:
+      213: 1610291770444329472
+    second: Satoru Gojo_75
+  - first:
+      213: -7604605306877983511
+    second: Satoru Gojo_76
+  - first:
+      213: -4077630799793544202
+    second: Satoru Gojo_77
+  - first:
+      213: 8202195061447977248
+    second: Satoru Gojo_78
+  - first:
+      213: -3033537251212908919
+    second: Satoru Gojo_79
+  - first:
+      213: -2025069663692992543
+    second: Satoru Gojo_80
+  - first:
+      213: -7355249101410286559
+    second: Satoru Gojo_81
+  - first:
+      213: -6252157520633976880
+    second: Satoru Gojo_82
+  - first:
+      213: 3332501172616057122
+    second: Satoru Gojo_83
+  - first:
+      213: -5441634911290678063
+    second: Satoru Gojo_84
+  - first:
+      213: -1477626471582447396
+    second: Satoru Gojo_85
+  - first:
+      213: 1959196381802080704
+    second: Satoru Gojo_86
+  - first:
+      213: 4529814537623380058
+    second: Satoru Gojo_87
+  - first:
+      213: -7191110594795887451
+    second: Satoru Gojo_88
+  - first:
+      213: -4795125766584228741
+    second: Satoru Gojo_89
+  - first:
+      213: 3825861399788989908
+    second: Satoru Gojo_90
+  - first:
+      213: -8603036361960177760
+    second: Satoru Gojo_91
+  - first:
+      213: 7629829657583016611
+    second: Satoru Gojo_92
+  - first:
+      213: -3404170209841136738
+    second: Satoru Gojo_93
+  - first:
+      213: 446395559267494383
+    second: Satoru Gojo_94
+  - first:
+      213: 3258382065914133979
+    second: Satoru Gojo_95
+  - first:
+      213: 3420234986934812089
+    second: Satoru Gojo_96
+  - first:
+      213: 7150513957805845124
+    second: Satoru Gojo_97
+  - first:
+      213: 4060716034872314278
+    second: Satoru Gojo_98
+  - first:
+      213: 7010617295858871687
+    second: Satoru Gojo_99
+  - first:
+      213: -7022347622328911157
+    second: Satoru Gojo_100
+  - first:
+      213: -6092324217542954097
+    second: Satoru Gojo_101
+  - first:
+      213: 5821369308079985694
+    second: Satoru Gojo_102
+  - first:
+      213: -451733777771169610
+    second: Satoru Gojo_103
+  - first:
+      213: -522189048502604994
+    second: Satoru Gojo_104
+  - first:
+      213: 1002228481331011341
+    second: Satoru Gojo_105
+  - first:
+      213: 1952636631371300021
+    second: Satoru Gojo_106
+  - first:
+      213: -164160736580210835
+    second: Satoru Gojo_107
+  - first:
+      213: 5442320921202994383
+    second: Satoru Gojo_108
+  - first:
+      213: 4625619390629917188
+    second: Satoru Gojo_109
+  - first:
+      213: -4759023312968654159
+    second: Satoru Gojo_110
+  - first:
+      213: -5326003812538850319
+    second: Satoru Gojo_111
+  - first:
+      213: -8148116715142118837
+    second: Satoru Gojo_112
+  - first:
+      213: 6936287927615310324
+    second: Satoru Gojo_113
+  - first:
+      213: -393049371890249288
+    second: Satoru Gojo_114
+  - first:
+      213: -2653696173209339074
+    second: Satoru Gojo_115
+  - first:
+      213: -8764042089756238837
+    second: Satoru Gojo_116
+  - first:
+      213: -859266278064451058
+    second: Satoru Gojo_117
+  - first:
+      213: -6811539676878373111
+    second: Satoru Gojo_118
+  - first:
+      213: 7440829136160245628
+    second: Satoru Gojo_119
+  - first:
+      213: 8071945572072136615
+    second: Satoru Gojo_120
+  - first:
+      213: -1822002548978863597
+    second: Satoru Gojo_121
+  - first:
+      213: -3361925318311913113
+    second: Satoru Gojo_122
+  - first:
+      213: 5323385042713986871
+    second: Satoru Gojo_123
+  - first:
+      213: 311985400346203559
+    second: Satoru Gojo_124
+  - first:
+      213: 890814742725221285
+    second: Satoru Gojo_125
+  - first:
+      213: 7665819672246446441
+    second: Satoru Gojo_126
+  - first:
+      213: -4150176063925206604
+    second: Satoru Gojo_127
+  - first:
+      213: -1264846679819053402
+    second: Satoru Gojo_128
+  - first:
+      213: -3367074864504030015
+    second: Satoru Gojo_129
+  - first:
+      213: 2869382491053555477
+    second: Satoru Gojo_130
+  - first:
+      213: -4784761205383186501
+    second: Satoru Gojo_131
+  - first:
+      213: 4914718346640554483
+    second: Satoru Gojo_132
+  - first:
+      213: -1328359961918049712
+    second: Satoru Gojo_133
+  - first:
+      213: 2338224007013324454
+    second: Satoru Gojo_134
+  - first:
+      213: -8446130738950423116
+    second: Satoru Gojo_135
+  - first:
+      213: -3337833297414334970
+    second: Satoru Gojo_136
+  - first:
+      213: -3908289488854056208
+    second: Satoru Gojo_137
+  - first:
+      213: -4481616853824289683
+    second: Satoru Gojo_138
+  - first:
+      213: 4562463241427274239
+    second: Satoru Gojo_139
+  - first:
+      213: -4614880969420754196
+    second: Satoru Gojo_140
+  - first:
+      213: 8716635375345501575
+    second: Satoru Gojo_141
+  - first:
+      213: -3279327793206342574
+    second: Satoru Gojo_142
+  - first:
+      213: 320610571985061879
+    second: Satoru Gojo_143
+  - first:
+      213: -5900845792634681644
+    second: Satoru Gojo_144
+  - first:
+      213: -2347419230600118987
+    second: Satoru Gojo_145
+  - first:
+      213: -6996145319467249015
+    second: Satoru Gojo_146
+  - first:
+      213: -7808806984342619320
+    second: Satoru Gojo_147
+  - first:
+      213: -4626128182196957861
+    second: Satoru Gojo_148
+  - first:
+      213: -3513481380786289421
+    second: Satoru Gojo_149
+  - first:
+      213: 1016673473910557346
+    second: Satoru Gojo_150
+  - first:
+      213: 6892932923492953198
+    second: Satoru Gojo_151
+  - first:
+      213: 2862823009217327508
+    second: Satoru Gojo_152
+  - first:
+      213: -5781840113329161429
+    second: Satoru Gojo_153
+  - first:
+      213: 6307820885711677428
+    second: Satoru Gojo_154
+  - first:
+      213: 8054029617776243246
+    second: Satoru Gojo_155
+  - first:
+      213: 4484009387120438247
+    second: Satoru Gojo_156
+  - first:
+      213: -1840648204419417463
+    second: Satoru Gojo_157
+  - first:
+      213: -8556003569197605243
+    second: Satoru Gojo_158
+  - first:
+      213: 175448393175645753
+    second: Satoru Gojo_159
+  - first:
+      213: 7873430334218686439
+    second: Satoru Gojo_160
+  - first:
+      213: 4637323122002029191
+    second: Satoru Gojo_161
+  - first:
+      213: -1741856041982966405
+    second: Satoru Gojo_162
+  - first:
+      213: -6405033981883809327
+    second: Satoru Gojo_163
+  - first:
+      213: -269681873895634758
+    second: Satoru Gojo_164
+  - first:
+      213: -2241259110859073394
+    second: Satoru Gojo_165
+  - first:
+      213: -142542758939870756
+    second: Satoru Gojo_166
+  - first:
+      213: 2470378826929188506
+    second: Satoru Gojo_167
+  - first:
+      213: 6736500959652964091
+    second: Satoru Gojo_168
+  - first:
+      213: 1575830235175090053
+    second: Satoru Gojo_169
+  - first:
+      213: 2737925250921221600
+    second: Satoru Gojo_170
+  - first:
+      213: -8669491063883696849
+    second: Satoru Gojo_171
+  - first:
+      213: -2235847072408143537
+    second: Satoru Gojo_172
+  - first:
+      213: -7050249711291701270
+    second: Satoru Gojo_173
+  - first:
+      213: 6918552046242365184
+    second: Satoru Gojo_174
+  - first:
+      213: -2026096124829497200
+    second: Satoru Gojo_175
+  - first:
+      213: 9133928301073963119
+    second: Satoru Gojo_176
+  - first:
+      213: -3557592945179574035
+    second: Satoru Gojo_177
+  - first:
+      213: 1797633891908341430
+    second: Satoru Gojo_178
+  - first:
+      213: -7075717392762777642
+    second: Satoru Gojo_179
+  - first:
+      213: -7896594852805207447
+    second: Satoru Gojo_180
+  - first:
+      213: 642489979370552600
+    second: Satoru Gojo_181
+  - first:
+      213: -2221679983036475044
+    second: Satoru Gojo_182
+  - first:
+      213: 4777059080037613600
+    second: Satoru Gojo_183
+  - first:
+      213: -3515058992634323698
+    second: Satoru Gojo_184
+  - first:
+      213: -4418834060597767475
+    second: Satoru Gojo_185
+  - first:
+      213: 1155039315800093699
+    second: Satoru Gojo_186
+  - first:
+      213: 177301980885709423
+    second: Satoru Gojo_187
+  - first:
+      213: 4795526569598215974
+    second: Satoru Gojo_188
+  - first:
+      213: -381101324811803701
+    second: Satoru Gojo_189
+  - first:
+      213: -8713576228781280406
+    second: Satoru Gojo_190
+  - first:
+      213: -5619175824619296254
+    second: Satoru Gojo_191
+  - first:
+      213: -6033482733492275956
+    second: Satoru Gojo_192
+  - first:
+      213: 8674648428199450678
+    second: Satoru Gojo_193
+  - first:
+      213: 4202495853457749950
+    second: Satoru Gojo_194
+  - first:
+      213: 6937092836372435179
+    second: Satoru Gojo_195
+  - first:
+      213: -5687059072721753171
+    second: Satoru Gojo_196
+  - first:
+      213: -1909079919822914250
+    second: Satoru Gojo_197
+  - first:
+      213: -8167046213525451076
+    second: Satoru Gojo_198
+  - first:
+      213: -6895807828618810303
+    second: Satoru Gojo_199
+  - first:
+      213: -4771950957905382183
+    second: Satoru Gojo_200
+  - first:
+      213: 1645096325346891698
+    second: Satoru Gojo_201
+  - first:
+      213: -2560348001028106506
+    second: Satoru Gojo_202
+  - first:
+      213: 1868320883857130061
+    second: Satoru Gojo_203
+  - first:
+      213: -7358222897203420017
+    second: Satoru Gojo_204
+  - first:
+      213: 2419822819064872243
+    second: Satoru Gojo_205
+  - first:
+      213: 9009195783789993708
+    second: Satoru Gojo_206
+  - first:
+      213: 8413546502977305935
+    second: Satoru Gojo_207
+  - first:
+      213: 2675187791067494255
+    second: Satoru Gojo_208
+  - first:
+      213: -5294761880842951005
+    second: Satoru Gojo_209
+  - first:
+      213: -3192634070385539545
+    second: Satoru Gojo_210
+  - first:
+      213: 2295037602260941990
+    second: Satoru Gojo_211
+  - first:
+      213: 2779063243739802219
+    second: Satoru Gojo_212
+  - first:
+      213: -2287829216941112340
+    second: Satoru Gojo_213
+  - first:
+      213: 1209084257687894615
+    second: Satoru Gojo_214
+  - first:
+      213: -3660765839168699352
+    second: Satoru Gojo_215
+  - first:
+      213: 5998244223056214020
+    second: Satoru Gojo_216
+  - first:
+      213: 2091384319130377684
+    second: Satoru Gojo_217
+  - first:
+      213: -290983694808885465
+    second: Satoru Gojo_218
+  - first:
+      213: -6838129185182279888
+    second: Satoru Gojo_219
+  - first:
+      213: -2807287298188891246
+    second: Satoru Gojo_220
+  - first:
+      213: 6170066843700454036
+    second: Satoru Gojo_221
+  - first:
+      213: -5520533928140532191
+    second: Satoru Gojo_222
+  - first:
+      213: 488159173247857924
+    second: Satoru Gojo_223
+  - first:
+      213: -803468475326941973
+    second: Satoru Gojo_224
+  - first:
+      213: 6402198037164855645
+    second: Satoru Gojo_225
+  - first:
+      213: 6355182173764314055
+    second: Satoru Gojo_226
+  - first:
+      213: -2578531657769600377
+    second: Satoru Gojo_227
+  - first:
+      213: 7021021680432024631
+    second: Satoru Gojo_228
+  - first:
+      213: -1013132087443097367
+    second: Satoru Gojo_229
+  - first:
+      213: 2547621308000586203
+    second: Satoru Gojo_230
+  - first:
+      213: 6771392942141576241
+    second: Satoru Gojo_231
+  - first:
+      213: -2497964728238119199
+    second: Satoru Gojo_232
+  - first:
+      213: 6966795126117894464
+    second: Satoru Gojo_233
+  - first:
+      213: 8262153501143672674
+    second: Satoru Gojo_234
+  - first:
+      213: 8891590881643355271
+    second: Satoru Gojo_235
+  - first:
+      213: 5465898972581147601
+    second: Satoru Gojo_236
+  - first:
+      213: 766310200450426304
+    second: Satoru Gojo_237
+  - first:
+      213: -685674705598291913
+    second: Satoru Gojo_238
+  - first:
+      213: 8097020005545749024
+    second: Satoru Gojo_239
+  - first:
+      213: -445292152160447253
+    second: Satoru Gojo_240
+  - first:
+      213: -7644189127699216983
+    second: Satoru Gojo_241
+  - first:
+      213: -7223018527182933497
+    second: Satoru Gojo_242
+  - first:
+      213: -957916488484105568
+    second: Satoru Gojo_243
+  - first:
+      213: -3419444270019013511
+    second: Satoru Gojo_244
+  - first:
+      213: 3829129451001244183
+    second: Satoru Gojo_245
+  - first:
+      213: 8353035121261169032
+    second: Satoru Gojo_246
+  - first:
+      213: -5593499295054383793
+    second: Satoru Gojo_247
+  - first:
+      213: 4477140617548467238
+    second: Satoru Gojo_248
+  - first:
+      213: -6637841133261068478
+    second: Satoru Gojo_249
+  - first:
+      213: -4466957833263175502
+    second: Satoru Gojo_250
+  - first:
+      213: -5754440290391893318
+    second: Satoru Gojo_251
+  - first:
+      213: 3491789135382440781
+    second: Satoru Gojo_252
+  - first:
+      213: 4129137938608817294
+    second: Satoru Gojo_253
+  - first:
+      213: 7816493272148357197
+    second: Satoru Gojo_254
+  - first:
+      213: -5904583299614994470
+    second: Satoru Gojo_255
+  - first:
+      213: -7761676607064205030
+    second: Satoru Gojo_256
+  - first:
+      213: 3817608901734189934
+    second: Satoru Gojo_257
+  - first:
+      213: -4070072406056470026
+    second: Satoru Gojo_258
+  - first:
+      213: -2194442728040051476
+    second: Satoru Gojo_259
+  - first:
+      213: -3584038126333432135
+    second: Satoru Gojo_260
+  - first:
+      213: 573418336567819651
+    second: Satoru Gojo_261
+  - first:
+      213: 7108737620392607890
+    second: Satoru Gojo_262
+  - first:
+      213: 5678414708696995697
+    second: Satoru Gojo_263
+  - first:
+      213: -345962141709914306
+    second: Satoru Gojo_264
+  - first:
+      213: 5729989935092761262
+    second: Satoru Gojo_265
+  - first:
+      213: 2889365197269291160
+    second: Satoru Gojo_266
+  - first:
+      213: 5007623218943162562
+    second: Satoru Gojo_267
+  - first:
+      213: -5245110227962885085
+    second: Satoru Gojo_268
+  - first:
+      213: 3411113985353757806
+    second: Satoru Gojo_269
+  - first:
+      213: -4999318740627072680
+    second: Satoru Gojo_270
+  - first:
+      213: 889187167283617678
+    second: Satoru Gojo_271
+  - first:
+      213: -4659002387725827283
+    second: Satoru Gojo_272
+  - first:
+      213: 8151755813017745064
+    second: Satoru Gojo_273
+  - first:
+      213: 7499454153113006675
+    second: Satoru Gojo_274
+  - first:
+      213: -8043702307837180595
+    second: Satoru Gojo_275
+  - first:
+      213: -5736936167941234119
+    second: Satoru Gojo_276
+  - first:
+      213: -5013133242423388862
+    second: Satoru Gojo_277
+  - first:
+      213: -6993888808509359768
+    second: Satoru Gojo_278
+  - first:
+      213: -8144342863254279456
+    second: Satoru Gojo_279
+  - first:
+      213: -8449067013373981682
+    second: Satoru Gojo_280
+  - first:
+      213: -6935862873886053201
+    second: Satoru Gojo_281
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: intro_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1497
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ccde578d9c68dfd0800000000000000
+      internalID: -2316982584445313852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1497
+        width: 25
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f7a2a58cd27f130800000000000000
+      internalID: 3600396765635444535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1497
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a53601aad9d4040800000000000000
+      internalID: 4633532945379056225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1497
+        width: 40
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ad4908da861da20800000000000000
+      internalID: 3085362314121370259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_5
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1497
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1374658ccac6068a0800000000000000
+      internalID: -6313927188222163151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1324
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9f27af8bc70fdbe0800000000000000
+      internalID: -1450431984120156259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1324
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fbb03aab406e380800000000000000
+      internalID: -8942454810451656828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_3
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1324
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807936fd6aef5fbc0800000000000000
+      internalID: -3749811122050197752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1324
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c168c1089c610dec0800000000000000
+      internalID: -3544307852046989796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1174
+        width: 63
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce5149e2a9778c00800000000000000
+      internalID: 902823990916112079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 999
+        width: 26
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130b3a6271c25f880800000000000000
+      internalID: -8577901437313109967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 999
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34dbfb8130010ed60800000000000000
+      internalID: 7917345750403497283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 999
+        width: 36
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe865b93687230c0800000000000000
+      internalID: -4597479900388618508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 999
+        width: 43
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a35d1bc91f145f0800000000000000
+      internalID: -774072005630281066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 844
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42608a34e69a5b770800000000000000
+      internalID: 8625986952344634916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 844
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96170d2ddd1cac0b0800000000000000
+      internalID: -5707536419269873303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 846
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8959a8cad224c4c0800000000000000
+      internalID: -4268248223775630964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit_4
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 845
+        width: 60
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85a627c6b57b1f30800000000000000
+      internalID: 4547357676646344079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 846
+        width: 70
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3514268485689c60800000000000000
+      internalID: 7825115972416836923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit_6
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 846
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d940471d0ba4b40800000000000000
+      internalID: 5425343114762296700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 678
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd2d4e3ca0381530800000000000000
+      internalID: 3825861399788989908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 678
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af38977200eb9880800000000000000
+      internalID: -8603036361960177760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 678
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aad9f426a992e960800000000000000
+      internalID: 7629829657583016611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 678
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9bb37fea35f1c0d0800000000000000
+      internalID: -3404170209841136738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_5
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 678
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe96373656ae13600800000000000000
+      internalID: 446395559267494383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_6
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 678
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bddb05da939183d20800000000000000
+      internalID: 3258382065914133979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 597
+        width: 35
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a6d704f8abb3360800000000000000
+      internalID: 7150513957805845124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 597
+        width: 45
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a90c4818bf8a5830800000000000000
+      internalID: 4060716034872314278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 597
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78da0e76947ba4160800000000000000
+      internalID: 7010617295858871687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 597
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcab6c12b0c9b8e90800000000000000
+      internalID: -7022347622328911157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_5
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 597
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83b7d41767b37ba0800000000000000
+      internalID: -6092324217542954097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_2
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 523
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b877e2c58e1bb9f0800000000000000
+      internalID: -451733777771169610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 522
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b276ab3dfc0c8f0800000000000000
+      internalID: -522189048502604994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_3
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 523
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f93856e71a8ed00800000000000000
+      internalID: 1002228481331011341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 523
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc3d44bba8291b10800000000000000
+      internalID: 1952636631371300021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 523
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6fe11a0ea8c8bdf0800000000000000
+      internalID: -164160736580210835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 437
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7b012d80d199db0800000000000000
+      internalID: -4784761205383186501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 437
+        width: 28
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9fa960c46943440800000000000000
+      internalID: 4914718346640554483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 437
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052f50017a7b09de0800000000000000
+      internalID: -1328359961918049712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_4
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 437
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6d15f885a037020800000000000000
+      internalID: 2338224007013324454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 437
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd3a5aa7d059ca80800000000000000
+      internalID: -8446130738950423116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 353
+        width: 100
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304ffd75326870010800000000000000
+      internalID: 1155039315800093699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 353
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c057dbfab63c44ca0800000000000000
+      internalID: -6033482733492275956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 353
+        width: 35
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6389a3209ca826870800000000000000
+      internalID: 8674648428199450678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_3
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 353
+        width: 40
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7b66386b3425a30800000000000000
+      internalID: 4202495853457749950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 353
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0d2ed2e21854060800000000000000
+      internalID: 6937092836372435179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_1
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 34
+        width: 24
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86938321f27b0fe90800000000000000
+      internalID: -6993888808509359768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_2
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 33
+        width: 29
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eaadb2015b79fe80800000000000000
+      internalID: -8144342863254279456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_3
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 33
+        width: 41
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c8f500152eeba80800000000000000
+      internalID: -8449067013373981682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_portrait
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1591
+        width: 205
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3d0208a207d3bd9bd812d696e71b0d
+      internalID: 875994248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ec98d9520897412fc8baec749bc4ed0b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Satoru Gojo_1: 6802462640481933912
+      Satoru Gojo_10: 5550695260393846900
+      Satoru Gojo_102: 5821369308079985694
+      Satoru Gojo_108: 5442320921202994383
+      Satoru Gojo_109: 4625619390629917188
+      Satoru Gojo_11: -3828819470519887687
+      Satoru Gojo_110: -4759023312968654159
+      Satoru Gojo_111: -5326003812538850319
+      Satoru Gojo_112: -8148116715142118837
+      Satoru Gojo_113: 6936287927615310324
+      Satoru Gojo_114: -393049371890249288
+      Satoru Gojo_115: -2653696173209339074
+      Satoru Gojo_116: -8764042089756238837
+      Satoru Gojo_117: -859266278064451058
+      Satoru Gojo_118: -6811539676878373111
+      Satoru Gojo_119: 7440829136160245628
+      Satoru Gojo_120: 8071945572072136615
+      Satoru Gojo_121: -1822002548978863597
+      Satoru Gojo_122: -3361925318311913113
+      Satoru Gojo_123: 5323385042713986871
+      Satoru Gojo_124: 311985400346203559
+      Satoru Gojo_125: 890814742725221285
+      Satoru Gojo_126: 7665819672246446441
+      Satoru Gojo_127: -4150176063925206604
+      Satoru Gojo_128: -1264846679819053402
+      Satoru Gojo_129: -3367074864504030015
+      Satoru Gojo_130: 2869382491053555477
+      Satoru Gojo_136: -3337833297414334970
+      Satoru Gojo_137: -3908289488854056208
+      Satoru Gojo_138: -4481616853824289683
+      Satoru Gojo_139: 4562463241427274239
+      Satoru Gojo_140: -4614880969420754196
+      Satoru Gojo_141: 8716635375345501575
+      Satoru Gojo_142: -3279327793206342574
+      Satoru Gojo_143: 320610571985061879
+      Satoru Gojo_144: -5900845792634681644
+      Satoru Gojo_145: -2347419230600118987
+      Satoru Gojo_146: -6996145319467249015
+      Satoru Gojo_147: -7808806984342619320
+      Satoru Gojo_148: -4626128182196957861
+      Satoru Gojo_149: -3513481380786289421
+      Satoru Gojo_150: 1016673473910557346
+      Satoru Gojo_151: 6892932923492953198
+      Satoru Gojo_152: 2862823009217327508
+      Satoru Gojo_153: -5781840113329161429
+      Satoru Gojo_154: 6307820885711677428
+      Satoru Gojo_155: 8054029617776243246
+      Satoru Gojo_156: 4484009387120438247
+      Satoru Gojo_157: -1840648204419417463
+      Satoru Gojo_158: -8556003569197605243
+      Satoru Gojo_159: 175448393175645753
+      Satoru Gojo_16: -1573956077296496039
+      Satoru Gojo_160: 7873430334218686439
+      Satoru Gojo_161: 4637323122002029191
+      Satoru Gojo_162: -1741856041982966405
+      Satoru Gojo_163: -6405033981883809327
+      Satoru Gojo_164: -269681873895634758
+      Satoru Gojo_165: -2241259110859073394
+      Satoru Gojo_166: -142542758939870756
+      Satoru Gojo_167: 2470378826929188506
+      Satoru Gojo_168: 6736500959652964091
+      Satoru Gojo_169: 1575830235175090053
+      Satoru Gojo_17: -6898045684933769825
+      Satoru Gojo_170: 2737925250921221600
+      Satoru Gojo_171: -8669491063883696849
+      Satoru Gojo_172: -2235847072408143537
+      Satoru Gojo_173: -7050249711291701270
+      Satoru Gojo_174: 6918552046242365184
+      Satoru Gojo_175: -2026096124829497200
+      Satoru Gojo_176: 9133928301073963119
+      Satoru Gojo_177: -3557592945179574035
+      Satoru Gojo_178: 1797633891908341430
+      Satoru Gojo_179: -7075717392762777642
+      Satoru Gojo_18: 2694687820810216369
+      Satoru Gojo_180: -7896594852805207447
+      Satoru Gojo_181: 642489979370552600
+      Satoru Gojo_182: -2221679983036475044
+      Satoru Gojo_183: 4777059080037613600
+      Satoru Gojo_184: -3515058992634323698
+      Satoru Gojo_185: -4418834060597767475
+      Satoru Gojo_19: -7916954359440183247
+      Satoru Gojo_191: -5619175824619296254
+      Satoru Gojo_196: -5687059072721753171
+      Satoru Gojo_197: -1909079919822914250
+      Satoru Gojo_198: -8167046213525451076
+      Satoru Gojo_199: -6895807828618810303
+      Satoru Gojo_2: -2538801363713679776
+      Satoru Gojo_20: 6439239484761839407
+      Satoru Gojo_200: -4771950957905382183
+      Satoru Gojo_201: 1645096325346891698
+      Satoru Gojo_202: -2560348001028106506
+      Satoru Gojo_203: 1868320883857130061
+      Satoru Gojo_204: -7358222897203420017
+      Satoru Gojo_205: 2419822819064872243
+      Satoru Gojo_206: 9009195783789993708
+      Satoru Gojo_207: 8413546502977305935
+      Satoru Gojo_208: 2675187791067494255
+      Satoru Gojo_209: -5294761880842951005
+      Satoru Gojo_210: -3192634070385539545
+      Satoru Gojo_211: 2295037602260941990
+      Satoru Gojo_212: 2779063243739802219
+      Satoru Gojo_213: -2287829216941112340
+      Satoru Gojo_214: 1209084257687894615
+      Satoru Gojo_215: -3660765839168699352
+      Satoru Gojo_216: 5998244223056214020
+      Satoru Gojo_217: 2091384319130377684
+      Satoru Gojo_218: -290983694808885465
+      Satoru Gojo_219: -6838129185182279888
+      Satoru Gojo_220: -2807287298188891246
+      Satoru Gojo_221: 6170066843700454036
+      Satoru Gojo_222: -5520533928140532191
+      Satoru Gojo_223: 488159173247857924
+      Satoru Gojo_224: -803468475326941973
+      Satoru Gojo_225: 6402198037164855645
+      Satoru Gojo_226: 6355182173764314055
+      Satoru Gojo_227: -2578531657769600377
+      Satoru Gojo_228: 7021021680432024631
+      Satoru Gojo_229: -1013132087443097367
+      Satoru Gojo_230: 2547621308000586203
+      Satoru Gojo_231: 6771392942141576241
+      Satoru Gojo_232: -2497964728238119199
+      Satoru Gojo_233: 6966795126117894464
+      Satoru Gojo_234: 8262153501143672674
+      Satoru Gojo_235: 8891590881643355271
+      Satoru Gojo_236: 5465898972581147601
+      Satoru Gojo_237: 766310200450426304
+      Satoru Gojo_238: -685674705598291913
+      Satoru Gojo_239: 8097020005545749024
+      Satoru Gojo_240: -445292152160447253
+      Satoru Gojo_241: -7644189127699216983
+      Satoru Gojo_242: -7223018527182933497
+      Satoru Gojo_243: -957916488484105568
+      Satoru Gojo_244: -3419444270019013511
+      Satoru Gojo_245: 3829129451001244183
+      Satoru Gojo_246: 8353035121261169032
+      Satoru Gojo_247: -5593499295054383793
+      Satoru Gojo_248: 4477140617548467238
+      Satoru Gojo_249: -6637841133261068478
+      Satoru Gojo_25: 2552625522070272073
+      Satoru Gojo_250: -4466957833263175502
+      Satoru Gojo_251: -5754440290391893318
+      Satoru Gojo_252: 3491789135382440781
+      Satoru Gojo_253: 4129137938608817294
+      Satoru Gojo_254: 7816493272148357197
+      Satoru Gojo_255: -5904583299614994470
+      Satoru Gojo_256: -7761676607064205030
+      Satoru Gojo_257: 3817608901734189934
+      Satoru Gojo_258: -4070072406056470026
+      Satoru Gojo_259: -2194442728040051476
+      Satoru Gojo_26: -1512236712349253735
+      Satoru Gojo_260: -3584038126333432135
+      Satoru Gojo_261: 573418336567819651
+      Satoru Gojo_262: 7108737620392607890
+      Satoru Gojo_263: 5678414708696995697
+      Satoru Gojo_264: -345962141709914306
+      Satoru Gojo_265: 5729989935092761262
+      Satoru Gojo_266: 2889365197269291160
+      Satoru Gojo_267: 5007623218943162562
+      Satoru Gojo_268: -5245110227962885085
+      Satoru Gojo_269: 3411113985353757806
+      Satoru Gojo_27: -7817057524838936103
+      Satoru Gojo_270: -4999318740627072680
+      Satoru Gojo_271: 889187167283617678
+      Satoru Gojo_272: -4659002387725827283
+      Satoru Gojo_273: 8151755813017745064
+      Satoru Gojo_274: 7499454153113006675
+      Satoru Gojo_275: -8043702307837180595
+      Satoru Gojo_276: -5736936167941234119
+      Satoru Gojo_277: -5013133242423388862
+      Satoru Gojo_28: -2194859421565161701
+      Satoru Gojo_281: -6935862873886053201
+      Satoru Gojo_29: 3668921425055615234
+      Satoru Gojo_3: -1361864760393733724
+      Satoru Gojo_30: -6261995333439152656
+      Satoru Gojo_31: -1256618825108449110
+      Satoru Gojo_32: -4095766498130138443
+      Satoru Gojo_33: -4468372577813879482
+      Satoru Gojo_34: 5524222252109156638
+      Satoru Gojo_35: -1049949534721242598
+      Satoru Gojo_36: -6238513392480591641
+      Satoru Gojo_37: 8024340271639441061
+      Satoru Gojo_38: -1077266009655030968
+      Satoru Gojo_39: 7079814782628744990
+      Satoru Gojo_4: 3943555532667633648
+      Satoru Gojo_41: -4686818490583200220
+      Satoru Gojo_42: 8034360402858188271
+      Satoru Gojo_43: -3857983852531437803
+      Satoru Gojo_44: -2311328749405306458
+      Satoru Gojo_45: 8874434585687704811
+      Satoru Gojo_46: -8130615069383335429
+      Satoru Gojo_47: 9190745156935729513
+      Satoru Gojo_48: -291421158930275315
+      Satoru Gojo_49: 6244357566560024501
+      Satoru Gojo_50: 4867592185770916866
+      Satoru Gojo_51: 8825392716300104615
+      Satoru Gojo_52: 4736840858581287338
+      Satoru Gojo_53: -364814902058191313
+      Satoru Gojo_54: 4726716877715856445
+      Satoru Gojo_55: -8683498033820635214
+      Satoru Gojo_60: 6518573842966532869
+      Satoru Gojo_61: -4535244668462321541
+      Satoru Gojo_62: -6588698636669673546
+      Satoru Gojo_63: -5927239297234792713
+      Satoru Gojo_64: 3873709214659134156
+      Satoru Gojo_65: -4772632993570858141
+      Satoru Gojo_66: -6282137105971160984
+      Satoru Gojo_67: -4487661740809893845
+      Satoru Gojo_68: -7000461258585489340
+      Satoru Gojo_75: 1610291770444329472
+      Satoru Gojo_76: -7604605306877983511
+      Satoru Gojo_77: -4077630799793544202
+      Satoru Gojo_78: 8202195061447977248
+      Satoru Gojo_79: -3033537251212908919
+      Satoru Gojo_80: -2025069663692992543
+      Satoru Gojo_81: -7355249101410286559
+      Satoru Gojo_82: -6252157520633976880
+      Satoru Gojo_83: 3332501172616057122
+      Satoru Gojo_84: -5441634911290678063
+      Satoru Gojo_85: -1477626471582447396
+      Satoru Gojo_89: -4795125766584228741
+      Satoru Gojo_96: 3420234986934812089
+      a_1: 3825861399788989908
+      a_2: -8603036361960177760
+      a_3: 7629829657583016611
+      a_4: -3404170209841136738
+      a_5: 446395559267494383
+      a_6: 3258382065914133979
+      b_1: 7150513957805845124
+      b_2: 4060716034872314278
+      b_3: 7010617295858871687
+      b_4: -7022347622328911157
+      b_5: -6092324217542954097
+      blue_1: -6033482733492275956
+      blue_2: 8674648428199450678
+      blue_3: 4202495853457749950
+      blue_4: 6937092836372435179
+      blue_5: 1155039315800093699
+      c_1: -522189048502604994
+      c_2: -451733777771169610
+      c_3: 1002228481331011341
+      c_4: 1952636631371300021
+      c_5: -164160736580210835
+      fall_1: -774072005630281066
+      fall_2: -8577901437313109967
+      gojo_portrait: 3065939836703873171
+      hit_1: 8625986952344634916
+      hit_2: -5707536419269873303
+      hit_3: -4268248223775630964
+      hit_4: 4547357676646344079
+      hit_5: 7825115972416836923
+      hit_6: 5425343114762296700
+      idle_1: -1450431984120156259
+      idle_2: -8942454810451656828
+      idle_3: -3749811122050197752
+      idle_4: -3544307852046989796
+      intro_1: -2316982584445313852
+      intro_2: 3600396765635444535
+      intro_3: 4633532945379056225
+      intro_4: 3085362314121370259
+      intro_5: -6313927188222163151
+      jump_1: 7917345750403497283
+      jump_2: -4597479900388618508
+      recovery_1: -6993888808509359768
+      recovery_2: -8144342863254279456
+      recovery_3: -8449067013373981682
+      red_1: -4784761205383186501
+      red_2: 4914718346640554483
+      red_3: -1328359961918049712
+      red_4: 2338224007013324454
+      red_5: -8446130738950423116
+      run: 902823990916112079
+      ult_1: 1959196381802080704
+      ult_2: 4529814537623380058
+      ult_3: -7191110594795887451
+      win_1: 2765635627882256883
+      win_2: 4382765943163305382
+      win_3: -5713526359145238104
+      win_4: -1372082767589834011
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
