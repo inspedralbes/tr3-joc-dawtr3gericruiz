@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4338704282189839430}
   - component: {fileID: 6968359893715766672}
   - component: {fileID: 6398990564154341273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: red_projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,5 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3fb9bd8f71bdc639ccde23c59ac95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
-  tiempoDeVida: 3
+  velocidad: 20
+  tiempoDeVida: 2
+  datosAtaque: {fileID: 0}

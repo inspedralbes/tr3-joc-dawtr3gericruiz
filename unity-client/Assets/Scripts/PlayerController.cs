@@ -285,12 +285,26 @@ public class PlayerController : MonoBehaviour
     {
         if (proyectilPrefab != null && puntoDeDisparo != null)
         {
-            Instantiate(proyectilPrefab, puntoDeDisparo.position, puntoDeDisparo.rotation);
+            Quaternion rotacionProyectil = puntoDeDisparo.rotation;
+            if (transform.localScale.x < 0)
+            {
+                rotacionProyectil = Quaternion.Euler(0, 180, 0);
+            }
+            
+            Instantiate(proyectilPrefab, puntoDeDisparo.position, rotacionProyectil);
         }
     }
     
     public void FinalizarAtaque()
     {
         estaHaciendoAtaque = false;
+        if (enSuelo)
+        {
+            anim.Play("gojo_idle"); 
+        }
+        else
+        {
+            anim.Play("gojo_fall"); 
+        }
     }
 }
