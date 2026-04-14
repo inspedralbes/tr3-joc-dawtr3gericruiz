@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movimiento y Salto")]
-    public float velocidadCorrer = 8f;
-    public float fuerzaSalto = 25f;
+    public float velocidadCorrer = 16f;
+    public float fuerzaSalto = 22f;
     public int saltosMaximos = 2;
     private int saltosRestantes;
     private float inputX;
@@ -26,11 +26,16 @@ public class PlayerController : MonoBehaviour
 
     private bool estaCargandoSmash = false;
     private bool estaHaciendoAtaque = false;
+    private bool estaHaciendoRecovery = false;
 
     [Header("Combate General")]
     public Hitbox hitboxAtaque;
     public AttackData[] arsenalDeAtaques;
     private float multiplicadorCalculado = 1f;
+
+    [Header("Proyectil (Ataque a Distancia)")]
+    public GameObject proyectilPrefab; 
+    public Transform puntoDeDisparo;
 
     [Header("Combo Jab (J)")]
     public float comboWindowTime = 0.6f; 
@@ -41,6 +46,12 @@ public class PlayerController : MonoBehaviour
     public float tiempoMaximoCarga = 2f;
     public float multiplicadorMaximo = 2f;
     private float tiempoCargaActual = 0f;
+
+    [Header("Recovery (Salto + L)")]
+    public float velocidadDashRecovery = 20f;
+    public float duracionDashRecovery = 0.2f;
+    private float timerDashRecovery = 0f;
+    private bool yaUsoRecovery = false;
 
     void Start()
     {
@@ -59,6 +70,14 @@ public class PlayerController : MonoBehaviour
         if (enSuelo)
         {
             saltosRestantes = saltosMaximos;
+            yaUsoRecovery = false;
+
+            if (rb.linearVelocity.y <= 0.1f) 
+            {
+                estaHaciendoRecovery = false;
+                anim.SetBool("isRecovering", false);
+            }
+
             if (esCaidaRapida)
             {
                 esCaidaRapida = false;
@@ -74,9 +93,26 @@ public class PlayerController : MonoBehaviour
         {
             HandleJabComboState();
         }
+        else if (estaHaciendoRecovery)
+        {
+            inputX = Input.GetAxisRaw("Horizontal");
+            saltosRestantes = 0;
+            if (timerDashRecovery > 0)
+            {
+                timerDashRecovery -= Time.deltaTime;
+            }
+        }
         else
         {
             ManejarEstadoLibre();
+        }
+
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && hitboxAtaque != null && hitboxAtaque.gameObject.activeSelf)
+        {
+            DesactivarHitbox();
+            estaHaciendoAtaque = false;
+            estaHaciendoRecovery = false;
+            anim.SetBool("isRecovering", false);
         }
     }
 
@@ -115,6 +151,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (currentComboTimer >= comboWindowTime)
             {
+                estaHaciendoAtaque = false;
                 comboStateJab = 0;
             }
         }
@@ -130,7 +167,11 @@ public class PlayerController : MonoBehaviour
 
         ManejarMovimientoVertical();
 
-        if (Input.GetKeyDown(KeyCode.J) && enSuelo)
+        if (Input.GetButton("Jump") && Input.GetKeyDown(KeyCode.L) && !yaUsoRecovery)
+        {
+            EjecutarRecovery();
+        }
+        else if (Input.GetKeyDown(KeyCode.J) && enSuelo)
         {
             multiplicadorCalculado = 1f;
             estaHaciendoAtaque = true;
@@ -142,6 +183,15 @@ public class PlayerController : MonoBehaviour
             estaCargandoSmash = true;
             tiempoCargaActual = 0f;
             anim.SetBool("CargandoSmash", true);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.L)) 
+        {
+            if (proyectilPrefab != null && puntoDeDisparo != null)
+            {
+                estaHaciendoAtaque = true;
+                anim.SetTrigger("LanzarProyectil");
+            }
         }
     }
 
@@ -171,9 +221,33 @@ public class PlayerController : MonoBehaviour
         if (esCaidaRapida) { esCaidaRapida = false; rb.gravityScale = gravedadBase; }
     }
 
+    void EjecutarRecovery()
+    {
+        yaUsoRecovery = true;
+        estaHaciendoRecovery = true;
+        
+        timerDashRecovery = duracionDashRecovery;
+        anim.SetBool("isRecovering", true);
+        anim.SetTrigger("HacerRecovery");
+    }
+
+    public void TerminarRecovery()
+    {
+        estaHaciendoRecovery = false;
+        anim.SetBool("isRecovering", false);
+        DesactivarHitbox();
+    }
+
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(inputX * velocidadCorrer, rb.linearVelocity.y);
+        if (estaHaciendoRecovery && timerDashRecovery > 0)
+        {
+            rb.linearVelocity = new Vector2(inputX * velocidadCorrer, velocidadDashRecovery);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(inputX * velocidadCorrer, rb.linearVelocity.y);
+        }
     }
 
     public void ActivarHitboxJab(int indiceArsenal)
@@ -185,9 +259,12 @@ public class PlayerController : MonoBehaviour
 
     public void DesactivarHitbox()
     {
-        hitboxAtaque.gameObject.SetActive(false);
-        hitboxAtaque.ataqueActual = null;
-        hitboxAtaque.multiplicadorActual = 1f;
+        if (hitboxAtaque != null)
+        {
+            hitboxAtaque.gameObject.SetActive(false);
+            hitboxAtaque.ataqueActual = null;
+            hitboxAtaque.multiplicadorActual = 1f;
+        }
     }
 
     public void EntrarEnComboGap()
@@ -201,5 +278,19 @@ public class PlayerController : MonoBehaviour
         estaHaciendoAtaque = false;
         comboStateJab = 0;
         anim.SetBool("HacerComboJab", false);
+        DesactivarHitbox();
+    }
+
+    public void Disparar()
+    {
+        if (proyectilPrefab != null && puntoDeDisparo != null)
+        {
+            Instantiate(proyectilPrefab, puntoDeDisparo.position, puntoDeDisparo.rotation);
+        }
+    }
+    
+    public void FinalizarAtaque()
+    {
+        estaHaciendoAtaque = false;
     }
 }

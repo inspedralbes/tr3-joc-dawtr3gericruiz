@@ -1752,9 +1752,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 437
+        y: 438
         width: 30
-        height: 63
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1774,9 +1774,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 44
-        y: 437
-        width: 28
-        height: 63
+        y: 438
+        width: 30
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1796,9 +1796,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 79
-        y: 437
+        y: 438
         width: 30
-        height: 63
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1818,9 +1818,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 118
-        y: 437
+        y: 438
         width: 45
-        height: 60
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1840,9 +1840,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 167
-        y: 437
+        y: 438
         width: 48
-        height: 56
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1858,123 +1858,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_5
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 353
-        width: 100
-        height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 304ffd75326870010800000000000000
-      internalID: 1155039315800093699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_1
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 353
-        width: 28
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c057dbfab63c44ca0800000000000000
-      internalID: -6033482733492275956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_2
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 353
-        width: 35
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6389a3209ca826870800000000000000
-      internalID: 8674648428199450678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_3
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 353
-        width: 40
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb7b66386b3425a30800000000000000
-      internalID: 4202495853457749950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_4
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 353
-        width: 48
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: be0d2ed2e21854060800000000000000
-      internalID: 6937092836372435179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: recovery_1
       rect:
         serializedVersion: 2
         x: 431
-        y: 34
+        y: 35
         width: 24
-        height: 60
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1994,9 +1884,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 460
-        y: 33
+        y: 34
         width: 29
-        height: 63
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2015,10 +1905,10 @@ TextureImporter:
       name: recovery_3
       rect:
         serializedVersion: 2
-        x: 493
-        y: 33
-        width: 41
-        height: 61
+        x: 494
+        y: 34
+        width: 39
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2042,7 +1932,7 @@ TextureImporter:
         width: 205
         height: 188
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2051,6 +1941,28 @@ TextureImporter:
       bones: []
       spriteID: eb3d0208a207d3bd9bd812d696e71b0d
       internalID: 875994248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_projectile
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 105
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633fc6acbea5a78cb970a69728a87a2a
+      internalID: -1248355264
       vertices: []
       indices: 
       edges: []
@@ -2339,6 +2251,7 @@ TextureImporter:
       red_3: -1328359961918049712
       red_4: 2338224007013324454
       red_5: -8446130738950423116
+      red_projectile: -1248355264
       run: 902823990916112079
       ult_1: 1959196381802080704
       ult_2: 4529814537623380058
