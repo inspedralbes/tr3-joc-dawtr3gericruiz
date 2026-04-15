@@ -34,11 +34,11 @@ public class PlayerController : MonoBehaviour
     private float multiplicadorCalculado = 1f;
 
     [Header("Proyectil (Ataque a Distancia)")]
-    public GameObject proyectilPrefab; 
+    public GameObject proyectilPrefab;
     public Transform puntoDeDisparo;
 
     [Header("Combo Jab (J)")]
-    public float comboWindowTime = 0.6f; 
+    public float comboWindowTime = 0.6f;
     private float currentComboTimer = 0f;
     private int comboStateJab = 0;
 
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
             saltosRestantes = saltosMaximos;
             yaUsoRecovery = false;
 
-            if (rb.linearVelocity.y <= 0.1f) 
+            if (rb.linearVelocity.y <= 0.1f)
             {
                 estaHaciendoRecovery = false;
                 anim.SetBool("isRecovering", false);
@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
     private void ManejarEstadoCargaSmash()
     {
         inputX = 0;
-        
+
         if (Input.GetKey(KeyCode.K) && tiempoCargaActual < tiempoMaximoCarga)
         {
             tiempoCargaActual += Time.deltaTime;
@@ -138,12 +138,14 @@ public class PlayerController : MonoBehaviour
 
     private void HandleJabComboState()
     {
-        inputX = 0;
+        inputX = Input.GetAxisRaw("Horizontal");
+        if (inputX > 0) transform.localScale = new Vector3(1, 1, 1);
+        else if (inputX < 0) transform.localScale = new Vector3(-1, 1, 1);
 
         if (comboStateJab == 2)
         {
             currentComboTimer += Time.deltaTime;
-            
+
             if (Input.GetKeyDown(KeyCode.J) || Input.GetKey(KeyCode.J))
             {
                 anim.SetBool("HacerComboJab", true);
@@ -185,7 +187,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("CargandoSmash", true);
         }
 
-        else if (Input.GetKeyDown(KeyCode.L)) 
+        else if (Input.GetKeyDown(KeyCode.L))
         {
             if (proyectilPrefab != null && puntoDeDisparo != null)
             {
@@ -202,7 +204,7 @@ public class PlayerController : MonoBehaviour
             if (enSuelo) EjecutarSalto();
             else if (saltosRestantes > 1) { EjecutarSalto(); saltosRestantes--; }
         }
-        
+
         if (!enSuelo && rb.linearVelocity.y <= 0.1f && !esCaidaRapida)
         {
             if (Input.GetAxisRaw("Vertical") < 0)
@@ -225,7 +227,7 @@ public class PlayerController : MonoBehaviour
     {
         yaUsoRecovery = true;
         estaHaciendoRecovery = true;
-        
+
         timerDashRecovery = duracionDashRecovery;
         anim.SetBool("isRecovering", true);
         anim.SetTrigger("HacerRecovery");
@@ -290,21 +292,13 @@ public class PlayerController : MonoBehaviour
             {
                 rotacionProyectil = Quaternion.Euler(0, 180, 0);
             }
-            
+
             Instantiate(proyectilPrefab, puntoDeDisparo.position, rotacionProyectil);
         }
     }
-    
+
     public void FinalizarAtaque()
-    {
-        estaHaciendoAtaque = false;
-        if (enSuelo)
-        {
-            anim.Play("gojo_idle"); 
-        }
-        else
-        {
-            anim.Play("gojo_fall"); 
-        }
-    }
+{
+    estaHaciendoAtaque = false;
+}
 }
