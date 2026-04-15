@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
         enSuelo = Physics2D.OverlapCircle(groundCheck.position, radioSuelo, capaSuelo);
         anim.SetBool("isGrounded", enSuelo);
         anim.SetFloat("yVelocity", rb.linearVelocity.y);
+        anim.SetBool("isAttacking", estaHaciendoAtaque || estaCargandoSmash);
 
         if (enSuelo)
         {
@@ -180,7 +181,7 @@ public class PlayerController : MonoBehaviour
         {
             EjecutarRecovery();
         }
-        else if (Input.GetKeyDown(KeyCode.J) && enSuelo)
+        else if (Input.GetKeyDown(KeyCode.J))
         {
             multiplicadorCalculado = 1f;
             estaHaciendoAtaque = true;
