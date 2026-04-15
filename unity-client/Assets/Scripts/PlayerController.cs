@@ -83,6 +83,13 @@ public class PlayerController : MonoBehaviour
                 esCaidaRapida = false;
                 rb.gravityScale = gravedadBase;
             }
+            else
+        {
+            if (rb.linearVelocity.y < 0f)
+            {
+                anim.SetBool("isRecovering", false);
+            }
+        }
         }
 
         if (estaCargandoSmash)
@@ -236,7 +243,6 @@ public class PlayerController : MonoBehaviour
     public void TerminarRecovery()
     {
         estaHaciendoRecovery = false;
-        anim.SetBool("isRecovering", false);
         DesactivarHitbox();
     }
 

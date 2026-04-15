@@ -1718,6 +1718,182 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: special_4
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 798
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8373d20d1af563b8b740ad08984d9e4
+      internalID: -16664962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 798
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbaff6764eb5fc19981bb664e059f98
+      internalID: 10193988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 798
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e922f4cc4d2bc1e69f31583f1b57a51
+      internalID: 1849565608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 798
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3258f404b216658f8be58494deb88166
+      internalID: 398066969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuga_projectile
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 808
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c724a5ac11651168636ea14519308b
+      internalID: 598667536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1287
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637ca320e843e9697b221c8a036302b1
+      internalID: 1418964139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1287
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51147ffc1262aa8a99f7dd904e956531
+      internalID: -1020028111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1287
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09996c983686200a79a4b7d209ef39b5
+      internalID: 1266797840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1750,6 +1926,7 @@ TextureImporter:
       c_4: -343848244
       c_5: 1979411079
       fall_1: 1980561144
+      fuga_projectile: 598667536
       idle_1: 1099939299
       idle_2: -2141512466
       idle_3: -2057304729
@@ -1763,6 +1940,9 @@ TextureImporter:
       intro_7: 1410309647
       intro_8: -671717651
       jump_1: -1821643379
+      recovery_1: 1418964139
+      recovery_2: -1020028111
+      recovery_3: 1266797840
       run_1: 428379070
       run_10: -157422913
       run_2: 1582184082
@@ -1773,6 +1953,10 @@ TextureImporter:
       run_7: -78090725
       run_8: -2141179119
       run_9: -773288159
+      special_1: 398066969
+      special_2: 1849565608
+      special_3: 10193988
+      special_4: -16664962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

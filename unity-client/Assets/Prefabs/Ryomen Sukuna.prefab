@@ -36,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 4198880692499519603}
   - {fileID: 9013722310666407678}
+  - {fileID: 7386898105686572162}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8279586145325265591
@@ -193,8 +194,11 @@ MonoBehaviour:
   arsenalDeAtaques:
   - {fileID: 11400000, guid: bd338b444749f2aa587e5e1cbca5b5e1, type: 2}
   - {fileID: 11400000, guid: d6a3b8b1f2a56254eaeaf9f3dc37d5ab, type: 2}
-  proyectilPrefab: {fileID: 0}
-  puntoDeDisparo: {fileID: 0}
+  - {fileID: 11400000, guid: f12c33d964e2efc5d81c6c38089e3770, type: 2}
+  - {fileID: 11400000, guid: 44d51db03b2265db68e70744e0aba00a, type: 2}
+  - {fileID: 11400000, guid: 964b4cb351f0eee78b8c6a350f464b37, type: 2}
+  proyectilPrefab: {fileID: 4634601988791860050, guid: 2edb59e9b24d79f19bd4dbc2c7bcd472, type: 3}
+  puntoDeDisparo: {fileID: 7386898105686572162}
   comboWindowTime: 0.6
   tiempoMaximoCarga: 2
   multiplicadorMaximo: 2
@@ -222,6 +226,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &5508349705101385569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7386898105686572162}
+  m_Layer: 0
+  m_Name: PuntoDeDisparo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7386898105686572162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508349705101385569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.67, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1500805511021863971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5928494723720192521
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9013722310666407678
 Transform:
   m_ObjectHideFlags: 0
