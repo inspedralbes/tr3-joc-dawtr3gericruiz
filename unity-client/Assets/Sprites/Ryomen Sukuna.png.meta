@@ -1894,6 +1894,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sukuna_portrait
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2812
+        width: 140
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a5c7efe4498af4f9a4d532f3570308
+      internalID: -2121967504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1957,6 +1979,7 @@ TextureImporter:
       special_2: 1849565608
       special_3: 10193988
       special_4: -16664962
+      sukuna_portrait: -2121967504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

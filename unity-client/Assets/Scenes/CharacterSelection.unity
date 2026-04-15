@@ -288,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   todosLosPersonajes:
   - {fileID: 11400000, guid: ee4484d0953dd6131adb2eb224ec257c, type: 2}
+  - {fileID: 11400000, guid: d21b5bf976e3cf858b1758b1eec35479, type: 2}
 --- !u!114 &1777593639
 MonoBehaviour:
   m_ObjectHideFlags: 0
