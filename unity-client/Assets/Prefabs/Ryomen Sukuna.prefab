@@ -179,6 +179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f12c7eb5ea8151e4960e8398550232d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  miInterfaz: {fileID: 0}
+  vidasMaximas: 3
+  puntoDeRespawn: {fileID: 0}
+  miFotoDePerfil: {fileID: -2121967504, guid: e18a5a741f6fb904ea3bb2a09583af1e, type: 3}
   velocidadCorrer: 16
   fuerzaSalto: 22
   saltosMaximos: 2
@@ -204,6 +208,9 @@ MonoBehaviour:
   multiplicadorMaximo: 2
   velocidadDashRecovery: 20
   duracionDashRecovery: 0.2
+  "porcentajeDa\xF1o": 0
+  peso: 100
+  estaEnHitstun: 0
 --- !u!95 &2209621526586004969
 Animator:
   serializedVersion: 7

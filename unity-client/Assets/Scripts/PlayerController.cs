@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Estado del Jugador (Vidas y UI)")]
+    public PlayerUI miInterfaz;
+    public int vidasMaximas = 3;
+    private int vidasActuales;
+    public Transform puntoDeRespawn;
+    public Sprite miFotoDePerfil;
+
     [Header("Movimiento y Salto")]
     public float velocidadCorrer = 16f;
     public float fuerzaSalto = 22f;
@@ -53,16 +60,27 @@ public class PlayerController : MonoBehaviour
     private float timerDashRecovery = 0f;
     private bool yaUsoRecovery = false;
 
+    [Header("Sistema de Daño (Smash)")]
+    public float porcentajeDaño = 0f;
+    public float peso = 100f;
+    public bool estaEnHitstun = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         gravedadBase = rb.gravityScale;
         saltosRestantes = saltosMaximos;
+        vidasActuales = vidasMaximas;
+        if (miInterfaz != null)
+        {
+            miInterfaz.ActualizarVidas(vidasActuales);
+        }
     }
 
     void Update()
     {
+        if (estaEnHitstun) return;
         enSuelo = Physics2D.OverlapCircle(groundCheck.position, radioSuelo, capaSuelo);
         anim.SetBool("isGrounded", enSuelo);
         anim.SetFloat("yVelocity", rb.linearVelocity.y);
@@ -122,6 +140,58 @@ public class PlayerController : MonoBehaviour
             estaHaciendoRecovery = false;
             anim.SetBool("isRecovering", false);
         }
+    }
+
+    public void RecibirDaño(float dañoRecibido, Vector2 direccion, float empujeBase, float escalado)
+    {
+        porcentajeDaño += dañoRecibido;
+        if (miInterfaz != null) miInterfaz.ActualizarPorcentaje(porcentajeDaño);
+
+        float knockbackTotal = empujeBase + ((porcentajeDaño * dañoRecibido * escalado) / (peso * 0.1f));
+
+        rb.linearVelocity = Vector2.zero;
+        
+        rb.AddForce(direccion * knockbackTotal, ForceMode2D.Impulse);
+
+        float tiempoAturdimiento = knockbackTotal * 0.025f;
+        
+        StartCoroutine(RutinaHitstun(tiempoAturdimiento));
+    }
+
+    public void PerderVida()
+    {
+        vidasActuales--;
+        if (miInterfaz != null) miInterfaz.ActualizarVidas(vidasActuales);
+
+        if (vidasActuales > 0)
+        {
+            transform.position = puntoDeRespawn.position;
+            rb.linearVelocity = Vector2.zero;
+            porcentajeDaño = 0f;
+            
+            if (miInterfaz != null) miInterfaz.ActualizarPorcentaje(porcentajeDaño);
+        }
+        else
+        {
+            // GAME OVER para este personaje
+            Debug.Log("¡El jugador ha sigut derrotadt!");
+            gameObject.SetActive(false);
+        }
+    }
+
+    private System.Collections.IEnumerator RutinaHitstun(float tiempo)
+    {
+        estaEnHitstun = true;
+        DesactivarHitbox();
+        estaHaciendoAtaque = false;
+        estaCargandoSmash = false;
+        estaHaciendoRecovery = false;
+        anim.SetBool("isRecovering", false);
+        anim.SetBool("CargandoSmash", false);
+
+        yield return new WaitForSeconds(tiempo);
+        
+        estaEnHitstun = false;
     }
 
     private void ManejarEstadoCargaSmash()
@@ -249,6 +319,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (estaEnHitstun) return;
         if (estaHaciendoRecovery && timerDashRecovery > 0)
         {
             rb.linearVelocity = new Vector2(inputX * velocidadCorrer, velocidadDashRecovery);
