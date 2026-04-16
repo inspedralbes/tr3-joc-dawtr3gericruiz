@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private PlayerController p1Controller;
+    private PlayerController p2Controller;
+    private bool partidaTerminada = false;
+
     [Header("UI de Partida")]
     public MatchUI uiPartida;
 
@@ -18,7 +22,7 @@ public class GameManager : MonoBehaviour
         // ---------------------------------------------------------
         // MODO PRUEBA RÁPIDA:
         // Descomenta la siguiente línea para probar el juego directamente al darle a Play.
-        // Asumimos que 0 = Gojo y 1 = Sukuna.
+        // 0 = Gojo y 1 = Sukuna.
         // ---------------------------------------------------------
 
         IniciarPelea(0, 1);
@@ -57,6 +61,8 @@ public class GameManager : MonoBehaviour
             GameObject jugador1 = Instantiate(prefabP1, puntosDeSpawn[0].position, Quaternion.identity);
             ConfigurarJugador(jugador1, 0);
             jugador1.GetComponent<PlayerController>().IniciarSecuenciaIntro(3f);
+            
+            p1Controller = jugador1.GetComponent<PlayerController>(); 
         }
 
         GameObject prefabP2 = ObtenerPrefabPorID(eleccionP2);
@@ -66,6 +72,8 @@ public class GameManager : MonoBehaviour
             ConfigurarJugador(jugador2, 1);
             jugador2.transform.localScale = new Vector3(-1, 1, 1);
             jugador2.GetComponent<PlayerController>().IniciarSecuenciaIntro(3f);
+            
+            p2Controller = jugador2.GetComponent<PlayerController>();
         }
         StartCoroutine(RutinaCuentaAtras());
     }
@@ -99,9 +107,34 @@ public class GameManager : MonoBehaviour
         uiPartida.ActualizarTexto("1");
         yield return new WaitForSeconds(1f);
 
-        uiPartida.ActualizarTexto("¡JA!");
+        uiPartida.ActualizarTexto("JA!");
         yield return new WaitForSeconds(1f);
 
         uiPartida.ActualizarTexto("");
+    }
+    public void ComprobarVictoria()
+    {
+        if (partidaTerminada) return;
+
+        if (p1Controller != null && p1Controller.vidasActuales <= 0)
+        {
+            TerminarPartida(2); 
+        }
+        else if (p2Controller != null && p2Controller.vidasActuales <= 0)
+        {
+            TerminarPartida(1); 
+        }
+    }
+
+    private void TerminarPartida(int ganador)
+    {
+        partidaTerminada = true;
+        
+        if (uiPartida != null)
+        {
+            uiPartida.MostrarPantallaVictoria(ganador);
+        }
+
+        Time.timeScale = 0f;
     }
 }

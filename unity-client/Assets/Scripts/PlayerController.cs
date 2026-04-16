@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [Header("Estado del Jugador (Vidas y UI)")]
     public PlayerUI miInterfaz;
     public int vidasMaximas = 3;
-    private int vidasActuales;
+    public int vidasActuales;
     public Transform puntoDeRespawn;
     public Sprite miFotoDePerfil;
 
@@ -170,6 +170,7 @@ public class PlayerController : MonoBehaviour
     public void PerderVida()
     {
         vidasActuales--;
+        FindObjectOfType<GameManager>().ComprobarVictoria();
         if (miInterfaz != null) miInterfaz.ActualizarVidas(vidasActuales);
 
         if (vidasActuales > 0)
