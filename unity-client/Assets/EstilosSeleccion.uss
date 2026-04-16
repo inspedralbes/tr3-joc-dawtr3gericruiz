@@ -1,14 +1,18 @@
 .character-button {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     margin: 5px;
     border-width: 3px;
     border-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     transition-property: scale, border-color; 
     transition-duration: 0.2s; 
-    transition-timing-function: ease-out-bounce;
+    transition-timing-function: ease-out;
 }
 
 .character-button:hover {
