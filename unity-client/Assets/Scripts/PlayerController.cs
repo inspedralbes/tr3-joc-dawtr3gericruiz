@@ -370,8 +370,12 @@ public class PlayerController : MonoBehaviour
             {
                 rotacionProyectil = Quaternion.Euler(0, 180, 0);
             }
-
-            Instantiate(proyectilPrefab, puntoDeDisparo.position, rotacionProyectil);
+            GameObject proy = Instantiate(proyectilPrefab, puntoDeDisparo.position, rotacionProyectil);
+            Proyectil scriptProy = proy.GetComponent<Proyectil>();
+            if (scriptProy != null)
+            {
+                scriptProy.jugadorQueDispara = this;
+            }
         }
     }
 

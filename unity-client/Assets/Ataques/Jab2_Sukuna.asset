@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreAtaque: Jab2
   "da\xF1o": 7
-  fuerzaEmpuje: 10
+  fuerzaEmpujeBase: 13
+  escaladoEmpuje: 0.1

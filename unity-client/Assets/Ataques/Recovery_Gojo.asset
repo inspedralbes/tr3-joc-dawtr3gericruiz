@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreAtaque: Recovery
   "da\xF1o": 4
-  fuerzaEmpuje: 10
+  fuerzaEmpujeBase: 10
+  escaladoEmpuje: 0.1
