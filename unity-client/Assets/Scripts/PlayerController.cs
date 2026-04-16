@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Estado Inicial")]
+    public bool bloqueadoPorIntro = false;
+
     [Header("Estado del Jugador (Vidas y UI)")]
     public PlayerUI miInterfaz;
     public int vidasMaximas = 3;
@@ -80,6 +83,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (bloqueadoPorIntro)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            return;
+        }
+
         if (estaEnHitstun) return;
         enSuelo = Physics2D.OverlapCircle(groundCheck.position, radioSuelo, capaSuelo);
         anim.SetBool("isGrounded", enSuelo);
@@ -103,12 +112,12 @@ public class PlayerController : MonoBehaviour
                 rb.gravityScale = gravedadBase;
             }
             else
-        {
-            if (rb.linearVelocity.y < 0f)
             {
-                anim.SetBool("isRecovering", false);
+                if (rb.linearVelocity.y < 0f)
+                {
+                    anim.SetBool("isRecovering", false);
+                }
             }
-        }
         }
 
         if (estaCargandoSmash)
@@ -150,11 +159,11 @@ public class PlayerController : MonoBehaviour
         float knockbackTotal = empujeBase + ((porcentajeDaño * dañoRecibido * escalado) / (peso * 0.1f));
 
         rb.linearVelocity = Vector2.zero;
-        
+
         rb.AddForce(direccion * knockbackTotal, ForceMode2D.Impulse);
 
         float tiempoAturdimiento = knockbackTotal * 0.025f;
-        
+
         StartCoroutine(RutinaHitstun(tiempoAturdimiento));
     }
 
@@ -195,7 +204,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("CargandoSmash", false);
 
         yield return new WaitForSeconds(tiempo);
-        
+
         estaEnHitstun = false;
     }
 
@@ -324,6 +333,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (bloqueadoPorIntro) return;
         if (estaEnHitstun) return;
         if (estaHaciendoRecovery && timerDashRecovery > 0)
         {
@@ -385,7 +395,25 @@ public class PlayerController : MonoBehaviour
     }
 
     public void FinalizarAtaque()
+    {
+        estaHaciendoAtaque = false;
+    }
+
+    public void IniciarSecuenciaIntro(float tiempo)
+    {
+        StartCoroutine(RutinaIntro(tiempo));
+    }
+
+    private System.Collections.IEnumerator RutinaIntro(float tiempo)
 {
-    estaHaciendoAtaque = false;
+    bloqueadoPorIntro = true;
+    yield return null; 
+    if (anim != null) 
+    {
+        anim.SetTrigger("Intro");
+    }
+
+    yield return new WaitForSeconds(tiempo);
+    bloqueadoPorIntro = false;
 }
 }

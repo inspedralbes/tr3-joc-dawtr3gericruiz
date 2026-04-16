@@ -47,23 +47,24 @@ public class GameManager : MonoBehaviour
     }
 
     public void IniciarPelea(int eleccionP1, int eleccionP2)
+{
+    GameObject prefabP1 = ObtenerPrefabPorID(eleccionP1);
+    if (prefabP1 != null && puntosDeSpawn.Length > 0)
     {
-        GameObject prefabP1 = ObtenerPrefabPorID(eleccionP1);
-        if (prefabP1 != null && puntosDeSpawn.Length > 0)
-        {
-            GameObject jugador1 = Instantiate(prefabP1, puntosDeSpawn[0].position, Quaternion.identity);
-            ConfigurarJugador(jugador1, 0);
-        }
-
-        GameObject prefabP2 = ObtenerPrefabPorID(eleccionP2);
-        if (prefabP2 != null && puntosDeSpawn.Length > 1)
-        {
-            GameObject jugador2 = Instantiate(prefabP2, puntosDeSpawn[1].position, Quaternion.identity);
-            ConfigurarJugador(jugador2, 1);
-            
-            jugador2.transform.localScale = new Vector3(-1, 1, 1);
-        }
+        GameObject jugador1 = Instantiate(prefabP1, puntosDeSpawn[0].position, Quaternion.identity);
+        ConfigurarJugador(jugador1, 0);
+        jugador1.GetComponent<PlayerController>().IniciarSecuenciaIntro(3f);
     }
+
+    GameObject prefabP2 = ObtenerPrefabPorID(eleccionP2);
+    if (prefabP2 != null && puntosDeSpawn.Length > 1)
+    {
+        GameObject jugador2 = Instantiate(prefabP2, puntosDeSpawn[1].position, Quaternion.identity);
+        ConfigurarJugador(jugador2, 1);
+        jugador2.transform.localScale = new Vector3(-1, 1, 1);
+        jugador2.GetComponent<PlayerController>().IniciarSecuenciaIntro(3f);
+    }
+}
 
     private GameObject ObtenerPrefabPorID(int idPersonaje)
     {
