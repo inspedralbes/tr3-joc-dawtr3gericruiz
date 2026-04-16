@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         // Asumimos que 0 = Gojo y 1 = Sukuna.
         // ---------------------------------------------------------
         
-        //IniciarPelea(0, 1); 
+        IniciarPelea(0, 1); 
     }
 
     private void ConfigurarJugador(GameObject jugadorInstanciado, int indiceJugador)
