@@ -168,13 +168,18 @@ public class PlayerController : MonoBehaviour
             transform.position = puntoDeRespawn.position;
             rb.linearVelocity = Vector2.zero;
             porcentajeDaño = 0f;
-            
             if (miInterfaz != null) miInterfaz.ActualizarPorcentaje(porcentajeDaño);
+            estaEnHitstun = false;
+            estaHaciendoAtaque = false;
+            estaCargandoSmash = false;
+            estaHaciendoRecovery = false;
+            anim.SetBool("isRecovering", false);
+            anim.SetBool("CargandoSmash", false);
+            DesactivarHitbox();
         }
         else
         {
-            // GAME OVER para este personaje
-            Debug.Log("¡El jugador ha sigut derrotadt!");
+            Debug.Log("¡El jugador ha sigut derrotat!");
             gameObject.SetActive(false);
         }
     }
