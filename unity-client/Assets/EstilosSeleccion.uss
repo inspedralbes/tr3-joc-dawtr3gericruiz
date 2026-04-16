@@ -1,27 +1,18 @@
 .character-button {
-    width: 300px;
-    height: 300px;
-    margin: 5px;
-    border-width: 3px;
-    border-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition-property: scale, border-color; 
-    transition-duration: 0.2s; 
-    transition-timing-function: ease-out;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    background-color: rgb(100, 100, 100);
 }
 
 .character-button:hover {
-    scale: 1.15;
-    border-color: rgb(255, 215, 0);
-    border-width: 5px;
+    scale: 1.1;
 }
 
-.character-button:active {
-    scale: 0.95;
-    border-color: rgb(255, 255, 255);
+.map-button {
+    width: 200px;
+    height: 120px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgb(100, 100, 100);
 }

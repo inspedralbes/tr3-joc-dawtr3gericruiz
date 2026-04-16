@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,17 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (MatchManager.Instance != null && MatchManager.Instance.mapaElegido != null)
+        {
+            string nombreEscenaMapa = MatchManager.Instance.mapaElegido.sceneName;
+            
+            if (!string.IsNullOrEmpty(nombreEscenaMapa) && !SceneManager.GetSceneByName(nombreEscenaMapa).isLoaded)
+            {
+                SceneManager.LoadScene(nombreEscenaMapa, LoadSceneMode.Additive);
+            }
+        }
+        // ----------------------------------------
+
         // ---------------------------------------------------------
         // MODO PRUEBA RÁPIDA:
         // Descomenta la siguiente línea para probar el juego directamente al darle a Play.
@@ -112,6 +124,7 @@ public class GameManager : MonoBehaviour
 
         uiPartida.ActualizarTexto("");
     }
+    
     public void ComprobarVictoria()
     {
         if (partidaTerminada) return;

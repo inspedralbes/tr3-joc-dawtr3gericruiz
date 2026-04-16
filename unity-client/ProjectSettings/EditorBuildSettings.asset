@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ciutat (Nit).unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/CharacterSelection.unity
+    guid: 1aff8db52f646f6a0af0ae73ab5473c4
+  - enabled: 1
+    path: Assets/Scenes/MapSelection.unity
+    guid: b4f55a54de574a94a89c76ce9480a41a
+  - enabled: 1
+    path: "Assets/Scenes/Estaci\xF3 de Shibuya.unity"
+    guid: 23ee44e8c1afb55478e6faac45506f64
+  - enabled: 1
+    path: Assets/Scenes/Pisos Picats.unity
+    guid: 02626ebc63a1c544192f970d40cad3f4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -6,6 +6,7 @@ public class MatchManager : MonoBehaviour
 
     public CharacterData player1Choice;
     public CharacterData player2Choice;
+    public MapData mapaElegido;
 
     void Awake()
     {
