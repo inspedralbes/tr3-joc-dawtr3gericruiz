@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         // 0 = Gojo y 1 = Sukuna.
         // ---------------------------------------------------------
 
-        IniciarPelea(0, 1);
+        IniciarPelea(1, 1);
     }
 
     private void ConfigurarJugador(GameObject jugadorInstanciado, int indiceJugador)
@@ -72,9 +72,10 @@ public class GameManager : MonoBehaviour
         {
             GameObject jugador1 = Instantiate(prefabP1, puntosDeSpawn[0].position, Quaternion.identity);
             ConfigurarJugador(jugador1, 0);
-            jugador1.GetComponent<PlayerController>().IniciarSecuenciaIntro(3f);
             
             p1Controller = jugador1.GetComponent<PlayerController>(); 
+            p1Controller.esJugadorLocal = true; 
+            p1Controller.IniciarSecuenciaIntro(3f);
         }
 
         GameObject prefabP2 = ObtenerPrefabPorID(eleccionP2);
@@ -82,11 +83,17 @@ public class GameManager : MonoBehaviour
         {
             GameObject jugador2 = Instantiate(prefabP2, puntosDeSpawn[1].position, Quaternion.identity);
             ConfigurarJugador(jugador2, 1);
-            jugador2.transform.localScale = new Vector3(-1, 1, 1);
-            jugador2.GetComponent<PlayerController>().IniciarSecuenciaIntro(3f);
             
             p2Controller = jugador2.GetComponent<PlayerController>();
+            p2Controller.esJugadorLocal = false; 
+
+            if (NetworkManager.Instancia != null) {
+                NetworkManager.Instancia.rivalController = p2Controller;
+            }
+
+            p2Controller.IniciarSecuenciaIntro(3f);
         }
+        
         StartCoroutine(RutinaCuentaAtras());
     }
 
