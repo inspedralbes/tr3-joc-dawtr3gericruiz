@@ -1,4 +1,4 @@
-// Dependency Injection Container
+
 const MongoUserRepository = require('./repositories/MongoUserRepository');
 const MongoGameRepository = require('./repositories/MongoGameRepository');
 const MongoResultRepository = require('./repositories/MongoResultRepository');
@@ -12,17 +12,17 @@ const GameController = require('./controllers/GameController');
 const ResultController = require('./controllers/ResultController');
 
 function createContainer() {
-    // 1. Instantiate Repositories
+    
     const userRepository = new MongoUserRepository();
     const gameRepository = new MongoGameRepository();
     const resultRepository = new MongoResultRepository();
 
-    // 2. Instantiate Services
+    
     const userService = new UserService(userRepository);
     const gameService = new GameService(gameRepository, userRepository);
     const resultService = new ResultService(resultRepository, gameRepository);
 
-    // 3. Instantiate Controllers
+    
     const userController = new UserController(userService);
     const gameController = new GameController(gameService);
     const resultController = new ResultController(resultService);

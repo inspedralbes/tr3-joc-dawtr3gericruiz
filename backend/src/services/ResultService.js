@@ -14,7 +14,7 @@ class ResultService {
             throw new Error('Game already finished');
         }
 
-        // Get losers
+        
         const losers = game.players
             .filter(p => (p._id ? p._id.toString() : p.toString()) !== winnerId)
             .map(p => p._id || p);

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class MapSelectionUI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MapSelectionUI : MonoBehaviour
     private VisualElement contenedorMapas;
     private Label nombreMapaText;
     private VisualElement imagenMapa;
+    private Button btnSeleccionar;
 
     void OnEnable()
     {
@@ -20,8 +22,36 @@ public class MapSelectionUI : MonoBehaviour
         contenedorMapas = root.Q<VisualElement>("ContenedorMapas");
         nombreMapaText = root.Q<Label>("NombreMapaText");
         imagenMapa = root.Q<VisualElement>("ImagenMapa");
+        
+        btnSeleccionar = root.Q<Button>("BtnSeleccionar");
+        if (btnSeleccionar != null)
+        {
+            btnSeleccionar.clicked += OnSeleccionarClicked;
+        }
 
         GenerarListaMapas();
+    }
+
+    private void OnDisable()
+    {
+        if (btnSeleccionar != null)
+        {
+            btnSeleccionar.clicked -= OnSeleccionarClicked;
+        }
+    }
+
+    private void OnSeleccionarClicked()
+    {
+        if (MatchManager.Instance != null && MatchManager.Instance.mapaElegido != null)
+        {
+            MatchManager.Instance.sceneNameToLoad = MatchManager.Instance.mapaElegido.sceneName;
+            if (NetworkManager.Instancia != null)
+            {
+                string jsonMap = $"{{\"tipo\":\"map_selected\",\"mapName\":\"{MatchManager.Instance.mapaElegido.sceneName}\"}}";
+                NetworkManager.Instancia.EnviarMensaje(jsonMap);
+            }
+            SceneManager.LoadScene("CharacterSelection");
+        }
     }
 
     void GenerarListaMapas()

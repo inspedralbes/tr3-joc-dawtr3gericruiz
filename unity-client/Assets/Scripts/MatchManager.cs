@@ -2,20 +2,41 @@ using UnityEngine;
 
 public class MatchManager : MonoBehaviour
 {
-    public static MatchManager Instance;
+    private static MatchManager _instance;
+    public static MatchManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<MatchManager>();
+                if (_instance == null)
+                {
+                    GameObject go = new GameObject("MatchManager");
+                    _instance = go.AddComponent<MatchManager>();
+                }
+            }
+            return _instance;
+        }
+    }
 
     public CharacterData player1Choice;
     public CharacterData player2Choice;
     public MapData mapaElegido;
 
+    public bool isHost = true;
+    public int localPlayerChoice = -1;
+    public int rivalPlayerChoice = -1;
+    public string sceneNameToLoad;
+
     void Awake()
     {
-        if (Instance == null)
+        if (_instance == null)
         {
-            Instance = this;
+            _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (_instance != this)
         {
             Destroy(gameObject);
         }

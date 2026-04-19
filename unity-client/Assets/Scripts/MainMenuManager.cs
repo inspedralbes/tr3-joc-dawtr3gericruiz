@@ -6,14 +6,14 @@ public class MainMenuManager : MonoBehaviour
 {
     public UIDocument document;
 
-    // Login UI Elements
+    
     private VisualElement loginPanel;
     private TextField usernameInput;
     private TextField passwordInput;
     private Button loginButton;
     private Label statusText;
 
-    // Lobby UI Elements
+    
     private VisualElement lobbyPanel;
     private TextField gameIdInput;
     private Button createGameButton;
@@ -25,7 +25,7 @@ public class MainMenuManager : MonoBehaviour
         if (document == null) document = GetComponent<UIDocument>();
         var root = document.rootVisualElement;
 
-        // Búsqueda de elementos (Asegúrate de que los nombres coincidan en tu UI Builder)
+        
         loginPanel = root.Q<VisualElement>("LoginPanel");
         usernameInput = root.Q<TextField>("UsernameInput");
         passwordInput = root.Q<TextField>("PasswordInput");
@@ -38,11 +38,11 @@ public class MainMenuManager : MonoBehaviour
         joinGameButton = root.Q<Button>("JoinGameButton");
         lobbyStatusText = root.Q<Label>("LobbyStatusText");
 
-        // Estado inicial
+        
         loginPanel.style.display = DisplayStyle.Flex;
         lobbyPanel.style.display = DisplayStyle.None;
 
-        // Asignar eventos
+        
         loginButton.clicked += OnLoginClicked;
         createGameButton.clicked += OnCreateGameClicked;
         joinGameButton.clicked += OnJoinGameClicked;
@@ -50,7 +50,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void OnDisable()
     {
-        // Limpiar eventos para evitar memory leaks
+        
         if (loginButton != null) loginButton.clicked -= OnLoginClicked;
         if (createGameButton != null) createGameButton.clicked -= OnCreateGameClicked;
         if (joinGameButton != null) joinGameButton.clicked -= OnJoinGameClicked;
@@ -82,9 +82,19 @@ public class MainMenuManager : MonoBehaviour
             else
             {
                 statusText.text = "Error: " + message;
-                // Si falla por 401, el usuario probablemente no exista
+                
             }
         });
+    }
+
+    private void InitNetworkManager(string gameId)
+    {
+        if (NetworkManager.Instancia == null)
+        {
+            GameObject netObj = new GameObject("NetworkManager");
+            NetworkManager.Instancia = netObj.AddComponent<NetworkManager>();
+        }
+        NetworkManager.Instancia.Conectar(gameId);
     }
 
     private void OnCreateGameClicked()
@@ -102,8 +112,10 @@ public class MainMenuManager : MonoBehaviour
             {
                 lobbyStatusText.text = "Partida creada! ID: " + gameIdOrError;
                 Debug.Log("ID Partida Creada: " + gameIdOrError);
-                // Cargar la escena de selección de personajes (asume build index 1)
-                SceneManager.LoadScene(1); 
+                if (MatchManager.Instance != null) MatchManager.Instance.isHost = true;
+                
+                InitNetworkManager(gameIdOrError);
+                SceneManager.LoadScene("MapSelection"); 
             }
             else
             {
@@ -133,8 +145,10 @@ public class MainMenuManager : MonoBehaviour
             if (success)
             {
                 lobbyStatusText.text = "Unido a la partida!";
-                // Cargar la escena de selección de personajes
-                SceneManager.LoadScene(1);
+                if (MatchManager.Instance != null) MatchManager.Instance.isHost = false;
+                
+                InitNetworkManager(gameId);
+                SceneManager.LoadScene("CharacterSelection");
             }
             else
             {

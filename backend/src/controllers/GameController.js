@@ -6,7 +6,7 @@ class GameController {
     async createGame(req, res) {
         try {
             const { maxPlayers } = req.body;
-            // Assuming we have middleware that sets req.user
+            
             const playerId = req.user ? req.user.id : req.body.playerId; 
             
             if (!playerId) return res.status(400).json({ error: 'Player ID required' });

@@ -10,10 +10,14 @@ public class NetworkManager : MonoBehaviour
     public static NetworkManager Instancia;
     
     private ClientWebSocket ws;
-    private string urlServidor = "ws://localhost:3000";
-
+    private string urlServidor = "ws://157.180.36.176:3000";
     public PlayerController rivalController;
     public PlayerController localController;
+
+    public event Action<string> OnMapSelected;
+    public event Action<int> OnCharacterSelected;
+    public event Action OnRivalReady;
+    public event Action OnStartMatch;
 
     private void Awake()
     {
@@ -21,20 +25,24 @@ public class NetworkManager : MonoBehaviour
         else { Destroy(gameObject); }
     }
 
-    private async void Start()
+    private void Start()
     {
+        
+    }
+
+    public async void Conectar(string gameId)
+    {
+        if (ws != null && ws.State == WebSocketState.Open) return;
+
         ws = new ClientWebSocket();
         try
         {
             await ws.ConnectAsync(new Uri(urlServidor), CancellationToken.None);
             Debug.Log("Connectat al servidor WebSocket.");
 
-            // Enviar missatge per unir-se a la sala
-            if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentGameId))
-            {
-                string joinMsg = $"{{\"tipo\":\"join_room\",\"gameId\":\"{ApiManager.Instance.CurrentGameId}\"}}";
-                EnviarMensaje(joinMsg);
-            }
+            
+            string joinMsg = $"{{\"tipo\":\"join_room\",\"gameId\":\"{gameId}\"}}";
+            EnviarMensaje(joinMsg);
 
             EscucharMensajes();
         }
@@ -85,6 +93,22 @@ public class NetworkManager : MonoBehaviour
                 Vector2 direccion = new Vector2(datos.dirX, datos.dirY);
                 localController.RecibirDaño(datos.daño, direccion, datos.empujeBase, datos.escalado);
                 Debug.Log("Hem rebut un cop del rival!");
+            }
+            else if (datos.tipo == "map_selected")
+            {
+                OnMapSelected?.Invoke(datos.mapName);
+            }
+            else if (datos.tipo == "character_selected")
+            {
+                OnCharacterSelected?.Invoke(datos.characterId);
+            }
+            else if (datos.tipo == "player_ready")
+            {
+                OnRivalReady?.Invoke();
+            }
+            else if (datos.tipo == "start_match")
+            {
+                OnStartMatch?.Invoke();
             }
         }
         catch (Exception e)
@@ -167,4 +191,8 @@ public class DatosRed
     public float dirY;
     public float empujeBase;
     public float escalado;
+
+    
+    public string mapName;
+    public int characterId;
 }

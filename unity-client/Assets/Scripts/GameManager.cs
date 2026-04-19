@@ -20,24 +20,13 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (MatchManager.Instance != null && MatchManager.Instance.mapaElegido != null)
+        if (MatchManager.Instance != null)
         {
-            string nombreEscenaMapa = MatchManager.Instance.mapaElegido.sceneName;
+            int p1Choice = MatchManager.Instance.isHost ? MatchManager.Instance.localPlayerChoice : MatchManager.Instance.rivalPlayerChoice;
+            int p2Choice = MatchManager.Instance.isHost ? MatchManager.Instance.rivalPlayerChoice : MatchManager.Instance.localPlayerChoice;
             
-            if (!string.IsNullOrEmpty(nombreEscenaMapa) && !SceneManager.GetSceneByName(nombreEscenaMapa).isLoaded)
-            {
-                SceneManager.LoadScene(nombreEscenaMapa, LoadSceneMode.Additive);
-            }
+            IniciarPelea(p1Choice, p2Choice);
         }
-        // ----------------------------------------
-
-        // ---------------------------------------------------------
-        // MODO PRUEBA RÁPIDA:
-        // Descomenta la siguiente línea para probar el juego directamente al darle a Play.
-        // 0 = Gojo y 1 = Sukuna.
-        // ---------------------------------------------------------
-
-        IniciarPelea(1, 1);
     }
 
     private void ConfigurarJugador(GameObject jugadorInstanciado, int indiceJugador)
@@ -67,6 +56,8 @@ public class GameManager : MonoBehaviour
 
     public void IniciarPelea(int eleccionP1, int eleccionP2)
     {
+        bool isHost = MatchManager.Instance == null || MatchManager.Instance.isHost;
+
         GameObject prefabP1 = ObtenerPrefabPorID(eleccionP1);
         if (prefabP1 != null && puntosDeSpawn.Length > 0)
         {
@@ -74,9 +65,10 @@ public class GameManager : MonoBehaviour
             ConfigurarJugador(jugador1, 0);
             
             p1Controller = jugador1.GetComponent<PlayerController>(); 
-            p1Controller.esJugadorLocal = true; 
+            p1Controller.esJugadorLocal = isHost; 
             if (NetworkManager.Instancia != null) {
-                NetworkManager.Instancia.localController = p1Controller;
+                if (isHost) NetworkManager.Instancia.localController = p1Controller;
+                else NetworkManager.Instancia.rivalController = p1Controller;
             }
             p1Controller.IniciarSecuenciaIntro(3f);
         }
@@ -88,10 +80,11 @@ public class GameManager : MonoBehaviour
             ConfigurarJugador(jugador2, 1);
             
             p2Controller = jugador2.GetComponent<PlayerController>();
-            p2Controller.esJugadorLocal = false; 
+            p2Controller.esJugadorLocal = !isHost; 
 
             if (NetworkManager.Instancia != null) {
-                NetworkManager.Instancia.rivalController = p2Controller;
+                if (!isHost) NetworkManager.Instancia.localController = p2Controller;
+                else NetworkManager.Instancia.rivalController = p2Controller;
             }
 
             p2Controller.IniciarSecuenciaIntro(3f);
@@ -158,7 +151,7 @@ public class GameManager : MonoBehaviour
             uiPartida.MostrarPantallaVictoria(ganador);
         }
 
-        // GUARDAR RESULTADO EN BACKEND
+        
         if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentGameId))
         {
             string winnerId = (ganador == 1) ? ApiManager.Instance.CurrentUserId : "rival_id";

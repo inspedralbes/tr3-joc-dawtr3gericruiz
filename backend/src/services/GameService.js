@@ -10,7 +10,11 @@ class GameService {
             throw new Error('User not found');
         }
 
+        const crypto = require('crypto');
+        const _id = crypto.randomBytes(3).toString('hex').toUpperCase();
+
         const game = await this.gameRepository.create({
+            _id,
             players: [playerId],
             maxPlayers,
             status: 'waiting'

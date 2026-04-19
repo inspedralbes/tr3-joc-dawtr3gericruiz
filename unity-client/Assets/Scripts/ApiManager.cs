@@ -8,7 +8,7 @@ public class ApiManager : MonoBehaviour
 {
     public static ApiManager Instance;
 
-    public string baseUrl = "http://localhost:3000/api";
+    public string baseUrl = "http://157.180.36.176:3000/api";
     
     public string AuthToken { get; private set; }
     public string CurrentUserId { get; private set; }
@@ -91,7 +91,7 @@ public class ApiManager : MonoBehaviour
 
     private IEnumerator CreateGameCoroutine(Action<bool, string> callback)
     {
-        string json = $"{{\"maxPlayers\": 2}}";
+        string json = $"{{\"maxPlayers\": 2, \"playerId\": \"{CurrentUserId}\"}}";
         
         using (UnityWebRequest request = CreatePostRequest($"{baseUrl}/games", json))
         {
@@ -118,7 +118,8 @@ public class ApiManager : MonoBehaviour
 
     private IEnumerator JoinGameCoroutine(string gameId, Action<bool, string> callback)
     {
-        using (UnityWebRequest request = CreatePostRequest($"{baseUrl}/games/{gameId}/join", "{}"))
+        string json = $"{{\"playerId\": \"{CurrentUserId}\"}}";
+        using (UnityWebRequest request = CreatePostRequest($"{baseUrl}/games/{gameId}/join", json))
         {
             SetAuthHeader(request);
             yield return request.SendWebRequest();
