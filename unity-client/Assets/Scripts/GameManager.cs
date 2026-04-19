@@ -77,6 +77,8 @@ public class GameManager : MonoBehaviour
         if (prefabP2 != null && puntosDeSpawn.Length > 1)
         {
             GameObject jugador2 = Instantiate(prefabP2, puntosDeSpawn[1].position, Quaternion.identity);
+            // Player 2 spawns facing left
+            jugador2.transform.localScale = new Vector3(-1, 1, 1);
             ConfigurarJugador(jugador2, 1);
             
             p2Controller = jugador2.GetComponent<PlayerController>();

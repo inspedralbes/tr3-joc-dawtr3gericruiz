@@ -17,7 +17,7 @@ public class NetworkManager : MonoBehaviour
     public event Action<string> OnMapSelected;
     public event Action<int> OnCharacterSelected;
     public event Action OnRivalReady;
-    public event Action OnStartMatch;
+    public event Action<string> OnStartMatch;
 
     private void Awake()
     {
@@ -108,7 +108,7 @@ public class NetworkManager : MonoBehaviour
             }
             else if (datos.tipo == "start_match")
             {
-                OnStartMatch?.Invoke();
+                OnStartMatch?.Invoke(datos.mapName);
             }
         }
         catch (Exception e)

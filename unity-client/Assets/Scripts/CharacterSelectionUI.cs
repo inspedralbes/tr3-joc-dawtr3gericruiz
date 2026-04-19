@@ -144,9 +144,24 @@ public class CharacterSelectionUI : MonoBehaviour
 
     private void HandleStartMatch()
     {
+        HandleStartMatch(null);
+    }
+
+    private void HandleStartMatch(string mapName)
+    {
+        // If a mapName was received in the message, store it
+        if (!string.IsNullOrEmpty(mapName) && MatchManager.Instance != null)
+        {
+            MatchManager.Instance.sceneNameToLoad = mapName;
+        }
+
         if (MatchManager.Instance != null && !string.IsNullOrEmpty(MatchManager.Instance.sceneNameToLoad))
         {
             SceneManager.LoadScene(MatchManager.Instance.sceneNameToLoad);
+        }
+        else
+        {
+            Debug.LogError("No s'ha pogut carregar l'escena: sceneNameToLoad esta buit!");
         }
     }
 
@@ -173,9 +188,11 @@ public class CharacterSelectionUI : MonoBehaviour
     {
         if (isLocalReady && isRivalReady && MatchManager.Instance != null && MatchManager.Instance.isHost)
         {
+            string mapName = MatchManager.Instance.sceneNameToLoad;
             if (NetworkManager.Instancia != null)
             {
-                NetworkManager.Instancia.EnviarMensaje("{\"tipo\":\"start_match\"}");
+                string json = $"{{\"tipo\":\"start_match\",\"mapName\":\"{mapName}\"}}";
+                NetworkManager.Instancia.EnviarMensaje(json);
             }
             HandleStartMatch(); 
         }
