@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Ciutat (Nit).unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0e4e752687bc9924bbc271dcd9a07a3f
+  - enabled: 1
+    path: Assets/Scenes/MapSelection.unity
+    guid: b4f55a54de574a94a89c76ce9480a41a
   - enabled: 1
     path: Assets/Scenes/CharacterSelection.unity
     guid: 1aff8db52f646f6a0af0ae73ab5473c4
   - enabled: 1
-    path: Assets/Scenes/MapSelection.unity
-    guid: b4f55a54de574a94a89c76ce9480a41a
+    path: Assets/Scenes/Ciutat (Nit).unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: "Assets/Scenes/Estaci\xF3 de Shibuya.unity"
     guid: 23ee44e8c1afb55478e6faac45506f64

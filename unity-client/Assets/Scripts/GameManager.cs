@@ -75,6 +75,9 @@ public class GameManager : MonoBehaviour
             
             p1Controller = jugador1.GetComponent<PlayerController>(); 
             p1Controller.esJugadorLocal = true; 
+            if (NetworkManager.Instancia != null) {
+                NetworkManager.Instancia.localController = p1Controller;
+            }
             p1Controller.IniciarSecuenciaIntro(3f);
         }
 
@@ -153,6 +156,16 @@ public class GameManager : MonoBehaviour
         if (uiPartida != null)
         {
             uiPartida.MostrarPantallaVictoria(ganador);
+        }
+
+        // GUARDAR RESULTADO EN BACKEND
+        if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentGameId))
+        {
+            string winnerId = (ganador == 1) ? ApiManager.Instance.CurrentUserId : "rival_id";
+            ApiManager.Instance.SaveResult(winnerId, Time.timeSinceLevelLoad, (success) => {
+                if(success) Debug.Log("Resultado guardado en el servidor.");
+                else Debug.LogError("Error al guardar el resultado.");
+            });
         }
 
         Time.timeScale = 0f;

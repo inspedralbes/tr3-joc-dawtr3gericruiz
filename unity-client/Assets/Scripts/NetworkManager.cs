@@ -13,6 +13,7 @@ public class NetworkManager : MonoBehaviour
     private string urlServidor = "ws://localhost:3000";
 
     public PlayerController rivalController;
+    public PlayerController localController;
 
     private void Awake()
     {
@@ -27,6 +28,14 @@ public class NetworkManager : MonoBehaviour
         {
             await ws.ConnectAsync(new Uri(urlServidor), CancellationToken.None);
             Debug.Log("Connectat al servidor WebSocket.");
+
+            // Enviar missatge per unir-se a la sala
+            if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentGameId))
+            {
+                string joinMsg = $"{{\"tipo\":\"join_room\",\"gameId\":\"{ApiManager.Instance.CurrentGameId}\"}}";
+                EnviarMensaje(joinMsg);
+            }
+
             EscucharMensajes();
         }
         catch (Exception e)
@@ -70,6 +79,13 @@ public class NetworkManager : MonoBehaviour
                     rivalController.EjecutarProyectil();
                 }
             }
+
+            else if (datos.tipo == "golpe" && localController != null)
+            {
+                Vector2 direccion = new Vector2(datos.dirX, datos.dirY);
+                localController.RecibirDaño(datos.daño, direccion, datos.empujeBase, datos.escalado);
+                Debug.Log("Hem rebut un cop del rival!");
+            }
         }
         catch (Exception e)
         {
@@ -101,6 +117,24 @@ public class NetworkManager : MonoBehaviour
         }
     }
 
+    public void EnviarGolpe(float daño, float dirX, float dirY, float empujeBase, float escalado)
+    {
+        if (ws != null && ws.State == WebSocketState.Open)
+        {
+            DatosRed datos = new DatosRed 
+            { 
+                tipo = "golpe", 
+                daño = daño,
+                dirX = dirX,
+                dirY = dirY,
+                empujeBase = empujeBase,
+                escalado = escalado
+            };
+            string json = JsonUtility.ToJson(datos);
+            EnviarMensaje(json);
+        }
+    }
+
     public async void EnviarMensaje(string mensaje)
     {
         if (ws != null && ws.State == WebSocketState.Open)
@@ -122,9 +156,15 @@ public class NetworkManager : MonoBehaviour
 [System.Serializable]
 public class DatosRed
 {
-    public string tipo;
+    public string tipo; 
     public float posX;
     public float posY;
     public float scaleX;
-    public string accion;
+    public string accion; 
+    
+    public float daño;
+    public float dirX;
+    public float dirY;
+    public float empujeBase;
+    public float escalado;
 }

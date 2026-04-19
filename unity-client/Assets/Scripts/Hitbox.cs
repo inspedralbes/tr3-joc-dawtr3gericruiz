@@ -15,8 +15,7 @@ public class Hitbox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlayerController objetivo = other.GetComponent<PlayerController>();
-
-        if (objetivo != null && objetivo != miJugador && ataqueActual != null)
+        if (objetivo != null && objetivo != miJugador && ataqueActual != null && miJugador.esJugadorLocal)
         {
             float dañoFinal = ataqueActual.daño * multiplicadorActual;
             
@@ -24,9 +23,12 @@ public class Hitbox : MonoBehaviour
             direccionEmpuje.y += 0.5f; 
             direccionEmpuje = direccionEmpuje.normalized;
 
-            objetivo.RecibirDaño(dañoFinal, direccionEmpuje, ataqueActual.fuerzaEmpujeBase, ataqueActual.escaladoEmpuje);
+            if (NetworkManager.Instancia != null)
+            {
+                NetworkManager.Instancia.EnviarGolpe(dañoFinal, direccionEmpuje.x, direccionEmpuje.y, ataqueActual.fuerzaEmpujeBase, ataqueActual.escaladoEmpuje);
+            }
             
-            Debug.Log($"¡{ataqueActual.nombreAtaque} ha connectat! {dañoFinal} de daño.");
+            Debug.Log($"Impacte registrat! Enviant dades al servidor: {dañoFinal} de dany.");
         }
     }
 }
