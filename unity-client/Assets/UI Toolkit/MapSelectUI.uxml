@@ -3,6 +3,7 @@
     <Style src="project://database/Assets/EstilosSeleccion.uss?fileID=7433441132597879392&amp;guid=1657aea975afd734e82d8f57f7a92438&amp;type=3#EstilosSeleccion" />
     
     <ui:VisualElement name="PantallaPrincipal" style="flex-grow: 1; background-color: rgb(219, 217, 217); align-items: center; justify-content: flex-start; padding-top: 40px; padding-bottom: 40px;">
+        <ui:Button text="Enrere" name="BtnAtras" style="position: absolute; top: 20px; left: 20px; font-size: 30px; width: 150px; height: 60px; border-radius: 10px; background-color: rgb(200, 100, 100);" />
         
         <ui:Label text="Selecció de mapa" name="TituloMenu" style="font-size: 80px; margin-bottom: 20px;" />
 

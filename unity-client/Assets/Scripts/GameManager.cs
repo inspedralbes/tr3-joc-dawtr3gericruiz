@@ -6,15 +6,16 @@ public class GameManager : MonoBehaviour
     private PlayerController p1Controller;
     private PlayerController p2Controller;
     private bool partidaTerminada = false;
+    private float tiempoInicioPartida = 0f;
 
     [Header("UI de Partida")]
     public MatchUI uiPartida;
 
-    [Header("Configuración de la Escena (Arrastrar de la jerarquía)")]
+    [Header("Configuración de la Escena")]
     public PlayerUI[] hudsJugadores;
     public Transform[] puntosDeSpawn;
 
-    [Header("Personajes Disponibles (Arrastrar de la carpeta Prefabs)")]
+    [Header("Personajes Disponibles")]
     public GameObject prefabGojo;
     public GameObject prefabSukuna;
 
@@ -32,14 +33,9 @@ public class GameManager : MonoBehaviour
     private void ConfigurarJugador(GameObject jugadorInstanciado, int indiceJugador)
     {
         PlayerController controlador = jugadorInstanciado.GetComponent<PlayerController>();
-
         if (controlador != null)
         {
-            if (puntosDeSpawn.Length > indiceJugador)
-            {
-                controlador.puntoDeRespawn = puntosDeSpawn[indiceJugador];
-            }
-
+            if (puntosDeSpawn.Length > indiceJugador) controlador.puntoDeRespawn = puntosDeSpawn[indiceJugador];
             if (hudsJugadores.Length > indiceJugador && hudsJugadores[indiceJugador] != null)
             {
                 controlador.miInterfaz = hudsJugadores[indiceJugador];
@@ -47,16 +43,25 @@ public class GameManager : MonoBehaviour
                 controlador.miInterfaz.ActualizarVidas(controlador.vidasMaximas);
                 controlador.miInterfaz.ActualizarPorcentaje(0f);
             }
-            else
-            {
-                Debug.LogError($"Falta assignar el HUD pel {indiceJugador + 1} en el GameManager.");
-            }
+        }
+    }
+
+    private void ConfigurarCerebroBot(GameObject jugadorInstanciado, bool esBot)
+    {
+        SimpleBotAgent botAgent = jugadorInstanciado.GetComponent<SimpleBotAgent>();
+        Unity.MLAgents.DecisionRequester dr = jugadorInstanciado.GetComponent<Unity.MLAgents.DecisionRequester>();
+
+        if (!esBot)
+        {
+            if (dr != null) Destroy(dr);
+            if (botAgent != null) Destroy(botAgent);
         }
     }
 
     public void IniciarPelea(int eleccionP1, int eleccionP2)
     {
         bool isHost = MatchManager.Instance == null || MatchManager.Instance.isHost;
+        bool esVsCpu = MatchManager.Instance != null && MatchManager.Instance.esModoVsCpu;
 
         GameObject prefabP1 = ObtenerPrefabPorID(eleccionP1);
         if (prefabP1 != null && puntosDeSpawn.Length > 0)
@@ -66,6 +71,9 @@ public class GameManager : MonoBehaviour
             
             p1Controller = jugador1.GetComponent<PlayerController>(); 
             p1Controller.esJugadorLocal = isHost; 
+            p1Controller.esBot = false;
+            ConfigurarCerebroBot(jugador1, false);
+
             if (NetworkManager.Instancia != null) {
                 if (isHost) NetworkManager.Instancia.localController = p1Controller;
                 else NetworkManager.Instancia.rivalController = p1Controller;
@@ -77,12 +85,26 @@ public class GameManager : MonoBehaviour
         if (prefabP2 != null && puntosDeSpawn.Length > 1)
         {
             GameObject jugador2 = Instantiate(prefabP2, puntosDeSpawn[1].position, Quaternion.identity);
-            // Player 2 spawns facing left
             jugador2.transform.localScale = new Vector3(-1, 1, 1);
             ConfigurarJugador(jugador2, 1);
             
             p2Controller = jugador2.GetComponent<PlayerController>();
-            p2Controller.esJugadorLocal = !isHost; 
+
+            if (esVsCpu)
+            {
+                p2Controller.esJugadorLocal = false; 
+                p2Controller.esBot = true;
+                ConfigurarCerebroBot(jugador2, true);
+                
+                SimpleBotAgent botScript = jugador2.GetComponent<SimpleBotAgent>();
+                if (botScript != null) botScript.isPlayerOne = false;
+            }
+            else
+            {
+                p2Controller.esJugadorLocal = !isHost; 
+                p2Controller.esBot = false;
+                ConfigurarCerebroBot(jugador2, false);
+            }
 
             if (NetworkManager.Instancia != null) {
                 if (!isHost) NetworkManager.Instancia.localController = p2Controller;
@@ -101,68 +123,48 @@ public class GameManager : MonoBehaviour
         {
             case 0: return prefabGojo;
             case 1: return prefabSukuna;
-            default:
-                Debug.LogWarning("ID de personatge no vàlida. Per defecte s'assigna Gojo.");
-                return prefabGojo;
+            default: return prefabGojo;
         }
     }
 
     private System.Collections.IEnumerator RutinaCuentaAtras()
     {
-        if (uiPartida == null)
-        {
-            Debug.LogWarning("Falta assignar el MatchUI en el GameManager.");
-            yield break;
-        }
-
+        if (uiPartida == null) yield break;
         uiPartida.ActualizarTexto("3");
         yield return new WaitForSeconds(1f);
-
         uiPartida.ActualizarTexto("2");
         yield return new WaitForSeconds(1f);
-
         uiPartida.ActualizarTexto("1");
         yield return new WaitForSeconds(1f);
-
         uiPartida.ActualizarTexto("JA!");
         yield return new WaitForSeconds(1f);
-
         uiPartida.ActualizarTexto("");
+        tiempoInicioPartida = Time.timeSinceLevelLoad;
     }
     
     public void ComprobarVictoria()
     {
         if (partidaTerminada) return;
-
-        if (p1Controller != null && p1Controller.vidasActuales <= 0)
-        {
-            TerminarPartida(2); 
-        }
-        else if (p2Controller != null && p2Controller.vidasActuales <= 0)
-        {
-            TerminarPartida(1); 
-        }
+        if (p1Controller != null && p1Controller.vidasActuales <= 0) TerminarPartida(2); 
+        else if (p2Controller != null && p2Controller.vidasActuales <= 0) TerminarPartida(1); 
     }
 
     private void TerminarPartida(int ganador)
     {
         partidaTerminada = true;
-        
-        if (uiPartida != null)
-        {
-            uiPartida.MostrarPantallaVictoria(ganador);
-        }
-
-        
+        float duracion = Time.timeSinceLevelLoad - tiempoInicioPartida;
+        PlayerController ganadorController = (ganador == 1) ? p1Controller : p2Controller;
+        int vidasRestantes = (ganadorController != null) ? ganadorController.vidasActuales : 0;
+        bool localEsGanador = (MatchManager.Instance == null) || (ganador == 1 && MatchManager.Instance.isHost) || (ganador == 2 && !MatchManager.Instance.isHost);
+        string usernameGanador;
+        if (localEsGanador) usernameGanador = (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentUsername)) ? ApiManager.Instance.CurrentUsername : "Jugador " + ganador;
+        else usernameGanador = (!string.IsNullOrEmpty(MatchManager.Instance.rivalUsername)) ? MatchManager.Instance.rivalUsername : "Rival";
+        if (uiPartida != null) uiPartida.MostrarPantallaVictoria(usernameGanador, vidasRestantes, duracion);
         if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentGameId))
         {
-            string winnerId = (ganador == 1) ? ApiManager.Instance.CurrentUserId : "rival_id";
-            ApiManager.Instance.SaveResult(winnerId, Time.timeSinceLevelLoad, (success) => {
-                if(success) Debug.Log("Resultado guardado en el servidor.");
-                else Debug.LogError("Error al guardar el resultado.");
-            });
+            string winnerId = localEsGanador ? ApiManager.Instance.CurrentUserId : "rival_id";
+            ApiManager.Instance.SaveResult(winnerId, duracion, (success) => {});
         }
-
         Time.timeScale = 0f;
     }
 }

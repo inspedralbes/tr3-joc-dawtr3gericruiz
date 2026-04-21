@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Jab1_Gojo
   m_EditorClassIdentifier: 
   nombreAtaque: Jab1
-  "da\xF1o": 6
+  "da\xF1o": 3
   fuerzaEmpujeBase: 2
   escaladoEmpuje: 0.1

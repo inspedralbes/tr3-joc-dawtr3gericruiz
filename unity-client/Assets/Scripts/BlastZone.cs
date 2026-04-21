@@ -6,12 +6,11 @@ public class BlastZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log(other.name + " ha sigut eliminat!");
-
             PlayerController jugador = other.GetComponent<PlayerController>();
 
-            if (jugador != null)
+            if (jugador != null && (jugador.esJugadorLocal || jugador.esBot))
             {
+                Debug.Log(other.name + " ha sortit de la zona de combat!");
                 jugador.PerderVida();
             }
         }

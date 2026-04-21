@@ -1,6 +1,46 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Label text="Label" name="TextoCuentaAtras" style="-unity-text-align: middle-center; height: 100%; width: 100%; font-size: 300px; color: rgb(255, 255, 255); align-self: center;" />
-    <ui:VisualElement name="WinScreenPanel" style="flex-grow: 1; width: 100%; height: 100%; position: absolute; display: none;">
-        <ui:Label text="Label" name="WinnerText" style="align-self: center; font-size: 100px; color: rgb(255, 255, 255); -unity-text-align: middle-center; align-items: stretch; width: 100%; height: 100%;" />
+
+    <ui:Label text="" name="TextoCuentaAtras" style="-unity-text-align: middle-center; height: 100%; width: 100%; font-size: 300px; color: rgb(255, 255, 255); align-self: center;" />
+
+    <!-- Panel de resultats final -->
+    <ui:VisualElement name="WinScreenPanel" style="flex-grow: 1; width: 100%; height: 100%; position: absolute; display: none; align-items: center; justify-content: center; background-color: rgba(219, 217, 217, 0.95);">
+
+        <!-- Caixa central -->
+        <ui:VisualElement name="ResultCard" style="width: 700px; align-items: center; padding: 60px 50px;">
+
+            <!-- Títol -->
+            <ui:Label name="VictoriaLabel" text="VICTORIA" style="font-size: 80px; -unity-font-style: bold; -unity-text-align: middle-center; margin-bottom: 10px;" />
+
+            <!-- Nom del guanyador -->
+            <ui:Label name="WinnerText" text="Jugador" style="font-size: 55px; -unity-font-style: bold; -unity-text-align: middle-center; margin-bottom: 50px;" />
+
+            <!-- Separador -->
+            <ui:VisualElement style="width: 100%; height: 4px; background-color: rgb(150, 150, 150); border-radius: 2px; margin-bottom: 40px;" />
+
+            <!-- Fila d'estadístiques -->
+            <ui:VisualElement style="flex-direction: row; justify-content: space-around; width: 100%; margin-bottom: 60px;">
+
+                <!-- Vides restants -->
+                <ui:VisualElement style="align-items: center; width: 45%;">
+                    <ui:Label name="VidasLabel" text="3" style="font-size: 72px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(200, 50, 50);" />
+                    <ui:Label text="Vides restants" style="font-size: 28px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+                </ui:VisualElement>
+
+                <!-- Separador vertical -->
+                <ui:VisualElement style="width: 4px; background-color: rgb(150, 150, 150); border-radius: 2px;" />
+
+                <!-- Durada de la partida -->
+                <ui:VisualElement style="align-items: center; width: 45%;">
+                    <ui:Label name="DuracionLabel" text="0:00" style="font-size: 72px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+                    <ui:Label text="Durada de la partida" style="font-size: 28px; -unity-font-style: bold; -unity-text-align: middle-center;" />
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+
+            <!-- Botó tornar al lobby -->
+            <ui:Button name="LobbyButton" text="Tornar al Lobby" style="font-size: 40px; width: 450px; height: 90px; border-radius: 15px; align-self: center; background-color: rgb(150, 200, 150);" />
+
+        </ui:VisualElement>
     </ui:VisualElement>
+
 </ui:UXML>

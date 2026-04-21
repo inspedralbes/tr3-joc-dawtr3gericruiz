@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 5260762733929113160}
   - component: {fileID: 3073718098767093890}
   - component: {fileID: 2209621526586004969}
+  - component: {fileID: -1862821171155578490}
+  - component: {fileID: 514233341419186091}
+  - component: {fileID: -715863675808207820}
   m_Layer: 0
   m_Name: Ryomen Sukuna
   m_TagString: Player
@@ -179,14 +182,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f12c7eb5ea8151e4960e8398550232d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  esJugadorLocal: 0
+  esBot: 0
   bloqueadoPorIntro: 0
   miInterfaz: {fileID: 0}
   vidasMaximas: 3
+  vidasActuales: 0
   puntoDeRespawn: {fileID: 0}
   miFotoDePerfil: {fileID: -2121967504, guid: e18a5a741f6fb904ea3bb2a09583af1e, type: 3}
   velocidadCorrer: 16
   fuerzaSalto: 22
   saltosMaximos: 2
+  inputX: 0
   multiplicadorCaidaRapida: 3
   impulsoInstantaneo: 5
   groundCheck: {fileID: 4198880692499519603}
@@ -205,8 +212,12 @@ MonoBehaviour:
   proyectilPrefab: {fileID: 4634601988791860050, guid: 2edb59e9b24d79f19bd4dbc2c7bcd472, type: 3}
   puntoDeDisparo: {fileID: 7386898105686572162}
   comboWindowTime: 0.6
+  currentComboTimer: 0
   tiempoMaximoCarga: 2
   multiplicadorMaximo: 2
+  tiempoCargaActual: 0
+  cooldownSmash: 1.2
+  cooldownProyectil: 1
   velocidadDashRecovery: 20
   duracionDashRecovery: 0.2
   "porcentajeDa\xF1o": 0
@@ -234,6 +245,72 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1862821171155578490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642350207006483243}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 10
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 08000000
+    VectorActionSize: 08000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 1
+  m_BehaviorName: FighterBehavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_DeterministicInference: 0
+  m_ObservableAttributeHandling: 0
+--- !u!114 &514233341419186091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642350207006483243}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  DecisionStep: 0
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &-715863675808207820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642350207006483243}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a508d69c7bdfef04fae4f0d3b09cebec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 500
+  arenaWidth: 20
+  arenaHeight: 15
+  distanciaAtac: 3
+  isPlayerOne: 0
 --- !u!1 &5508349705101385569
 GameObject:
   m_ObjectHideFlags: 0

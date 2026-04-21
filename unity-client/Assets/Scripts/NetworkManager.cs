@@ -15,7 +15,7 @@ public class NetworkManager : MonoBehaviour
     public PlayerController localController;
 
     public event Action<string> OnMapSelected;
-    public event Action<int> OnCharacterSelected;
+    public event Action<int, string> OnCharacterSelected;
     public event Action OnRivalReady;
     public event Action<string> OnStartMatch;
 
@@ -54,7 +54,7 @@ public class NetworkManager : MonoBehaviour
 
     private async void EscucharMensajes()
     {
-        byte[] buffer = new byte[1024];
+        byte[] buffer = new byte[4096];
         while (ws.State == WebSocketState.Open)
         {
             WebSocketReceiveResult resultado = await ws.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
@@ -72,9 +72,9 @@ public class NetworkManager : MonoBehaviour
 
             if (datos.tipo == "movimiento" && rivalController != null)
             {
-                rivalController.transform.position = new Vector3(datos.posX, datos.posY, 0);
+                rivalController.ActualizarPosicionRed(datos.posX, datos.posY);
                 rivalController.transform.localScale = new Vector3(datos.scaleX, 1, 1);
-                rivalController.inputX = (datos.scaleX > 0) ? 1 : -1; 
+                rivalController.inputX = datos.inputX; 
             }
             else if (datos.tipo == "accion" && rivalController != null)
             {
@@ -86,13 +86,33 @@ public class NetworkManager : MonoBehaviour
                 {
                     rivalController.EjecutarProyectil();
                 }
+                else if (datos.accion == "smash_start")
+                {
+                    rivalController.IniciarCargaSmash();
+                }
+                else if (datos.accion == "smash_release")
+                {
+                    rivalController.EjecutarLanzamientoSmash();
+                }
+                else if (datos.accion == "recovery")
+                {
+                    rivalController.EjecutarRecovery();
+                }
             }
 
             else if (datos.tipo == "golpe" && localController != null)
             {
+                // El 'localController' aquí es el jugador que FUE GOLPEADO (el defensor).
+                // Aplica el daño real con knockback en la máquina del defensor.
                 Vector2 direccion = new Vector2(datos.dirX, datos.dirY);
                 localController.RecibirDaño(datos.daño, direccion, datos.empujeBase, datos.escalado);
                 Debug.Log("Hem rebut un cop del rival!");
+            }
+            else if (datos.tipo == "muerte" && rivalController != null)
+            {
+                // El rival (en la máquina del atacante) ha muerto según el defensor.
+                rivalController.PerderVidaRed();
+                Debug.Log("El rival ha perdut una vida (sincronitzat per xarxa).");
             }
             else if (datos.tipo == "map_selected")
             {
@@ -100,7 +120,7 @@ public class NetworkManager : MonoBehaviour
             }
             else if (datos.tipo == "character_selected")
             {
-                OnCharacterSelected?.Invoke(datos.characterId);
+                OnCharacterSelected?.Invoke(datos.characterId, datos.username);
             }
             else if (datos.tipo == "player_ready")
             {
@@ -117,11 +137,11 @@ public class NetworkManager : MonoBehaviour
         }
     }
 
-    public void EnviarMovimiento(float x, float y, float scaleX)
+    public void EnviarMovimiento(float x, float y, float scaleX, float inputX)
     {
         if (ws != null && ws.State == WebSocketState.Open)
         {
-            DatosRed datos = new DatosRed { tipo = "movimiento", posX = x, posY = y, scaleX = scaleX };
+            DatosRed datos = new DatosRed { tipo = "movimiento", posX = x, posY = y, scaleX = scaleX, inputX = inputX };
             string json = JsonUtility.ToJson(datos);
             
             EnviarMensaje(json);
@@ -159,6 +179,17 @@ public class NetworkManager : MonoBehaviour
         }
     }
 
+    public void EnviarMuerte()
+    {
+        if (ws != null && ws.State == WebSocketState.Open)
+        {
+            DatosRed datos = new DatosRed { tipo = "muerte" };
+            string json = JsonUtility.ToJson(datos);
+            EnviarMensaje(json);
+            Debug.Log("Enviant mort al servidor.");
+        }
+    }
+
     public async void EnviarMensaje(string mensaje)
     {
         if (ws != null && ws.State == WebSocketState.Open)
@@ -175,6 +206,17 @@ public class NetworkManager : MonoBehaviour
             await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Tancant el joc", CancellationToken.None);
         }
     }
+
+    public async void Desconectar()
+    {
+        if (ws != null && ws.State == WebSocketState.Open)
+        {
+            await ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "Sortint de la sala", CancellationToken.None);
+        }
+        
+        Instancia = null;
+        Destroy(gameObject);
+    }
 }
 
 [System.Serializable]
@@ -184,6 +226,7 @@ public class DatosRed
     public float posX;
     public float posY;
     public float scaleX;
+    public float inputX;
     public string accion; 
     
     public float daño;
@@ -192,7 +235,7 @@ public class DatosRed
     public float empujeBase;
     public float escalado;
 
-    
     public string mapName;
     public int characterId;
+    public string username;  // username del jugador que envia la seleccion de personaje
 }

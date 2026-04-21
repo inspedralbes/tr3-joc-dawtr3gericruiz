@@ -84,6 +84,30 @@ public class ApiManager : MonoBehaviour
         }
     }
 
+    public void Register(string username, string password, Action<bool, string> callback)
+    {
+        StartCoroutine(RegisterCoroutine(username, password, callback));
+    }
+
+    private IEnumerator RegisterCoroutine(string username, string password, Action<bool, string> callback)
+    {
+        string json = $"{{\"username\":\"{username}\",\"password\":\"{password}\"}}";
+        
+        using (UnityWebRequest request = CreatePostRequest($"{baseUrl}/users/register", json))
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                callback?.Invoke(true, "Registre exitós");
+            }
+            else
+            {
+                callback?.Invoke(false, request.error);
+            }
+        }
+    }
+
     public void CreateGame(Action<bool, string> callback)
     {
         StartCoroutine(CreateGameCoroutine(callback));

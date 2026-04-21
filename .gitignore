@@ -104,5 +104,5 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
-unity-client/Assets/Scripts/SimpleBotAgent.cs.meta
 unity-client/Assets/Scripts/SimpleBotAgent.cs
+unity-client/Assets/Scripts/SimpleBotAgent.cs.meta

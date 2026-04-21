@@ -13,6 +13,7 @@ public class MapSelectionUI : MonoBehaviour
     private Label nombreMapaText;
     private VisualElement imagenMapa;
     private Button btnSeleccionar;
+    private Button btnAtras;
 
     void OnEnable()
     {
@@ -29,6 +30,12 @@ public class MapSelectionUI : MonoBehaviour
             btnSeleccionar.clicked += OnSeleccionarClicked;
         }
 
+        btnAtras = root.Q<Button>("BtnAtras");
+        if (btnAtras != null)
+        {
+            btnAtras.clicked += OnBtnAtrasClicked;
+        }
+
         GenerarListaMapas();
     }
 
@@ -38,6 +45,19 @@ public class MapSelectionUI : MonoBehaviour
         {
             btnSeleccionar.clicked -= OnSeleccionarClicked;
         }
+        if (btnAtras != null)
+        {
+            btnAtras.clicked -= OnBtnAtrasClicked;
+        }
+    }
+
+    private void OnBtnAtrasClicked()
+    {
+        if (NetworkManager.Instancia != null)
+        {
+            NetworkManager.Instancia.Desconectar();
+        }
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void OnSeleccionarClicked()

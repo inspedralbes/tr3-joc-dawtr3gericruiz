@@ -1,28 +1,19 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    
-    <Style src="project://database/Assets/EstilosSeleccion.uss?fileID=7433441132597879392&amp;guid=1657aea975afd734e82d8f57f7a92438&amp;type=3#EstilosSeleccion" />
-    
+    <Style src="project://database/Assets/UI%20Toolkit/EstilosSeleccion.uss?fileID=7433441132597879392&amp;guid=1657aea975afd734e82d8f57f7a92438&amp;type=3#EstilosSeleccion" />
     <ui:VisualElement name="PantallaPrincipal" style="flex-grow: 1; background-color: rgb(219, 217, 217); align-items: center; justify-content: space-between; padding: 40px;">
-
+        <ui:Button text="Enrere" name="BtnAtras" style="position: absolute; top: 20px; left: 20px; font-size: 30px; width: 150px; height: 60px; border-radius: 10px; background-color: rgb(200, 100, 100);" />
         <ui:Label text="Selecció de personatge" name="TituloMenu" style="font-size: 80px; -unity-font-style: bold;" />
-
         <ui:VisualElement name="ContenedorRoster" style="flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: center; width: 80%; min-height: 300px; margin-top: 20px; margin-bottom: 20px;" />
-
         <ui:VisualElement name="PanelJugadores" style="flex-direction: row; justify-content: space-between; align-items: flex-end; width: 100%; height: 300px;">
-
             <ui:VisualElement name="P1Panel" style="width: 300px; align-items: center;">
                 <ui:VisualElement name="P1Retrato" style="width: 250px; height: 250px; background-color: rgb(150, 150, 150); border-radius: 15px; margin-bottom: 10px;" />
-                <ui:Label name="P1NombreText" text="Jugador 1" style="font-size: 42px; -unity-font-style: bold;" />
+                <ui:Label name="P1NombreText" text="Jugador 1" style="font-size: 42px; -unity-font-style: bold; -unity-text-align: middle-center;" />
             </ui:VisualElement>
-
             <ui:Button text="Seleccionar" name="BtnSeleccionar" style="font-size: 35px; width: 250px; height: 80px; border-radius: 10px; align-self: center; margin-bottom: 50px;" />
-
             <ui:VisualElement name="P2Panel" style="width: 300px; align-items: center;">
                 <ui:VisualElement name="P2Retrato" style="width: 250px; height: 250px; background-color: rgb(150, 150, 150); border-radius: 15px; margin-bottom: 10px;" />
-                <ui:Label name="P2NombreText" text="Jugador 2" style="font-size: 42px; -unity-font-style: bold;" />
+                <ui:Label name="P2NombreText" text="Jugador 2" style="font-size: 42px; -unity-font-style: bold; -unity-text-align: middle-center;" />
             </ui:VisualElement>
-
         </ui:VisualElement>
-
     </ui:VisualElement>
 </ui:UXML>
