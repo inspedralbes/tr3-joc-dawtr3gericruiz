@@ -46,22 +46,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ConfigurarCerebroBot(GameObject jugadorInstanciado, bool esBot)
-    {
-        SimpleBotAgent botAgent = jugadorInstanciado.GetComponent<SimpleBotAgent>();
-        Unity.MLAgents.DecisionRequester dr = jugadorInstanciado.GetComponent<Unity.MLAgents.DecisionRequester>();
-
-        if (!esBot)
-        {
-            if (dr != null) Destroy(dr);
-            if (botAgent != null) Destroy(botAgent);
-        }
-    }
-
     public void IniciarPelea(int eleccionP1, int eleccionP2)
     {
         bool isHost = MatchManager.Instance == null || MatchManager.Instance.isHost;
-        bool esVsCpu = MatchManager.Instance != null && MatchManager.Instance.esModoVsCpu;
 
         GameObject prefabP1 = ObtenerPrefabPorID(eleccionP1);
         if (prefabP1 != null && puntosDeSpawn.Length > 0)
@@ -71,8 +58,6 @@ public class GameManager : MonoBehaviour
             
             p1Controller = jugador1.GetComponent<PlayerController>(); 
             p1Controller.esJugadorLocal = isHost; 
-            p1Controller.esBot = false;
-            ConfigurarCerebroBot(jugador1, false);
 
             if (NetworkManager.Instancia != null) {
                 if (isHost) NetworkManager.Instancia.localController = p1Controller;
@@ -89,22 +74,7 @@ public class GameManager : MonoBehaviour
             ConfigurarJugador(jugador2, 1);
             
             p2Controller = jugador2.GetComponent<PlayerController>();
-
-            if (esVsCpu)
-            {
-                p2Controller.esJugadorLocal = false; 
-                p2Controller.esBot = true;
-                ConfigurarCerebroBot(jugador2, true);
-                
-                SimpleBotAgent botScript = jugador2.GetComponent<SimpleBotAgent>();
-                if (botScript != null) botScript.isPlayerOne = false;
-            }
-            else
-            {
-                p2Controller.esJugadorLocal = !isHost; 
-                p2Controller.esBot = false;
-                ConfigurarCerebroBot(jugador2, false);
-            }
+            p2Controller.esJugadorLocal = !isHost; 
 
             if (NetworkManager.Instancia != null) {
                 if (!isHost) NetworkManager.Instancia.localController = p2Controller;
@@ -156,10 +126,13 @@ public class GameManager : MonoBehaviour
         PlayerController ganadorController = (ganador == 1) ? p1Controller : p2Controller;
         int vidasRestantes = (ganadorController != null) ? ganadorController.vidasActuales : 0;
         bool localEsGanador = (MatchManager.Instance == null) || (ganador == 1 && MatchManager.Instance.isHost) || (ganador == 2 && !MatchManager.Instance.isHost);
+        
         string usernameGanador;
         if (localEsGanador) usernameGanador = (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentUsername)) ? ApiManager.Instance.CurrentUsername : "Jugador " + ganador;
         else usernameGanador = (!string.IsNullOrEmpty(MatchManager.Instance.rivalUsername)) ? MatchManager.Instance.rivalUsername : "Rival";
+        
         if (uiPartida != null) uiPartida.MostrarPantallaVictoria(usernameGanador, vidasRestantes, duracion);
+        
         if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentGameId))
         {
             string winnerId = localEsGanador ? ApiManager.Instance.CurrentUserId : "rival_id";

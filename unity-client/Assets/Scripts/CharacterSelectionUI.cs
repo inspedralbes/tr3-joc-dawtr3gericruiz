@@ -25,9 +25,6 @@ public class CharacterSelectionUI : MonoBehaviour
     private bool isLocalReady = false;
     private bool isRivalReady = false;
 
-    // Propiedad rápida para saber si estamos en modo CPU
-    private bool esModoVsCpu => MatchManager.Instance != null && MatchManager.Instance.esModoVsCpu;
-
     void OnEnable()
     {
         uiDocument = GetComponent<UIDocument>();
@@ -54,29 +51,20 @@ public class CharacterSelectionUI : MonoBehaviour
             rivalRetrato = p1Retrato;
         }
 
-        // Resetear selecciones anteriores por si venimos de otra partida
         if (MatchManager.Instance != null)
         {
             MatchManager.Instance.localPlayerChoice = -1;
             MatchManager.Instance.rivalPlayerChoice = -1;
         }
 
-        // Mostrar el username del jugador local
         if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentUsername))
         {
             localNombreText.text = ApiManager.Instance.CurrentUsername;
         }
 
-        // Si es Vs CPU, preparamos los textos
-        if (esModoVsCpu)
-        {
-            rivalNombreText.text = "CPU\n(Tria personatge)";
-        }
-
         btnSeleccionar = root.Q<Button>("BtnSeleccionar");
         if (btnSeleccionar != null)
         {
-            if (esModoVsCpu) btnSeleccionar.text = "Confirmar Jugador";
             btnSeleccionar.clicked += OnSeleccionarClicked;
         }
 
@@ -86,9 +74,8 @@ public class CharacterSelectionUI : MonoBehaviour
             btnAtras.clicked += OnBtnAtrasClicked;
         }
 
-        // Solo mostrar la ID de la sala si NO estamos contra la CPU
         VisualElement pantalla = root.Q<VisualElement>("PantallaPrincipal");
-        if (!esModoVsCpu && pantalla != null && ApiManager.Instance != null)
+        if (pantalla != null && ApiManager.Instance != null)
         {
             Label roomLabel = new Label();
             roomLabel.text = "SALA ID: " + ApiManager.Instance.CurrentGameId;
@@ -99,8 +86,7 @@ public class CharacterSelectionUI : MonoBehaviour
             pantalla.Insert(1, roomLabel);
         }
 
-        // Solo suscribir a eventos de red si NO estamos contra la CPU
-        if (!esModoVsCpu && NetworkManager.Instancia != null)
+        if (NetworkManager.Instancia != null)
         {
             NetworkManager.Instancia.OnMapSelected += HandleMapSelected;
             NetworkManager.Instancia.OnCharacterSelected += HandleCharacterSelected;
@@ -108,8 +94,7 @@ public class CharacterSelectionUI : MonoBehaviour
             NetworkManager.Instancia.OnStartMatch += HandleStartMatch;
         }
 
-        // Solo enviar el mapa por red si somos host y NO estamos contra la CPU
-        if (!esModoVsCpu && MatchManager.Instance != null && MatchManager.Instance.isHost && !string.IsNullOrEmpty(MatchManager.Instance.sceneNameToLoad))
+        if (MatchManager.Instance != null && MatchManager.Instance.isHost && !string.IsNullOrEmpty(MatchManager.Instance.sceneNameToLoad))
         {
             if (NetworkManager.Instancia != null)
             {
@@ -126,7 +111,7 @@ public class CharacterSelectionUI : MonoBehaviour
         if (btnSeleccionar != null) btnSeleccionar.clicked -= OnSeleccionarClicked;
         if (btnAtras != null) btnAtras.clicked -= OnBtnAtrasClicked;
         
-        if (!esModoVsCpu && NetworkManager.Instancia != null)
+        if (NetworkManager.Instancia != null)
         {
             NetworkManager.Instancia.OnMapSelected -= HandleMapSelected;
             NetworkManager.Instancia.OnCharacterSelected -= HandleCharacterSelected;
@@ -137,7 +122,7 @@ public class CharacterSelectionUI : MonoBehaviour
 
     private void OnBtnAtrasClicked()
     {
-        if (!esModoVsCpu && NetworkManager.Instancia != null)
+        if (NetworkManager.Instancia != null)
         {
             NetworkManager.Instancia.Desconectar();
         }
@@ -204,64 +189,27 @@ public class CharacterSelectionUI : MonoBehaviour
 
     private void OnSeleccionarClicked()
     {
-        if (esModoVsCpu)
+        if (isLocalReady) return;
+        if (MatchManager.Instance == null || MatchManager.Instance.localPlayerChoice == -1) return;
+
+        isLocalReady = true;
+        btnSeleccionar.text = "Esperant...";
+        btnSeleccionar.style.backgroundColor = new StyleColor(Color.gray);
+        localNombreText.text = "LLEST!\n" + localNombreText.text;
+        localNombreText.style.color = new StyleColor(Color.green);
+
+        if (NetworkManager.Instancia != null)
         {
-            // PASO 1: Confirmar jugador local
-            if (!isLocalReady)
-            {
-                if (MatchManager.Instance == null || MatchManager.Instance.localPlayerChoice == -1) return;
-                
-                isLocalReady = true;
-                localNombreText.text = "LLEST!\n" + localNombreText.text;
-                localNombreText.style.color = new StyleColor(Color.green);
-                
-                // Cambiar el botón para guiar al jugador al siguiente paso
-                btnSeleccionar.text = "Confirmar CPU"; 
-            }
-            // PASO 2: Confirmar CPU
-            else if (!isRivalReady)
-            {
-                if (MatchManager.Instance == null || MatchManager.Instance.rivalPlayerChoice == -1) return;
-
-                isRivalReady = true;
-                rivalNombreText.text = "LLEST!\n" + rivalNombreText.text;
-                rivalNombreText.style.color = new StyleColor(Color.green);
-                
-                btnSeleccionar.text = "Iniciant...";
-                btnSeleccionar.style.backgroundColor = new StyleColor(Color.gray);
-                
-                CheckAmbosListos();
-            }
+            NetworkManager.Instancia.EnviarMensaje("{\"tipo\":\"player_ready\"}");
         }
-        else
-        {
-            // MODO ONLINE NORMAL
-            if (isLocalReady) return;
-            if (MatchManager.Instance == null || MatchManager.Instance.localPlayerChoice == -1) return;
-
-            isLocalReady = true;
-            btnSeleccionar.text = "Esperant...";
-            btnSeleccionar.style.backgroundColor = new StyleColor(Color.gray);
-            localNombreText.text = "LLEST!\n" + localNombreText.text;
-            localNombreText.style.color = new StyleColor(Color.green);
-
-            if (NetworkManager.Instancia != null)
-            {
-                NetworkManager.Instancia.EnviarMensaje("{\"tipo\":\"player_ready\"}");
-            }
-            CheckAmbosListos();
-        }
+        CheckAmbosListos();
     }
 
     private void CheckAmbosListos()
     {
         if (isLocalReady && isRivalReady)
         {
-            if (esModoVsCpu)
-            {
-                HandleStartMatch();
-            }
-            else if (MatchManager.Instance != null && MatchManager.Instance.isHost)
+            if (MatchManager.Instance != null && MatchManager.Instance.isHost)
             {
                 string mapName = MatchManager.Instance.sceneNameToLoad;
                 if (NetworkManager.Instancia != null)
@@ -289,20 +237,14 @@ public class CharacterSelectionUI : MonoBehaviour
         }
     }
 
-    // He cambiado el nombre a SeleccionarPersonaje (ya que sirve para ambos ahora)
     void SeleccionarPersonaje(int index)
     {
-        // Si estamos en online y ya estamos listos, no hacer nada.
-        if (!esModoVsCpu && isLocalReady) return;
-        
-        // Si estamos en Vs CPU y ya hemos elegido ambos, no hacer nada.
-        if (esModoVsCpu && isLocalReady && isRivalReady) return;
+        if (isLocalReady) return;
 
         CharacterData personajeElegido = todosLosPersonajes[index];
 
         if (!isLocalReady)
         {
-            // SELECCIÓN DEL JUGADOR LOCAL
             string username = (ApiManager.Instance != null) ? ApiManager.Instance.CurrentUsername : "Jugador";
             localNombreText.text = username + "\n" + personajeElegido.characterName;
 
@@ -315,26 +257,10 @@ public class CharacterSelectionUI : MonoBehaviour
                 MatchManager.Instance.player1Choice = personajeElegido;
             }
 
-            // Solo enviar por red si NO estamos contra la CPU
-            if (!esModoVsCpu && NetworkManager.Instancia != null)
+            if (NetworkManager.Instancia != null)
             {
                 string json = $"{{\"tipo\":\"character_selected\",\"characterId\":{index},\"username\":\"{username}\"}}";
                 NetworkManager.Instancia.EnviarMensaje(json);
-            }
-        }
-        else if (esModoVsCpu && !isRivalReady)
-        {
-            // SELECCIÓN DE LA CPU (Si el jugador ya está listo)
-            rivalNombreText.text = "CPU\n" + personajeElegido.characterName;
-
-            rivalRetrato.style.backgroundImage = new StyleBackground(personajeElegido.characterPortrait);
-            rivalRetrato.style.unityBackgroundScaleMode = ScaleMode.ScaleAndCrop;
-
-            if (MatchManager.Instance != null)
-            {
-                MatchManager.Instance.rivalPlayerChoice = index;
-                MatchManager.Instance.player2Choice = personajeElegido;
-                MatchManager.Instance.rivalUsername = "CPU";
             }
         }
     }

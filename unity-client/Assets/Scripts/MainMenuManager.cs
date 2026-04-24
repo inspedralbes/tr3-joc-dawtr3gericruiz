@@ -6,7 +6,6 @@ public class MainMenuManager : MonoBehaviour
 {
     public UIDocument document;
 
-    // ── Login ──────────────────────────────────────────────────────
     private VisualElement loginPanel;
     private TextField usernameInput;
     private TextField passwordInput;
@@ -14,7 +13,6 @@ public class MainMenuManager : MonoBehaviour
     private Button goToRegisterButton;
     private Label statusText;
 
-    // ── Register ───────────────────────────────────────────────────
     private VisualElement registerPanel;
     private TextField regUsernameInput;
     private TextField regPasswordInput;
@@ -23,12 +21,10 @@ public class MainMenuManager : MonoBehaviour
     private Button goToLoginButton;
     private Label regStatusText;
 
-    // ── Lobby ──────────────────────────────────────────────────────
     private VisualElement lobbyPanel;
     private TextField gameIdInput;
     private Button createGameButton;
     private Button joinGameButton;
-    private Button vsCpuButton;
     private Label lobbyStatusText;
 
     private void OnEnable()
@@ -36,7 +32,6 @@ public class MainMenuManager : MonoBehaviour
         if (document == null) document = GetComponent<UIDocument>();
         var root = document.rootVisualElement;
 
-        // Login
         loginPanel         = root.Q<VisualElement>("LoginPanel");
         usernameInput      = root.Q<TextField>("UsernameInput");
         passwordInput      = root.Q<TextField>("PasswordInput");
@@ -44,7 +39,6 @@ public class MainMenuManager : MonoBehaviour
         goToRegisterButton = root.Q<Button>("GoToRegisterButton");
         statusText         = root.Q<Label>("StatusText");
 
-        // Register
         registerPanel           = root.Q<VisualElement>("RegisterPanel");
         regUsernameInput        = root.Q<TextField>("RegUsernameInput");
         regPasswordInput        = root.Q<TextField>("RegPasswordInput");
@@ -53,15 +47,12 @@ public class MainMenuManager : MonoBehaviour
         goToLoginButton         = root.Q<Button>("GoToLoginButton");
         regStatusText           = root.Q<Label>("RegStatusText");
 
-        // Lobby
         lobbyPanel       = root.Q<VisualElement>("LobbyPanel");
         gameIdInput      = root.Q<TextField>("GameIdInput");
         createGameButton = root.Q<Button>("CreateGameButton");
         joinGameButton   = root.Q<Button>("JoinGameButton");
-        vsCpuButton      = root.Q<Button>("VsCpuButton");
         lobbyStatusText  = root.Q<Label>("LobbyStatusText");
 
-        // Forçar codi de sala en majúscules
         if (gameIdInput != null)
         {
             gameIdInput.RegisterValueChangedCallback(evt =>
@@ -72,18 +63,13 @@ public class MainMenuManager : MonoBehaviour
             });
         }
 
-        // ── Subscriure TOTS els events aquí ────────────────────────────
-        // UI Toolkit registra perfectament els events d'elements ocults. 
         if (loginButton != null) loginButton.clicked               += OnLoginClicked;
         if (goToRegisterButton != null) goToRegisterButton.clicked += OnGoToRegisterClicked;
         if (registerButton != null) registerButton.clicked         += OnRegisterClicked;
         if (goToLoginButton != null) goToLoginButton.clicked       += OnGoToLoginClicked;
-        
         if (createGameButton != null) createGameButton.clicked     += OnCreateGameClicked;
         if (joinGameButton != null) joinGameButton.clicked         += OnJoinGameClicked;
-        if (vsCpuButton != null) vsCpuButton.clicked               += OnVsCpuClicked;
 
-        // Decidir quin panell mostrar
         if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.AuthToken))
             MostrarLobby();
         else
@@ -102,7 +88,6 @@ public class MainMenuManager : MonoBehaviour
         if (goToLoginButton != null) goToLoginButton.clicked       -= OnGoToLoginClicked;
         if (createGameButton != null) createGameButton.clicked     -= OnCreateGameClicked;
         if (joinGameButton != null) joinGameButton.clicked         -= OnJoinGameClicked;
-        if (vsCpuButton != null) vsCpuButton.clicked               -= OnVsCpuClicked;
     }
 
     private void MostrarLobby()
@@ -110,23 +95,8 @@ public class MainMenuManager : MonoBehaviour
         loginPanel.style.display    = DisplayStyle.None;
         registerPanel.style.display = DisplayStyle.None;
         lobbyPanel.style.display    = DisplayStyle.Flex;
-        
-        // Com hem traslladat els estils al UXML i les subscripcions al OnEnable,
-        // aquesta funció ara només s'encarrega d'intercanviar els panells.
     }
 
-    private void OnVsCpuClicked()
-    {
-        Debug.Log("[MainMenuManager] Jugar contra CPU!");
-        if (MatchManager.Instance != null)
-        {
-            MatchManager.Instance.isHost      = true;
-            MatchManager.Instance.esModoVsCpu = true;
-        }
-        SceneManager.LoadScene("MapSelection");
-    }
-
-    // ── Navegació panells ──────────────────────────────────────────
     private void OnGoToRegisterClicked()
     {
         loginPanel.style.display    = DisplayStyle.None;
@@ -143,7 +113,6 @@ public class MainMenuManager : MonoBehaviour
         regStatusText.text = "";
     }
 
-    // ── Register ───────────────────────────────────────────────────
     private void OnRegisterClicked()
     {
         string username        = regUsernameInput.value;
@@ -171,20 +140,15 @@ public class MainMenuManager : MonoBehaviour
             {
                 regStatusText.text = "Compte creat! Pots iniciar sessió.";
                 regStatusText.style.color = new StyleColor(new Color(0.2f, 0.8f, 0.2f));
-                regUsernameInput.value        = "";
-                regPasswordInput.value        = "";
-                regConfirmPasswordInput.value = "";
                 Invoke("OnGoToLoginClicked", 1.5f);
             }
             else
             {
                 regStatusText.text = "Error: " + message;
-                regStatusText.style.color = new StyleColor(new Color(0.8f, 0.2f, 0.2f));
             }
         });
     }
 
-    // ── Login ──────────────────────────────────────────────────────
     private void OnLoginClicked()
     {
         string username = usernameInput.value;
@@ -214,7 +178,6 @@ public class MainMenuManager : MonoBehaviour
         });
     }
 
-    // ── Xarxa ──────────────────────────────────────────────────────
     private void InitNetworkManager(string gameId)
     {
         if (NetworkManager.Instancia == null)
@@ -241,8 +204,7 @@ public class MainMenuManager : MonoBehaviour
                 lobbyStatusText.text = "Partida creada! ID: " + gameIdOrError;
                 if (MatchManager.Instance != null)
                 {
-                    MatchManager.Instance.isHost      = true;
-                    MatchManager.Instance.esModoVsCpu = false;
+                    MatchManager.Instance.isHost = true;
                 }
                 InitNetworkManager(gameIdOrError);
                 SceneManager.LoadScene("MapSelection");
@@ -277,8 +239,7 @@ public class MainMenuManager : MonoBehaviour
                 lobbyStatusText.text = "Unit a la partida!";
                 if (MatchManager.Instance != null)
                 {
-                    MatchManager.Instance.isHost      = false;
-                    MatchManager.Instance.esModoVsCpu = false;
+                    MatchManager.Instance.isHost = false;
                 }
                 InitNetworkManager(gameId);
                 SceneManager.LoadScene("CharacterSelection");

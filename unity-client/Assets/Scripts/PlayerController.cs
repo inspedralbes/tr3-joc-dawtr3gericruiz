@@ -4,7 +4,6 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Red / Multijugador")]
     public bool esJugadorLocal = false; 
-    public bool esBot = false;
 
     [Header("Estado Inicial")]
     public bool bloqueadoPorIntro = false;
@@ -13,7 +12,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 redPosicionObjetivo;
     private bool recibioPrimeraPosicion = false;
     private float movSendTimer = 0f;
-    private const float MOV_SEND_INTERVAL = 0.033f; // ~30 veces/segundo
+    private const float MOV_SEND_INTERVAL = 0.033f;
+    private float redVelY;
+    private bool redEnSuelo;
 
     [Header("Estado del Jugador (Vidas y UI)")]
     public PlayerUI miInterfaz;
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
     public float comboWindowTime = 0.6f;
     [SerializeField] private float currentComboTimer = 0f;
     private int comboStateJab = 0;
-    private bool estaEnComboGap = false; // TRUE durante la ventana Jab1→Jab2 para evitar cancelación prematura
+    private bool estaEnComboGap = false;
 
     [Header("Smash Attack (K)")]
     public float tiempoMaximoCarga = 2f;
@@ -69,8 +70,8 @@ public class PlayerController : MonoBehaviour
     public float tiempoCargaActual = 0f;
 
     [Header("Cooldowns")]
-    public float cooldownSmash = 1.2f;      // segundos de espera tras lanzar un Smash
-    public float cooldownProyectil = 1.0f;  // segundos de espera tras lanzar un Proyectil
+    public float cooldownSmash = 1.2f;
+    public float cooldownProyectil = 1.0f;
     private float timerCooldownSmash = 0f;
     private float timerCooldownProyectil = 0f;
 
@@ -106,22 +107,26 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        // --- Interpolación de red: siempre activa para jugadores remotos ---
         if (!esJugadorLocal && recibioPrimeraPosicion)
         {
             transform.position = Vector3.Lerp(transform.position, redPosicionObjetivo, Time.deltaTime * 25f);
-
-            if (enSuelo || estaEnHitstun)
-            {
-                anim.SetFloat("yVelocity", 0);
-            }
         }
 
         if (estaEnHitstun) return;
         
-        enSuelo = Physics2D.OverlapCircle(groundCheck.position, radioSuelo, capaSuelo);
-        anim.SetBool("isGrounded", enSuelo);
-        anim.SetFloat("yVelocity", rb.linearVelocity.y);
+        if (esJugadorLocal)
+        {
+            enSuelo = Physics2D.OverlapCircle(groundCheck.position, radioSuelo, capaSuelo);
+            anim.SetBool("isGrounded", enSuelo);
+            anim.SetFloat("yVelocity", rb.linearVelocity.y);
+        }
+        else
+        {
+            enSuelo = redEnSuelo;
+            anim.SetBool("isGrounded", enSuelo);
+            anim.SetFloat("yVelocity", redVelY);
+        }
+
         anim.SetBool("isAttacking", estaHaciendoAtaque || estaCargandoSmash);
 
         if (enSuelo)
@@ -146,7 +151,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Actualizar cooldowns
         if (timerCooldownSmash > 0f)     timerCooldownSmash     -= Time.deltaTime;
         if (timerCooldownProyectil > 0f) timerCooldownProyectil -= Time.deltaTime;
 
@@ -172,7 +176,6 @@ public class PlayerController : MonoBehaviour
             ManejarEstadoLibre();
         }
 
-        // Solo limpiar hitbox/ataque si NO estamos en la ventana de combo Jab1→Jab2
         if (!estaEnComboGap && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && hitboxAtaque != null && hitboxAtaque.gameObject.activeSelf)
         {
             DesactivarHitbox();
@@ -209,10 +212,10 @@ public class PlayerController : MonoBehaviour
         estaCargandoSmash = false;
         estaHaciendoAtaque = true;
         anim.SetBool("CargandoSmash", false);
-        timerCooldownSmash = cooldownSmash; // Iniciar cooldown
+        timerCooldownSmash = cooldownSmash;
     }
 
-        public void ContinuarComboJab()
+    public void ContinuarComboJab()
     {
         estaEnComboGap = false;
         currentComboTimer = 0f;
@@ -234,7 +237,7 @@ public class PlayerController : MonoBehaviour
             if (esJugadorLocal && (Input.GetKeyDown(KeyCode.J) || Input.GetKey(KeyCode.J)))
             {
                 ContinuarComboJab();
-                Debug.Log("Entra");
+                if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("combo_jab");
             }
             else if (currentComboTimer >= comboWindowTime)
             {
@@ -348,7 +351,7 @@ public class PlayerController : MonoBehaviour
         if (proyectilPrefab != null && puntoDeDisparo != null)
         {
             estaHaciendoAtaque = true;
-            timerCooldownProyectil = cooldownProyectil; // Iniciar cooldown
+            timerCooldownProyectil = cooldownProyectil;
             anim.SetTrigger("LanzarProyectil");
         }
     }
@@ -373,14 +376,17 @@ public class PlayerController : MonoBehaviour
             if (movSendTimer >= MOV_SEND_INTERVAL)
             {
                 movSendTimer = 0f;
-                NetworkManager.Instancia.EnviarMovimiento(transform.position.x, transform.position.y, transform.localScale.x, inputX);
+                NetworkManager.Instancia.EnviarMovimiento(transform.position.x, transform.position.y, transform.localScale.x, inputX, rb.linearVelocity.y, enSuelo);
             }
         }
     }
 
-    public void ActualizarPosicionRed(float x, float y)
+    public void ActualizarPosicionRed(float x, float y, float velY, bool suelo)
     {
         redPosicionObjetivo = new Vector3(x, y, transform.position.z);
+        redVelY = velY;
+        redEnSuelo = suelo;
+
         if (!recibioPrimeraPosicion)
         {
             transform.position = redPosicionObjetivo;
@@ -407,12 +413,6 @@ public class PlayerController : MonoBehaviour
         FindObjectOfType<GameManager>().ComprobarVictoria();
         if (miInterfaz != null) miInterfaz.ActualizarVidas(vidasActuales);
 
-        if (esBot)
-    {
-        GetComponent<SimpleBotAgent>()?.NotificarMort();
-    }
-
-        // Notificar al rival que hemos perdido una vida
         if (esJugadorLocal && NetworkManager.Instancia != null)
         {
             NetworkManager.Instancia.EnviarMuerte();
@@ -434,15 +434,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("¡El jugador ha sido derrotado!");
             gameObject.SetActive(false);
         }
     }
 
-    /// <summary>
-    /// Versión de PerderVida para el jugador REMOTO (recibida por red).
-    /// Actualiza HUD y estado sin volver a enviar mensaje de red.
-    /// </summary>
     public void PerderVidaRed()
     {
         vidasActuales--;
@@ -451,7 +446,6 @@ public class PlayerController : MonoBehaviour
 
         if (vidasActuales > 0)
         {
-            // Resetear estado visual del rival
             rb.linearVelocity = Vector2.zero;
             porcentajeDaño = 0f;
             if (miInterfaz != null) miInterfaz.ActualizarPorcentaje(porcentajeDaño);
@@ -459,23 +453,17 @@ public class PlayerController : MonoBehaviour
             estaHaciendoAtaque = false;
             estaCargandoSmash = false;
             estaHaciendoRecovery = false;
-            recibioPrimeraPosicion = false; // Forzar snap de posición al respawn
+            recibioPrimeraPosicion = false; 
             anim.SetBool("isRecovering", false);
             anim.SetBool("CargandoSmash", false);
             DesactivarHitbox();
         }
         else
         {
-            Debug.Log("¡El rival ha sido derrotado! (sincronitzat per xarxa)");
             gameObject.SetActive(false);
         }
     }
 
-    /// <summary>
-    /// Aplica solo el aumento de porcentaje y actualiza el HUD,
-    /// sin knockback ni hitstun. Usado por el atacante para ver
-    /// el porcentaje del rival actualizado en tiempo real.
-    /// </summary>
     public void AplicarDañoVisual(float dañoRecibido)
     {
         porcentajeDaño += dañoRecibido;
@@ -523,7 +511,7 @@ public class PlayerController : MonoBehaviour
     {
         comboStateJab = 2;
         currentComboTimer = 0f;
-        estaEnComboGap = true; // Proteger contra cancelación prematura durante la ventana
+        estaEnComboGap = true;
     }
 
     public void TerminarSecuenciaJab()

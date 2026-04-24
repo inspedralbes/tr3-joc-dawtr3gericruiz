@@ -27,7 +27,6 @@ public class NetworkManager : MonoBehaviour
 
     private void Start()
     {
-        
     }
 
     public async void Conectar(string gameId)
@@ -39,7 +38,6 @@ public class NetworkManager : MonoBehaviour
         {
             await ws.ConnectAsync(new Uri(urlServidor), CancellationToken.None);
             Debug.Log("Connectat al servidor WebSocket.");
-
             
             string joinMsg = $"{{\"tipo\":\"join_room\",\"gameId\":\"{gameId}\"}}";
             EnviarMensaje(joinMsg);
@@ -72,7 +70,7 @@ public class NetworkManager : MonoBehaviour
 
             if (datos.tipo == "movimiento" && rivalController != null)
             {
-                rivalController.ActualizarPosicionRed(datos.posX, datos.posY);
+                rivalController.ActualizarPosicionRed(datos.posX, datos.posY, datos.velY, datos.enSuelo);
                 rivalController.transform.localScale = new Vector3(datos.scaleX, 1, 1);
                 rivalController.inputX = datos.inputX; 
             }
@@ -81,6 +79,10 @@ public class NetworkManager : MonoBehaviour
                 if (datos.accion == "jab") 
                 {
                     rivalController.EjecutarJab();
+                }
+                else if (datos.accion == "combo_jab")
+                {
+                    rivalController.ContinuarComboJab();
                 }
                 else if (datos.accion == "proyectil")
                 {
@@ -99,18 +101,14 @@ public class NetworkManager : MonoBehaviour
                     rivalController.EjecutarRecovery();
                 }
             }
-
             else if (datos.tipo == "golpe" && localController != null)
             {
-                // El 'localController' aquí es el jugador que FUE GOLPEADO (el defensor).
-                // Aplica el daño real con knockback en la máquina del defensor.
                 Vector2 direccion = new Vector2(datos.dirX, datos.dirY);
                 localController.RecibirDaño(datos.daño, direccion, datos.empujeBase, datos.escalado);
                 Debug.Log("Hem rebut un cop del rival!");
             }
             else if (datos.tipo == "muerte" && rivalController != null)
             {
-                // El rival (en la máquina del atacante) ha muerto según el defensor.
                 rivalController.PerderVidaRed();
                 Debug.Log("El rival ha perdut una vida (sincronitzat per xarxa).");
             }
@@ -137,11 +135,11 @@ public class NetworkManager : MonoBehaviour
         }
     }
 
-    public void EnviarMovimiento(float x, float y, float scaleX, float inputX)
+    public void EnviarMovimiento(float x, float y, float scaleX, float inputX, float velY, bool enSuelo)
     {
         if (ws != null && ws.State == WebSocketState.Open)
         {
-            DatosRed datos = new DatosRed { tipo = "movimiento", posX = x, posY = y, scaleX = scaleX, inputX = inputX };
+            DatosRed datos = new DatosRed { tipo = "movimiento", posX = x, posY = y, scaleX = scaleX, inputX = inputX, velY = velY, enSuelo = enSuelo };
             string json = JsonUtility.ToJson(datos);
             
             EnviarMensaje(json);
@@ -227,6 +225,8 @@ public class DatosRed
     public float posY;
     public float scaleX;
     public float inputX;
+    public float velY;
+    public bool enSuelo;
     public string accion; 
     
     public float daño;
@@ -237,5 +237,5 @@ public class DatosRed
 
     public string mapName;
     public int characterId;
-    public string username;  // username del jugador que envia la seleccion de personaje
+    public string username;
 }

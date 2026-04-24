@@ -25,7 +25,6 @@ public class MatchManager : MonoBehaviour
     public MapData mapaElegido;
 
     public bool isHost = true;
-    public bool esModoVsCpu = false;
     public int localPlayerChoice = -1;
     public int rivalPlayerChoice = -1;
     public string sceneNameToLoad;
