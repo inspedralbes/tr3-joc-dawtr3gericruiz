@@ -28,7 +28,18 @@ public class PlayerController : MonoBehaviour
     public float fuerzaSalto = 22f;
     public int saltosMaximos = 2;
     private int saltosRestantes;
+    
+    [Header("Input State")]
     public float inputX;
+    public bool inputJumpDown;
+    public bool inputJumpHeld;
+    public bool inputCaidaRapida;
+    public bool inputJabDown;
+    public bool inputJabHeld;
+    public bool inputSmashDown;
+    public bool inputSmashUp;
+    public bool inputProyectilDown;
+    public bool inputRecovery;
 
     [Header("Caída Rápida")]
     public float multiplicadorCaidaRapida = 3f;
@@ -114,6 +125,8 @@ public class PlayerController : MonoBehaviour
 
         if (estaEnHitstun) return;
         
+        RecogerInput();
+        
         if (esJugadorLocal)
         {
             enSuelo = Physics2D.OverlapCircle(groundCheck.position, radioSuelo, capaSuelo);
@@ -164,7 +177,6 @@ public class PlayerController : MonoBehaviour
         }
         else if (estaHaciendoRecovery)
         {
-            if (esJugadorLocal) inputX = Input.GetAxisRaw("Horizontal");
             saltosRestantes = 0;
             if (timerDashRecovery > 0)
             {
@@ -192,10 +204,9 @@ public class PlayerController : MonoBehaviour
             tiempoCargaActual += Time.deltaTime;
         }
 
-        if (esJugadorLocal)
+        if (esJugadorLocal || (MatchManager.Instance != null && MatchManager.Instance.isVsCpu && !esJugadorLocal))
         {
-            inputX = 0;
-            if (Input.GetKeyUp(KeyCode.K) || tiempoCargaActual >= tiempoMaximoCarga)
+            if (inputSmashUp || tiempoCargaActual >= tiempoMaximoCarga)
             {
                 EjecutarLanzamientoSmash();
                 if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("smash_release");
@@ -226,15 +237,13 @@ public class PlayerController : MonoBehaviour
 
     private void HandleJabComboState()
     {
-        if (esJugadorLocal) inputX = Input.GetAxisRaw("Horizontal");
-        
         ActualizarOrientacion();
 
         if (comboStateJab == 2)
         {
             currentComboTimer += Time.deltaTime;
 
-            if (esJugadorLocal && (Input.GetKeyDown(KeyCode.J) || Input.GetKey(KeyCode.J)))
+            if (inputJabDown || inputJabHeld)
             {
                 ContinuarComboJab();
                 if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("combo_jab");
@@ -250,38 +259,30 @@ public class PlayerController : MonoBehaviour
 
     private void ManejarEstadoLibre()
     {
-        if (esJugadorLocal)
-        {
-            inputX = Input.GetAxisRaw("Horizontal");
-        }
-        
         anim.SetBool("isRunning", inputX != 0);
         ActualizarOrientacion();
 
-        if (esJugadorLocal)
-        {
-            ManejarMovimientoVerticalLocal();
+        ManejarMovimientoVerticalLocal();
 
-            if (Input.GetButton("Jump") && Input.GetKeyDown(KeyCode.L) && !yaUsoRecovery)
-            {
-                EjecutarRecovery();
-                if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("recovery");
-            }
-            else if (Input.GetKeyDown(KeyCode.J))
-            {
-                EjecutarJab();
-                if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("jab");
-            }
-            else if (Input.GetKeyDown(KeyCode.K) && enSuelo && timerCooldownSmash <= 0f)
-            {
-                IniciarCargaSmash();
-                if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("smash_start");
-            }
-            else if (Input.GetKeyDown(KeyCode.L) && timerCooldownProyectil <= 0f)
-            {
-                EjecutarProyectil();
-                if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("proyectil");
-            }
+        if (inputRecovery && !yaUsoRecovery)
+        {
+            EjecutarRecovery();
+            if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("recovery");
+        }
+        else if (inputJabDown)
+        {
+            EjecutarJab();
+            if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("jab");
+        }
+        else if (inputSmashDown && enSuelo && timerCooldownSmash <= 0f)
+        {
+            IniciarCargaSmash();
+            if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("smash_start");
+        }
+        else if (inputProyectilDown && timerCooldownProyectil <= 0f)
+        {
+            EjecutarProyectil();
+            if (NetworkManager.Instancia != null) NetworkManager.Instancia.EnviarAccion("proyectil");
         }
     }
 
@@ -293,7 +294,7 @@ public class PlayerController : MonoBehaviour
 
     void ManejarMovimientoVerticalLocal()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (inputJumpDown)
         {
             if (enSuelo) EjecutarSalto();
             else if (saltosRestantes > 1) { EjecutarSalto(); saltosRestantes--; }
@@ -301,10 +302,31 @@ public class PlayerController : MonoBehaviour
 
         if (!enSuelo && rb.linearVelocity.y <= 0.1f && !esCaidaRapida)
         {
-            if (Input.GetAxisRaw("Vertical") < 0)
+            if (inputCaidaRapida)
             {
                 EjecutarCaidaRapida();
             }
+        }
+    }
+
+    private void RecogerInput()
+    {
+        // Si este personaje está siendo controlado por la IA, ignoramos el teclado
+        FighterAgent agent = GetComponent<FighterAgent>();
+        if (agent != null && agent.enabled) return;
+
+        if (esJugadorLocal)
+        {
+            inputX = Input.GetAxisRaw("Horizontal");
+            inputJumpDown = Input.GetButtonDown("Jump");
+            inputJumpHeld = Input.GetButton("Jump");
+            inputCaidaRapida = Input.GetAxisRaw("Vertical") < -0.5f;
+            inputJabDown = Input.GetKeyDown(KeyCode.J);
+            inputJabHeld = Input.GetKey(KeyCode.J);
+            inputSmashDown = Input.GetKeyDown(KeyCode.K);
+            inputSmashUp = Input.GetKeyUp(KeyCode.K);
+            inputProyectilDown = Input.GetKeyDown(KeyCode.L);
+            inputRecovery = Input.GetButton("Jump") && Input.GetKeyDown(KeyCode.L);
         }
     }
 
@@ -434,7 +456,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            GameManager gm = FindFirstObjectByType<GameManager>();
+            if (gm == null || !gm.modoEntrenamiento)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 
@@ -460,7 +486,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            GameManager gm = FindFirstObjectByType<GameManager>();
+            if (gm == null || !gm.modoEntrenamiento)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 

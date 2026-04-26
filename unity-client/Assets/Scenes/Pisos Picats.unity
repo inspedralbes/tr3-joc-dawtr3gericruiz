@@ -938,6 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b9ed2042b51c542b123da3b29ec972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modoEntrenamiento: 0
   uiPartida: {fileID: 828881804}
   hudsJugadores:
   - {fileID: 273669457}

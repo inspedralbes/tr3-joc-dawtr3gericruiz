@@ -45,6 +45,9 @@ GameObject:
   - component: {fileID: 8678587099875598974}
   - component: {fileID: 3338661482783133972}
   - component: {fileID: 457697908013518837}
+  - component: {fileID: -3738117500739929646}
+  - component: {fileID: -6566082949551510737}
+  - component: {fileID: 6831059813077707079}
   m_Layer: 0
   m_Name: Satoru Gojo
   m_TagString: Player
@@ -210,14 +213,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f12c7eb5ea8151e4960e8398550232d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  esJugadorLocal: 0
   bloqueadoPorIntro: 0
   miInterfaz: {fileID: 0}
   vidasMaximas: 3
+  vidasActuales: 0
   puntoDeRespawn: {fileID: 0}
   miFotoDePerfil: {fileID: 875994248, guid: 55bf5778cbfe18a62a98f3bca413b740, type: 3}
   velocidadCorrer: 16
   fuerzaSalto: 22
   saltosMaximos: 2
+  inputX: 0
+  inputJumpDown: 0
+  inputJumpHeld: 0
+  inputCaidaRapida: 0
+  inputJabDown: 0
+  inputJabHeld: 0
+  inputSmashDown: 0
+  inputSmashUp: 0
+  inputProyectilDown: 0
+  inputRecovery: 0
   multiplicadorCaidaRapida: 3
   impulsoInstantaneo: 5
   groundCheck: {fileID: 2871159348084203870}
@@ -236,8 +251,12 @@ MonoBehaviour:
   proyectilPrefab: {fileID: 7967169055013824487, guid: 2aa8b091476c8f212ba5121232a26509, type: 3}
   puntoDeDisparo: {fileID: 3100954273593280084}
   comboWindowTime: 0.6
+  currentComboTimer: 0
   tiempoMaximoCarga: 2
   multiplicadorMaximo: 2
+  tiempoCargaActual: 0
+  cooldownSmash: 1.2
+  cooldownProyectil: 1
   velocidadDashRecovery: 20
   duracionDashRecovery: 0.2
   "porcentajeDa\xF1o": 0
@@ -265,6 +284,68 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3738117500739929646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630692861412699201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 1
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 030000000300000006000000
+    VectorActionSize: 030000000300000006000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 0369b2322cc99f743b8f28af6865ff4c, type: 3}
+  m_InferenceDevice: 0
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_DeterministicInference: 0
+  m_ObservableAttributeHandling: 0
+--- !u!114 &-6566082949551510737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630692861412699201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7138b7cca68734797fa77a5e6de273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+--- !u!114 &6831059813077707079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630692861412699201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  DecisionStep: 0
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &1398707339766869251
 GameObject:
   m_ObjectHideFlags: 0

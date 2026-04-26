@@ -29,6 +29,7 @@ public class MatchManager : MonoBehaviour
     public int rivalPlayerChoice = -1;
     public string sceneNameToLoad;
     public string rivalUsername = "";
+    public bool isVsCpu = false;
 
     void Awake()
     {

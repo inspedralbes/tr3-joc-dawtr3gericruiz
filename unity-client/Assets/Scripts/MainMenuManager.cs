@@ -26,6 +26,7 @@ public class MainMenuManager : MonoBehaviour
     private Button createGameButton;
     private Button joinGameButton;
     private Label lobbyStatusText;
+    private Button vsCpuButton;
 
     private void OnEnable()
     {
@@ -52,6 +53,7 @@ public class MainMenuManager : MonoBehaviour
         createGameButton = root.Q<Button>("CreateGameButton");
         joinGameButton   = root.Q<Button>("JoinGameButton");
         lobbyStatusText  = root.Q<Label>("LobbyStatusText");
+        vsCpuButton      = root.Q<Button>("VsCpuButton");
 
         if (gameIdInput != null)
         {
@@ -69,6 +71,7 @@ public class MainMenuManager : MonoBehaviour
         if (goToLoginButton != null) goToLoginButton.clicked       += OnGoToLoginClicked;
         if (createGameButton != null) createGameButton.clicked     += OnCreateGameClicked;
         if (joinGameButton != null) joinGameButton.clicked         += OnJoinGameClicked;
+        if (vsCpuButton != null) vsCpuButton.clicked               += OnVsCpuClicked;
 
         if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.AuthToken))
             MostrarLobby();
@@ -88,6 +91,7 @@ public class MainMenuManager : MonoBehaviour
         if (goToLoginButton != null) goToLoginButton.clicked       -= OnGoToLoginClicked;
         if (createGameButton != null) createGameButton.clicked     -= OnCreateGameClicked;
         if (joinGameButton != null) joinGameButton.clicked         -= OnJoinGameClicked;
+        if (vsCpuButton != null) vsCpuButton.clicked               -= OnVsCpuClicked;
     }
 
     private void MostrarLobby()
@@ -111,6 +115,16 @@ public class MainMenuManager : MonoBehaviour
         loginPanel.style.display    = DisplayStyle.Flex;
         statusText.text    = "";
         regStatusText.text = "";
+    }
+
+    private void OnVsCpuClicked()
+    {
+        if (MatchManager.Instance != null)
+        {
+            MatchManager.Instance.isHost = true;
+            MatchManager.Instance.isVsCpu = true;
+        }
+        SceneManager.LoadScene("MapSelection");
     }
 
     private void OnRegisterClicked()
@@ -205,6 +219,7 @@ public class MainMenuManager : MonoBehaviour
                 if (MatchManager.Instance != null)
                 {
                     MatchManager.Instance.isHost = true;
+                    MatchManager.Instance.isVsCpu = false;
                 }
                 InitNetworkManager(gameIdOrError);
                 SceneManager.LoadScene("MapSelection");
@@ -240,6 +255,7 @@ public class MainMenuManager : MonoBehaviour
                 if (MatchManager.Instance != null)
                 {
                     MatchManager.Instance.isHost = false;
+                    MatchManager.Instance.isVsCpu = false;
                 }
                 InitNetworkManager(gameId);
                 SceneManager.LoadScene("CharacterSelection");

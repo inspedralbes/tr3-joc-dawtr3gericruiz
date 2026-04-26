@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     private bool partidaTerminada = false;
     private float tiempoInicioPartida = 0f;
 
+    [Header("Entrenamiento IA")]
+    public bool modoEntrenamiento = false;
+
     [Header("UI de Partida")]
     public MatchUI uiPartida;
 
@@ -84,7 +87,48 @@ public class GameManager : MonoBehaviour
             p2Controller.IniciarSecuenciaIntro(3f);
         }
         
+        ConfigurarIA();
+        
         StartCoroutine(RutinaCuentaAtras());
+    }
+
+    private void ConfigurarIA()
+    {
+        if (p1Controller == null || p2Controller == null) return;
+
+        FighterAgent agent1 = p1Controller.GetComponent<FighterAgent>();
+        FighterAgent agent2 = p2Controller.GetComponent<FighterAgent>();
+
+        if (modoEntrenamiento)
+        {
+            if (agent1 != null) 
+            {
+                agent1.enabled = true;
+                agent1.EstablecerEnemigo(p2Controller);
+            }
+            if (agent2 != null)
+            {
+                agent2.enabled = true;
+                agent2.EstablecerEnemigo(p1Controller);
+            }
+        }
+        else
+        {
+            if (agent1 != null) agent1.enabled = false;
+            
+            if (agent2 != null)
+            {
+                if (MatchManager.Instance != null && MatchManager.Instance.isVsCpu)
+                {
+                    agent2.enabled = true;
+                    agent2.EstablecerEnemigo(p1Controller);
+                }
+                else
+                {
+                    agent2.enabled = false;
+                }
+            }
+        }
     }
 
     private GameObject ObtenerPrefabPorID(int idPersonaje)
@@ -115,6 +159,7 @@ public class GameManager : MonoBehaviour
     public void ComprobarVictoria()
     {
         if (partidaTerminada) return;
+        if (modoEntrenamiento) return;
         if (p1Controller != null && p1Controller.vidasActuales <= 0) TerminarPartida(2); 
         else if (p2Controller != null && p2Controller.vidasActuales <= 0) TerminarPartida(1); 
     }
@@ -133,7 +178,7 @@ public class GameManager : MonoBehaviour
         
         if (uiPartida != null) uiPartida.MostrarPantallaVictoria(usernameGanador, vidasRestantes, duracion);
         
-        if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentGameId))
+        if (ApiManager.Instance != null && !string.IsNullOrEmpty(ApiManager.Instance.CurrentGameId) && (MatchManager.Instance == null || !MatchManager.Instance.isVsCpu))
         {
             string winnerId = localEsGanador ? ApiManager.Instance.CurrentUserId : "rival_id";
             ApiManager.Instance.SaveResult(winnerId, duracion, (success) => {});

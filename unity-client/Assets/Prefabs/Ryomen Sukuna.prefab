@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 5260762733929113160}
   - component: {fileID: 3073718098767093890}
   - component: {fileID: 2209621526586004969}
+  - component: {fileID: -6632237413699182806}
+  - component: {fileID: -4322908920826790913}
+  - component: {fileID: 1466397052140003511}
   m_Layer: 0
   m_Name: Ryomen Sukuna
   m_TagString: Player
@@ -180,7 +183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esJugadorLocal: 0
-  esBot: 0
   bloqueadoPorIntro: 0
   miInterfaz: {fileID: 0}
   vidasMaximas: 3
@@ -191,6 +193,15 @@ MonoBehaviour:
   fuerzaSalto: 22
   saltosMaximos: 2
   inputX: 0
+  inputJumpDown: 0
+  inputJumpHeld: 0
+  inputCaidaRapida: 0
+  inputJabDown: 0
+  inputJabHeld: 0
+  inputSmashDown: 0
+  inputSmashUp: 0
+  inputProyectilDown: 0
+  inputRecovery: 0
   multiplicadorCaidaRapida: 3
   impulsoInstantaneo: 5
   groundCheck: {fileID: 4198880692499519603}
@@ -242,6 +253,68 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6632237413699182806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642350207006483243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 1
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 030000000300000006000000
+    VectorActionSize: 030000000300000006000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 0369b2322cc99f743b8f28af6865ff4c, type: 3}
+  m_InferenceDevice: 0
+  m_BehaviorType: 2
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_DeterministicInference: 0
+  m_ObservableAttributeHandling: 0
+--- !u!114 &-4322908920826790913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642350207006483243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7138b7cca68734797fa77a5e6de273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+--- !u!114 &1466397052140003511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642350207006483243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  DecisionStep: 0
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &5508349705101385569
 GameObject:
   m_ObjectHideFlags: 0
