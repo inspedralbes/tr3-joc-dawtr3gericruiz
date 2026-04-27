@@ -1,0 +1,1987 @@
+fileFormatVersion: 2
+guid: e18a5a741f6fb904ea3bb2a09583af1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6500433193491711765
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_0
+  - first:
+      213: -5230029364868401050
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_1
+  - first:
+      213: 8005652574457835206
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_2
+  - first:
+      213: -686506170272965213
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_3
+  - first:
+      213: 1354239229744048501
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_4
+  - first:
+      213: 7245867337881896288
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_5
+  - first:
+      213: -4528002062259100048
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_6
+  - first:
+      213: 7836832233346556757
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_7
+  - first:
+      213: 7979099384180306284
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_8
+  - first:
+      213: 1566724891626462302
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_9
+  - first:
+      213: 3149070295639083626
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_10
+  - first:
+      213: -6106602588850629752
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_11
+  - first:
+      213: -8184746791860206416
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_12
+  - first:
+      213: 6918706546192710169
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_13
+  - first:
+      213: -7762873929945377770
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_14
+  - first:
+      213: 9026817942525089338
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_15
+  - first:
+      213: -8260759491021345930
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_16
+  - first:
+      213: -6421158859696430952
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_17
+  - first:
+      213: 8793597103927529569
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_18
+  - first:
+      213: 5155947500625139607
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_19
+  - first:
+      213: 2252594278030501512
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_20
+  - first:
+      213: -299185532324584349
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_21
+  - first:
+      213: 2163385201307064413
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_22
+  - first:
+      213: 5236076481982139718
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_23
+  - first:
+      213: -1874842255947732362
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_24
+  - first:
+      213: -5583566741175090588
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_25
+  - first:
+      213: 6019023717690190947
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_26
+  - first:
+      213: -3451571376581084908
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_27
+  - first:
+      213: 3801176184544651728
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_28
+  - first:
+      213: -3251651745929637862
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_29
+  - first:
+      213: 5886162309380905615
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_30
+  - first:
+      213: 7209167620625467260
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_31
+  - first:
+      213: 4360403212858101185
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_32
+  - first:
+      213: -7081952630139336943
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_33
+  - first:
+      213: 6881935663372781344
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_34
+  - first:
+      213: 6682411009633813823
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_35
+  - first:
+      213: 4385098620624969079
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_36
+  - first:
+      213: -3049963609299885531
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_37
+  - first:
+      213: 6030466168751146016
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_38
+  - first:
+      213: -4831388540738307414
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_39
+  - first:
+      213: 2996149163636364205
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_40
+  - first:
+      213: 7574099039043899546
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_41
+  - first:
+      213: -1503661843526696306
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_42
+  - first:
+      213: -8877039511437870196
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_43
+  - first:
+      213: -5574399672366784281
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_44
+  - first:
+      213: 1478742429581425334
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_45
+  - first:
+      213: 2075438682068083780
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_46
+  - first:
+      213: 1043376013933488096
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_47
+  - first:
+      213: -7956278804751779652
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_48
+  - first:
+      213: -2918944569862292320
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_49
+  - first:
+      213: 6859217501839127989
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_50
+  - first:
+      213: -2871755505910234004
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_51
+  - first:
+      213: -298463922144403809
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_52
+  - first:
+      213: 289008947352097505
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_53
+  - first:
+      213: 5000647512135140807
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_54
+  - first:
+      213: 163064021703350905
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_55
+  - first:
+      213: -6145196988951969802
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_56
+  - first:
+      213: -2919619942948984157
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_57
+  - first:
+      213: 2299552054388153655
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_58
+  - first:
+      213: 1266326350186791080
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_59
+  - first:
+      213: -3768594642535032117
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_60
+  - first:
+      213: 5275859156053432093
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_61
+  - first:
+      213: 7662378518252211912
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_62
+  - first:
+      213: -8217831382248551855
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_63
+  - first:
+      213: -2913081703946650699
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_64
+  - first:
+      213: 5221739904901139497
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_65
+  - first:
+      213: 117235945956819582
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_66
+  - first:
+      213: 4086029825282761147
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_67
+  - first:
+      213: 7419023726797376140
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_68
+  - first:
+      213: -4921800241872061414
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_69
+  - first:
+      213: 1575445962858789304
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_70
+  - first:
+      213: -3842980328926137701
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_71
+  - first:
+      213: -4783115019575702063
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_72
+  - first:
+      213: -798815171353292508
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_73
+  - first:
+      213: -8626827586202476568
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_74
+  - first:
+      213: 6587595004581966228
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_75
+  - first:
+      213: 6858194085672244942
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_76
+  - first:
+      213: 5050121506518711519
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_77
+  - first:
+      213: -788196959734534817
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_78
+  - first:
+      213: -3142602863348190236
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_79
+  - first:
+      213: 6766954403633729466
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_80
+  - first:
+      213: -1752637006737655732
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_81
+  - first:
+      213: -402053100786775901
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_82
+  - first:
+      213: 994982190622590034
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_83
+  - first:
+      213: -2196048100663779995
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_84
+  - first:
+      213: 182249134472740427
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_85
+  - first:
+      213: -3178767423630655429
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_86
+  - first:
+      213: 4826425912296383038
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_87
+  - first:
+      213: -371419662769047634
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_88
+  - first:
+      213: 8672268184949125595
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_89
+  - first:
+      213: 6859044213451033412
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_90
+  - first:
+      213: 8423082313925600834
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_91
+  - first:
+      213: 4060058901971551239
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_92
+  - first:
+      213: -6538683157507446402
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_93
+  - first:
+      213: -3496111299295004792
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_94
+  - first:
+      213: 1350635104216026537
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_95
+  - first:
+      213: 7020015753295945568
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_96
+  - first:
+      213: -2523693860759294138
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_97
+  - first:
+      213: 1477802630230549505
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_98
+  - first:
+      213: -6651961632701912537
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_99
+  - first:
+      213: -2123190078499790445
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_100
+  - first:
+      213: -3392480513896062068
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_101
+  - first:
+      213: 7211600508195663599
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_102
+  - first:
+      213: 5981977304456847587
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_103
+  - first:
+      213: 427030833136154534
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_104
+  - first:
+      213: -4777623996744071344
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_105
+  - first:
+      213: 1956706173400275161
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_106
+  - first:
+      213: -2185621822493867402
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_107
+  - first:
+      213: 8739202439859773190
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_108
+  - first:
+      213: 5003473119567610988
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_109
+  - first:
+      213: 5825140118893341259
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_110
+  - first:
+      213: 6180333909635101441
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_111
+  - first:
+      213: -8959984286594956840
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_112
+  - first:
+      213: 1320343620140317016
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_113
+  - first:
+      213: -7412283918450496166
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_114
+  - first:
+      213: 6833194716197896057
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_115
+  - first:
+      213: 500283187047677627
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_116
+  - first:
+      213: 4031463194477854579
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_117
+  - first:
+      213: -7740736148162213395
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_118
+  - first:
+      213: 6190803051819417268
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_119
+  - first:
+      213: -3379608870850843174
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_120
+  - first:
+      213: 3276893336008565522
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_121
+  - first:
+      213: -667415486488471144
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_122
+  - first:
+      213: 1598805334952214194
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_123
+  - first:
+      213: 5127778466084932080
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_124
+  - first:
+      213: 7672065728825067995
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_125
+  - first:
+      213: 6859872750779571142
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_126
+  - first:
+      213: -4725695632857248397
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_127
+  - first:
+      213: 2204795553254021768
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_128
+  - first:
+      213: 1692180465460917536
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_129
+  - first:
+      213: 3730121683493824124
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_130
+  - first:
+      213: -2307615527092597103
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_131
+  - first:
+      213: 2630288307595304045
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_132
+  - first:
+      213: -8002037727195418922
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_133
+  - first:
+      213: -5933854768104044776
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_134
+  - first:
+      213: 3641874271899716040
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_135
+  - first:
+      213: 4007666267368484710
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_136
+  - first:
+      213: -8905183118609041757
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_137
+  - first:
+      213: -896362702993755207
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_138
+  - first:
+      213: -8168214348681733263
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_139
+  - first:
+      213: 6737701642353738823
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_140
+  - first:
+      213: -4997380902468644715
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_141
+  - first:
+      213: -8947054092225960486
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_142
+  - first:
+      213: 6519256794970899578
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_143
+  - first:
+      213: -1337561724875511666
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_144
+  - first:
+      213: 664076577371255342
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_145
+  - first:
+      213: -528399775661712301
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_146
+  - first:
+      213: 4864522847809889985
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_147
+  - first:
+      213: -9034212075374331412
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_148
+  - first:
+      213: 5450801606260019442
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_149
+  - first:
+      213: 7476362722512008945
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_150
+  - first:
+      213: 2890286214236422370
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_151
+  - first:
+      213: -5962715299728912470
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_152
+  - first:
+      213: 896650759611746106
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_153
+  - first:
+      213: 3676132385600965753
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_154
+  - first:
+      213: -715370365093762458
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_155
+  - first:
+      213: 1399943109472958940
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_156
+  - first:
+      213: 6900625084214222429
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_157
+  - first:
+      213: -3579351509979430958
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_158
+  - first:
+      213: -5252841980484659524
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_159
+  - first:
+      213: -8732884291527472680
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_160
+  - first:
+      213: 5560837218291535512
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_161
+  - first:
+      213: -7728460630871101035
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_162
+  - first:
+      213: 2783759166234442585
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_163
+  - first:
+      213: -4429453827630809832
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_164
+  - first:
+      213: -5760164568275875072
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_165
+  - first:
+      213: -1157136389604611072
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_166
+  - first:
+      213: -2226639998026174058
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_167
+  - first:
+      213: 4049392983134488613
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_168
+  - first:
+      213: -59038164250367464
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_169
+  - first:
+      213: 1459088958199372572
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_170
+  - first:
+      213: 1402925787136457788
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_171
+  - first:
+      213: 1258201442538044677
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_172
+  - first:
+      213: -5130132442270676035
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_173
+  - first:
+      213: -5891862933358472309
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_174
+  - first:
+      213: 6841074771363490517
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_175
+  - first:
+      213: 7620820407279960529
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_176
+  - first:
+      213: -759298506990192951
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_177
+  - first:
+      213: 1761602924541408608
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_178
+  - first:
+      213: 1928245259789043983
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_179
+  - first:
+      213: 5744012525225058382
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_180
+  - first:
+      213: -3758924591205117872
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_181
+  - first:
+      213: 1763176887018471837
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_182
+  - first:
+      213: 496251405863436464
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_183
+  - first:
+      213: 8266903969268580855
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_184
+  - first:
+      213: 8711173247901321103
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_185
+  - first:
+      213: -2893794546907295079
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_186
+  - first:
+      213: -1162350418705578447
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_187
+  - first:
+      213: -145589805212680303
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_188
+  - first:
+      213: 9197061047226837739
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_189
+  - first:
+      213: -3944440764789151232
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_190
+  - first:
+      213: -8567955565065799821
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_191
+  - first:
+      213: -8239351671133718533
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_192
+  - first:
+      213: 4181090649007377005
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_193
+  - first:
+      213: -5794411646345232119
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_194
+  - first:
+      213: -2781584539919355181
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_195
+  - first:
+      213: -4108750428356015922
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_196
+  - first:
+      213: -7283307820169014191
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_197
+  - first:
+      213: 1530305020385931845
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_198
+  - first:
+      213: 6290982404780539410
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_199
+  - first:
+      213: 5566874291768076468
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_200
+  - first:
+      213: -7781156114383127416
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_201
+  - first:
+      213: -1429700316640369518
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_202
+  - first:
+      213: -8618659839461119898
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_203
+  - first:
+      213: -6785415977580734885
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_204
+  - first:
+      213: 10912618009820552
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_205
+  - first:
+      213: 960935023318597621
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_206
+  - first:
+      213: -1102224810080834913
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_207
+  - first:
+      213: -1263508124526863160
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_208
+  - first:
+      213: -1616662246124169783
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_209
+  - first:
+      213: -2263180125920231771
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_210
+  - first:
+      213: -1466317980691454127
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_211
+  - first:
+      213: -7788678224170668522
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_212
+  - first:
+      213: 1459917782956564653
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_213
+  - first:
+      213: -7554218527523728024
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_214
+  - first:
+      213: -1196580110696224941
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_215
+  - first:
+      213: 333202735377110233
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_216
+  - first:
+      213: -8832377087401455473
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_217
+  - first:
+      213: -2743548856888764379
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_218
+  - first:
+      213: 7745668929386520302
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_219
+  - first:
+      213: 1788280165891616988
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_220
+  - first:
+      213: -5319573617328936740
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_221
+  - first:
+      213: 8308182896404389905
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_222
+  - first:
+      213: 7462567062266956179
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_223
+  - first:
+      213: 1212724153859206324
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_224
+  - first:
+      213: -8470970548758283059
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_225
+  - first:
+      213: -2522996738154947471
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_226
+  - first:
+      213: 1259424174762057775
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_227
+  - first:
+      213: -382055065606148422
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_228
+  - first:
+      213: 1225929864875290913
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_229
+  - first:
+      213: -7238233849930088116
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_230
+  - first:
+      213: -5607007906273971072
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_231
+  - first:
+      213: -6877346946398749492
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_232
+  - first:
+      213: -8437063968883531240
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_233
+  - first:
+      213: -1517488080584100700
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_234
+  - first:
+      213: 2893153345938990111
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_235
+  - first:
+      213: -4910756807265159773
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_236
+  - first:
+      213: -7963354436243044442
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_237
+  - first:
+      213: -4028239876658529867
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_238
+  - first:
+      213: -7058068315515104915
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_239
+  - first:
+      213: 3600885475608089778
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_240
+  - first:
+      213: 6675788156573732737
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_241
+  - first:
+      213: 178409216547065840
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_242
+  - first:
+      213: -1036068106829620902
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_243
+  - first:
+      213: 6913933995356417790
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_244
+  - first:
+      213: -7265749863496482235
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_245
+  - first:
+      213: 2810697400940229823
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_246
+  - first:
+      213: -9003715180570263598
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_247
+  - first:
+      213: 1621251708426909106
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_248
+  - first:
+      213: 5266028254524513330
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_249
+  - first:
+      213: 4645644305365319320
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_250
+  - first:
+      213: 4142863665545170801
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_251
+  - first:
+      213: -4444229679733441701
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_252
+  - first:
+      213: 612466630453918211
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_253
+  - first:
+      213: -7889977721259028624
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_254
+  - first:
+      213: 2555851053215076602
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_255
+  - first:
+      213: 1869074959599130114
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_256
+  - first:
+      213: 526919902527414883
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_257
+  - first:
+      213: 1215743073033291547
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_258
+  - first:
+      213: 6389995467051198791
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_259
+  - first:
+      213: 5411717586216530755
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_260
+  - first:
+      213: 1662443154279479566
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_261
+  - first:
+      213: -2491323032027672116
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_262
+  - first:
+      213: -5070123567448027921
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_263
+  - first:
+      213: 6511296654004711376
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_264
+  - first:
+      213: 8697383605309897266
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_265
+  - first:
+      213: -6695328570903480194
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_266
+  - first:
+      213: -5272794005257557247
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_267
+  - first:
+      213: -5283676325077381860
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_268
+  - first:
+      213: 6333496736945226171
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_269
+  - first:
+      213: -8531001685570541791
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_270
+  - first:
+      213: 2293073891661459050
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_271
+  - first:
+      213: 1053855728978746918
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_272
+  - first:
+      213: 3497898901960031894
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_273
+  - first:
+      213: -3297856312886876786
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_274
+  - first:
+      213: -5101585203773197047
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_275
+  - first:
+      213: -4359811752701345826
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_276
+  - first:
+      213: 528195559858901844
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_277
+  - first:
+      213: -861985746462145140
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_278
+  - first:
+      213: -5087773072443306636
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_279
+  - first:
+      213: 1139149557214642476
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_280
+  - first:
+      213: 8429609928909919411
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_281
+  - first:
+      213: -4156672228558666630
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_282
+  - first:
+      213: 7604698806045323762
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_283
+  - first:
+      213: -2427933313911348825
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_284
+  - first:
+      213: 7466244413824315996
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_285
+  - first:
+      213: 59644694038879821
+    second: sukuna_shibuya_arc_sprite_sheet_jus__by_finhj_dhp7ynr (1)_286
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idle_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 2529
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8b4c78372d9c5a0800000000000000
+      internalID: -6500433193491711765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2529
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b2687da0f5c3f4d96609992eef7f7a
+      internalID: -2057304729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 2529
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e462bb9615a2b41ae55b6742d720eb
+      internalID: -2141512466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2529
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01def627719c3084c994bcd083689fd1
+      internalID: 1099939299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 2296
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423cc0123c497c046b61b574ddf225c9
+      internalID: 1582184082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2297
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e292c8eb83b476af8ff14dceaba734a
+      internalID: 428379070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 2296
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2183e985160357b578308099311ab708
+      internalID: 441633109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2135
+        width: 24
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d11654df151b787abbe40d82849dfaf
+      internalID: -1821643379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2135
+        width: 24
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82d14e94bff23e33ba91c49d655e828
+      internalID: 1980561144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1704
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc2208bb655b8b22aec6b5ec502aa23
+      internalID: -1805562452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1704
+        width: 38
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835c46b923bf53ae889f7a9b0e68c6ad
+      internalID: -858689150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1704
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095dc976a3e55322d8e8ed4a0774b3a1
+      internalID: 869061075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: a_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1704
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f12a8b973876c314a63c3344f9fcf38
+      internalID: 1137023277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1616
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdd3b94903149969858bbbc3d6fcefa
+      internalID: 864667271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1616
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b732668752b73a1b5933726aca315be6
+      internalID: 1780759223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1616
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af891872c75b15d88968772190fd994d
+      internalID: -23029985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1616
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bc4fffffb7e0ff08163e1526d989b4
+      internalID: -1850548499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_5
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1616
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2bc621382e13e94ad7694d9999a6b5
+      internalID: 1094608004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_6
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1616
+        width: 38
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46944ec218390dd3280beca531c47655
+      internalID: 1562904036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_7
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1616
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b086cb50dc5332e4baa65dc9d06e32a
+      internalID: 1826943415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: b_8
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1616
+        width: 26
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37a29dc287bf35bb98a44dc2412d2c9
+      internalID: -2046929397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 254
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbeded4c202e51c8ba38df467899f219
+      internalID: -909368578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 254
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e9633a6bd701084805e780d231075e
+      internalID: 1447231999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_3
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 254
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3650a2f2187e51fd88ea5b007b76de6
+      internalID: 514929002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 254
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929d73e951cbbac9d873f604bc9cfbd9
+      internalID: 651534562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 254
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5b16db96dfbec76a877054c1015962
+      internalID: -1435054641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 254
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e4ae69e99e9c5b987777bcb0b8ce54
+      internalID: -1364805333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 254
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ba6b18e2729cb71acd27b075ab7ea2
+      internalID: 1410309647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 254
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6093e1972abfc2396e3f1b8b7c1d6a
+      internalID: -671717651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1440
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92e800798e61118685caffa64b3e378
+      internalID: 1309524286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1440
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d0510bda85a7ab19861d3c62f9345b
+      internalID: -2028084002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1440
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389f62daab361f5c5ba082d89de0b342
+      internalID: -1227189627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1440
+        width: 57
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c310b4ebcf949e0f6ba8b5d32060ae1c
+      internalID: -343848244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c_5
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1441
+        width: 57
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edbe472e56b25d98b19dbc7bf256fde
+      internalID: 1979411079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special_4
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 798
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8373d20d1af563b8b740ad08984d9e4
+      internalID: -16664962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special_3
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 798
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbaff6764eb5fc19981bb664e059f98
+      internalID: 10193988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 798
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e922f4cc4d2bc1e69f31583f1b57a51
+      internalID: 1849565608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: special_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 798
+        width: 55
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3258f404b216658f8be58494deb88166
+      internalID: 398066969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuga_projectile
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 808
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c724a5ac11651168636ea14519308b
+      internalID: 598667536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1287
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637ca320e843e9697b221c8a036302b1
+      internalID: 1418964139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1287
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51147ffc1262aa8a99f7dd904e956531
+      internalID: -1020028111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recovery_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1287
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09996c983686200a79a4b7d209ef39b5
+      internalID: 1266797840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sukuna_portrait
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2812
+        width: 140
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a5c7efe4498af4f9a4d532f3570308
+      internalID: -2121967504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fc1532cc767f442499322a7afb43aae6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      a_1: -1805562452
+      a_2: -858689150
+      a_3: 869061075
+      a_4: 1137023277
+      b_1: 864667271
+      b_2: 1780759223
+      b_3: -23029985
+      b_4: -1850548499
+      b_5: 1094608004
+      b_6: 1562904036
+      b_7: 1826943415
+      b_8: -2046929397
+      c_1: 1309524286
+      c_2: -2028084002
+      c_3: -1227189627
+      c_4: -343848244
+      c_5: 1979411079
+      fall_1: 1980561144
+      fuga_projectile: 598667536
+      idle_1: 1099939299
+      idle_2: -2141512466
+      idle_3: -2057304729
+      idle_4: -6500433193491711765
+      intro_1: -909368578
+      intro_2: 1447231999
+      intro_3: 514929002
+      intro_4: 651534562
+      intro_5: -1435054641
+      intro_6: -1364805333
+      intro_7: 1410309647
+      intro_8: -671717651
+      jump_1: -1821643379
+      recovery_1: 1418964139
+      recovery_2: -1020028111
+      recovery_3: 1266797840
+      run_1: 428379070
+      run_10: -157422913
+      run_2: 1582184082
+      run_3: 441633109
+      run_4: 2054735710
+      run_5: 1994690422
+      run_6: -1714299400
+      run_7: -78090725
+      run_8: -2141179119
+      run_9: -773288159
+      special_1: 398066969
+      special_2: 1849565608
+      special_3: 10193988
+      special_4: -16664962
+      sukuna_portrait: -2121967504
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

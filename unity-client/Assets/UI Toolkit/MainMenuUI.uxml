@@ -1,0 +1,48 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/EstilosSeleccion.uss?fileID=7433441132597879392&amp;guid=1657aea975afd734e82d8f57f7a92438&amp;type=3#EstilosSeleccion" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(219, 217, 217); align-items: center; justify-content: center; padding: 40px;">
+        <ui:VisualElement name="LoginPanel" style="flex-grow: 1; align-items: center; justify-content: center; width: 60%; min-width: 600px;">
+            <ui:Label text="Jujutsu Bros Online" name="TituloLogin" style="font-size: 80px; -unity-font-style: bold; margin-bottom: 60px;" />
+            <ui:VisualElement style="width: 100%; margin-bottom: 30px;">
+                <ui:Label text="Usuari" name="UsernameText" style="font-size: 42px; -unity-font-style: bold; margin-bottom: 10px;" />
+                <ui:TextField name="UsernameInput" style="font-size: 35px; height: 70px; border-radius: 10px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="width: 100%; margin-bottom: 50px;">
+                <ui:Label text="Contrasenya" name="PasswordText" style="font-size: 42px; -unity-font-style: bold; margin-bottom: 10px;" />
+                <ui:TextField password="true" name="PasswordInput" style="font-size: 35px; height: 70px; border-radius: 10px;" />
+            </ui:VisualElement>
+            <ui:Button text="Entrar" name="LoginButton" style="font-size: 40px; width: 350px; height: 90px; border-radius: 15px; align-self: center; margin-bottom: 20px; background-color: rgb(200, 200, 200);" />
+            <ui:Button text="Crear compte" name="GoToRegisterButton" style="font-size: 30px; width: 350px; height: 60px; border-radius: 10px; align-self: center; margin-bottom: 30px; background-color: rgb(180, 180, 220);" />
+            <ui:Label name="StatusText" style="font-size: 35px; -unity-font-style: bold; color: rgb(200, 50, 50);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="RegisterPanel" style="flex-grow: 1; align-items: center; justify-content: center; width: 60%; min-width: 600px; display: none;">
+            <ui:Label text="Jujutsu Bros Online" name="TituloRegister" style="font-size: 80px; -unity-font-style: bold; margin-bottom: 40px;" />
+            <ui:VisualElement style="width: 100%; margin-bottom: 20px;">
+                <ui:Label text="Usuari" name="RegUsernameText" style="font-size: 42px; -unity-font-style: bold; margin-bottom: 10px;" />
+                <ui:TextField name="RegUsernameInput" style="font-size: 35px; height: 70px; border-radius: 10px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="width: 100%; margin-bottom: 20px;">
+                <ui:Label text="Contrasenya" name="RegPasswordText" style="font-size: 42px; -unity-font-style: bold; margin-bottom: 10px;" />
+                <ui:TextField password="true" name="RegPasswordInput" style="font-size: 35px; height: 70px; border-radius: 10px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="width: 100%; margin-bottom: 40px;">
+                <ui:Label text="Confirmar Contrasenya" name="RegConfirmPasswordText" style="font-size: 42px; -unity-font-style: bold; margin-bottom: 10px;" />
+                <ui:TextField password="true" name="RegConfirmPasswordInput" style="font-size: 35px; height: 70px; border-radius: 10px;" />
+            </ui:VisualElement>
+            <ui:Button text="Registrar-se" name="RegisterButton" style="font-size: 40px; width: 350px; height: 90px; border-radius: 15px; align-self: center; margin-bottom: 20px; background-color: rgb(150, 200, 150);" />
+            <ui:Button text="Tornar a Iniciar Sessió" name="GoToLoginButton" style="font-size: 30px; width: 350px; height: 60px; border-radius: 10px; align-self: center; margin-bottom: 30px; background-color: rgb(220, 180, 180);" />
+            <ui:Label name="RegStatusText" style="font-size: 35px; -unity-font-style: bold; color: rgb(200, 50, 50);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LobbyPanel" style="flex-grow: 1; align-items: center; justify-content: center; width: 60%; min-width: 600px; display: none;">
+            <ui:Label text="Sales de Joc" name="TituloLobby" style="font-size: 80px; -unity-font-style: bold; margin-bottom: 60px;" />
+            <ui:Button text="Crear Nova Partida" name="CreateGameButton" style="font-size: 40px; width: 450px; height: 90px; border-radius: 15px; align-self: center; margin-bottom: 60px; background-color: rgb(150, 200, 150);" />
+            <ui:VisualElement style="width: 100%; margin-bottom: 30px; align-items: center; border-top-width: 4px; border-color: rgb(150, 150, 150); padding-top: 40px;">
+                <ui:Label text="O uneix-te a una existent:" name="GameIdText" style="font-size: 42px; -unity-font-style: bold; margin-bottom: 20px;" />
+                <ui:TextField name="GameIdInput" placeholder-text="ID de la partida..." style="font-size: 35px; height: 70px; width: 100%; border-radius: 10px; margin-bottom: 30px;" />
+                <ui:Button text="Unir-se" name="JoinGameButton" style="font-size: 40px; width: 350px; height: 90px; border-radius: 15px; align-self: center; background-color: rgb(200, 200, 200);" />
+            </ui:VisualElement>
+            <ui:Label name="LobbyStatusText" style="font-size: 35px; -unity-font-style: bold; color: rgb(200, 50, 50); margin-top: 30px;" />
+            <ui:Button text="Jugar contra CPU" name="VsCpuButton" style="font-size: 36px; width: 450px; height: 90px; border-radius: 15px; align-self: center; margin-top: 30px; background-color: rgb(102, 153, 255);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

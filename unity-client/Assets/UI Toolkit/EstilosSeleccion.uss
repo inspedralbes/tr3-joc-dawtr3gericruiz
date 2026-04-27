@@ -1,0 +1,18 @@
+.character-button {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    background-color: rgb(100, 100, 100);
+}
+
+.character-button:hover {
+    scale: 1.1;
+}
+
+.map-button {
+    width: 200px;
+    height: 120px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgb(100, 100, 100);
+}
